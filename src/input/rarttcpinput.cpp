@@ -158,8 +158,8 @@ bool RartTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
             qCCritical(rartTcpInput) << "Unable to connect";
         }
 #else  // (_WIN32_WINNT < 0x0600) \
-    // poll API does not exist :-( \
-    // this part was not tested
+       // poll API does not exist :-( \
+       // this part was not tested
         fd_set connFd;
         FD_ZERO(&connFd);
         FD_SET(sfd, &connFd);

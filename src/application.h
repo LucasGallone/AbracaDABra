@@ -415,6 +415,7 @@ private:
     bool m_deviceChangeRequested = false;
     bool m_exitRequested = false;
     bool m_skipSaveSettings = false;
+    bool m_appInitOngoing = true;
     int m_exitCode = 0;
     bool m_quitEventIntercepted = false;
     bool m_allowQuitEvent = false;

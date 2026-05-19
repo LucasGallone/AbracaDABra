@@ -896,6 +896,53 @@ void Application::setContextProperties()
 
 void Application::onInputDeviceReady()
 {
+    // setup dialog
+    configureForInputDevice();
+
+    switch (m_inputDeviceId)
+    {
+        case InputDevice::Id::AIRSPY:
+            // these are settings that are configures in ini file manually
+            // they are only set when device is initialized
+            if (dynamic_cast<AirspyInput *>(m_inputDevice))
+            {
+                dynamic_cast<AirspyInput *>(m_inputDevice)->setDataPacking(m_settings->airspy.dataPacking);
+            }
+            break;
+        case InputDevice::Id::RAWFILE:
+            if (m_inputDevice->deviceDescription().rawFile.frequency_kHz != 0)
+            {
+                m_channelListModel->setChannelFilter(m_inputDevice->deviceDescription().rawFile.frequency_kHz);
+            }
+            break;
+        default:
+            break;
+    }
+
+    if (m_appInitOngoing)
+    {
+        m_appInitOngoing = false;
+
+        // restore service for live stream devices
+        if (m_inputDevice && (m_inputDevice->capabilities() & InputDevice::Capability::LiveStream))
+        {  // restore channel
+            if (m_SId.isValid())
+            {
+                int sid = m_SId.value();
+                uint8_t scids = m_SCIdS;
+
+                m_SId = 0;
+                m_SCIdS = 0;
+
+                selectService(ServiceListId(sid, scids));
+            }
+            if (m_serviceList->numServices() == 0)
+            {
+                QTimer::singleShot(1, this, [this]() { emit startBandScan(); });
+            }
+        }
+    }
+
     m_ui->tuneEnabled(true);
     m_ui->infoLabelIndex(0);
 }
@@ -2686,11 +2733,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::RTLSDR;
-
-                // setup dialog
-                configureForInputDevice();
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2735,11 +2778,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::RTLTCP;
-
-                // setup dialog
-                configureForInputDevice();
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2784,10 +2823,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::RARTTCP;
-
-                configureForInputDevice();
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2829,14 +2865,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::AIRSPY;
-
-                configureForInputDevice();
-
-                // these are settings that are configures in ini file manually
-                // they are only set when device is initialized
-                dynamic_cast<AirspyInput *>(m_inputDevice)->setDataPacking(m_settings->airspy.dataPacking);
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2883,10 +2912,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::SOAPYSDR;
-
-                configureForInputDevice();
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2932,10 +2958,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 else
                 { /* keep service list as it is */
                 }
-
-                m_inputDeviceId = InputDevice::Id::SDRPLAY;
-
-                configureForInputDevice();
+                m_inputDeviceId = d;
             }
             else
             {
@@ -2983,14 +3006,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
                 // clear rec schedule
                 m_audioRecScheduleModel->clear();
 
-                m_inputDeviceId = InputDevice::Id::RAWFILE;
-
-                configureForInputDevice();
-
-                if (m_inputDevice->deviceDescription().rawFile.frequency_kHz != 0)
-                {
-                    m_channelListModel->setChannelFilter(m_inputDevice->deviceDescription().rawFile.frequency_kHz);
-                }
+                m_inputDeviceId = d;
             }
             else
             {
@@ -3476,21 +3492,16 @@ void Application::loadSettings()
         // restore service for live stream devices
         if (m_inputDevice && (m_inputDevice->capabilities() & InputDevice::Capability::LiveStream))
         {  // restore channel
-            int sid = settings->value("SID", 0).toInt();
-            uint8_t scids = settings->value("SCIdS", 0).toInt();
-            selectService(ServiceListId(sid, scids));
+            m_SId = settings->value("SID", 0).toInt();
+            m_SCIdS = settings->value("SCIdS", 0).toInt();
         }
     }
 
     delete settings;
 
-    if (m_inputDevice && (m_inputDevice->capabilities() & InputDevice::Capability::LiveStream) && (m_serviceList->numServices() == 0))
-    {
-        QTimer::singleShot(1, this, [this]() { emit startBandScan(); });
-    }
-
     bool showSettings =
         (InputDevice::Id::UNDEFINED == m_inputDeviceId) || ((InputDevice::Id::RAWFILE == m_inputDeviceId) && (m_settings->rawfile.file.isEmpty()));
+
     QTimer::singleShot(500, this,
                        [this, showSettings]()
                        {

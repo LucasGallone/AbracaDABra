@@ -324,72 +324,30 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
         return false;
     }
 
-    struct
-    {
-        char magic[4];
-        uint32_t tunerType;
-        uint32_t tunerGainCount;
-    } dongleInfo;
+    // worker reads dongle info and starts reading samples
+    m_worker = new RtlTcpWorker(m_sock, this);
+    connect(m_worker, &RtlTcpWorker::serverInfo, this, &RtlTcpInput::onServerInfo, Qt::QueuedConnection);
+    connect(m_worker, &RtlTcpWorker::agcLevel, this, &RtlTcpInput::onAgcLevel, Qt::QueuedConnection);
+    connect(m_worker, &RtlTcpWorker::dataReady, this, [=]() { emit tuned(m_frequency); }, Qt::QueuedConnection);
+    connect(m_worker, &RtlTcpWorker::recordBuffer, this, &InputDevice::recordBuffer, Qt::DirectConnection);
+    connect(m_worker, &RtlTcpWorker::finished, this, &RtlTcpInput::onReadThreadStopped, Qt::QueuedConnection);
+    connect(m_worker, &RtlTcpWorker::finished, m_worker, &QObject::deleteLater);
+    connect(m_worker, &RtlTcpWorker::destroyed, this, [=]() { m_worker = nullptr; });
+    m_worker->start();
 
-    // get information about RTL stick
-#if defined(_WIN32)
-#if (_WIN32_WINNT >= 0x0600)
-    struct pollfd fd;
-    fd.fd = m_sock;
-    fd.events = POLLIN;
-    if (WSAPoll(&fd, 1, 10000) > 0)
-    {
-        ::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
+    if (m_controlSocketEna)
+    {  // try to connect to control socket
+        QTimer::singleShot(100, this, [this]() { initControlSocket(); });
     }
-    else
-    {  // -1 is error, 0 is timeout
-        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return false;
-    }
-#else
-    // poll API does not exist :-(
-    fd_set readFd;
-    FD_ZERO(&readFd);
-    FD_SET(sock, &readFd);
 
-    // check if the socket is ready
-    TIMEVAL Timeout;
-    Timeout.tv_sec = 2;
-    Timeout.tv_usec = 0;
-    if (::select(sock + 1, nullptr, &readFd, nullptr, &Timeout) > 0)
-    {
-        ::recv(sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
-    }
-    else
-    {  // -1 is error, 0 is timeout
-        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return false;
-    }
-#endif
-#else
-    struct pollfd fd;
-    fd.fd = m_sock;
-    fd.events = POLLIN;
-    if (poll(&fd, 1, 10000) > 0)
-    {
-        if (::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0) <= 0)
-        {
-            qCCritical(rtlTcpInput) << "Server not responding.";
-            return false;
-        }
-    }
-    else
-    {  // -1 is error, 0 is timeout
-        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return false;
-    }
-#endif
+    return true;
+}
 
+void RtlTcpInput::onServerInfo(uint32_t tunerType, uint32_t tunerGainCount)
+{
     // Convert the byte order
     const int *gains = unknown_gains;
-    dongleInfo.tunerType = ntohl(dongleInfo.tunerType);
-    dongleInfo.tunerGainCount = ntohl(dongleInfo.tunerGainCount);
-    if (dongleInfo.magic[0] == 'R' && dongleInfo.magic[1] == 'T' && dongleInfo.magic[2] == 'L' && dongleInfo.magic[3] == '0')
+    if (tunerType != RTLSDR_TUNER_UNKNOWN)
     {
         m_deviceDescription.device.name = "rtl_tcp";
         m_deviceDescription.device.model = "Generic RTL2832U";
@@ -399,12 +357,12 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
         m_deviceDescription.sample.channelContainer = "uint8";
 
         int numGains = 0;
-        switch (dongleInfo.tunerType)
+        switch (tunerType)
         {
             case RTLSDR_TUNER_E4000:
                 qCInfo(rtlTcpInput) << "RTLSDR_TUNER_E4000";
                 numGains = *(&e4k_gains_olddab + 1) - e4k_gains_olddab;
-                if (dongleInfo.tunerGainCount == numGains)
+                if (tunerGainCount == numGains)
                 {
                     gains = e4k_gains_olddab;
                 }
@@ -436,7 +394,7 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
             case RTLSDR_TUNER_R820T:
                 qCInfo(rtlTcpInput) << "RTLSDR_TUNER_R820T";
                 numGains = *(&r82xx_gains_olddab + 1) - r82xx_gains_olddab;
-                if (dongleInfo.tunerGainCount == numGains)
+                if (tunerGainCount == numGains)
                 {
                     gains = r82xx_gains_olddab;
                 }
@@ -450,7 +408,7 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
             case RTLSDR_TUNER_R828D:
                 qCInfo(rtlTcpInput) << "RTLSDR_TUNER_R828D";
                 numGains = *(&r82xx_gains_olddab + 1) - r82xx_gains_olddab;
-                if (dongleInfo.tunerGainCount == numGains)
+                if (tunerGainCount == numGains)
                 {
                     gains = r82xx_gains_olddab;
                 }
@@ -465,18 +423,18 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
             default:
             {
                 qCWarning(rtlTcpInput) << "RTLSDR_TUNER_UNKNOWN";
-                dongleInfo.tunerGainCount = 0;
+                tunerGainCount = 0;
                 m_deviceDescription.device.tuner = "Unknown";
             }
         }
         m_deviceDescription.device.name += QString(" [%1]").arg(m_deviceDescription.device.tuner);
 
-        if (dongleInfo.tunerGainCount != numGains)
+        if (tunerGainCount != numGains)
         {
-            qCWarning(rtlTcpInput) << "Unexpected number of gain values reported by server" << dongleInfo.tunerGainCount;
-            if (dongleInfo.tunerGainCount > numGains)
+            qCWarning(rtlTcpInput) << "Unexpected number of gain values reported by server" << tunerGainCount;
+            if (tunerGainCount > numGains)
             {
-                dongleInfo.tunerGainCount = numGains;
+                tunerGainCount = numGains;
             }
         }
     }
@@ -492,7 +450,7 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
         m_deviceDescription.sample.containerBits = 8;
         m_deviceDescription.sample.channelContainer = "uint8";
 
-        dongleInfo.tunerGainCount = 0;
+        tunerGainCount = 0;
     }
 
     if (nullptr != m_gainList)
@@ -500,7 +458,7 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
         delete m_gainList;
     }
     m_gainList = new QList<int>();
-    for (int i = 0; i < dongleInfo.tunerGainCount; i++)
+    for (int i = 0; i < tunerGainCount; i++)
     {
         m_gainList->append(gains[i]);
     }
@@ -521,24 +479,9 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
     // setGainMode(RtlGainMode::Software);
     m_gainIdx = -1;
 
-    // need to create worker, server is pushing samples
-    m_worker = new RtlTcpWorker(m_sock, this);
-    connect(m_worker, &RtlTcpWorker::agcLevel, this, &RtlTcpInput::onAgcLevel, Qt::QueuedConnection);
-    connect(m_worker, &RtlTcpWorker::dataReady, this, [=]() { emit tuned(m_frequency); }, Qt::QueuedConnection);
-    connect(m_worker, &RtlTcpWorker::recordBuffer, this, &InputDevice::recordBuffer, Qt::DirectConnection);
-    connect(m_worker, &RtlTcpWorker::finished, this, &RtlTcpInput::onReadThreadStopped, Qt::QueuedConnection);
-    connect(m_worker, &RtlTcpWorker::finished, m_worker, &QObject::deleteLater);
-    connect(m_worker, &RtlTcpWorker::destroyed, this, [=]() { m_worker = nullptr; });
-    m_worker->start();
     m_watchdogTimer.start(1000 * INPUTDEVICE_WDOG_TIMEOUT_SEC);
+
     emit deviceReady();
-
-    if (m_controlSocketEna)
-    {  // try to connect to control socket
-        QTimer::singleShot(100, this, [this]() { initControlSocket(); });
-    }
-
-    return true;
 }
 
 void RtlTcpInput::tune(uint32_t frequency)
@@ -831,6 +774,78 @@ void RtlTcpWorker::run()
     m_agcLevel = 0.0;
     m_agcLevelEmitCntr = 0;
     m_watchdogFlag = false;  // first callback sets it to true
+
+    // read dongle info
+    struct
+    {
+        char magic[4];
+        uint32_t tunerType;
+        uint32_t tunerGainCount;
+    } dongleInfo;
+
+    // get information about RTL stick
+#if defined(_WIN32)
+#if (_WIN32_WINNT >= 0x0600)
+    struct pollfd fd;
+    fd.fd = m_sock;
+    fd.events = POLLIN;
+    if (WSAPoll(&fd, 1, 10000) > 0)
+    {
+        ::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
+    }
+    else
+    {  // -1 is error, 0 is timeout
+        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
+        return false;
+    }
+#else
+    // poll API does not exist :-(
+    fd_set readFd;
+    FD_ZERO(&readFd);
+    FD_SET(sock, &readFd);
+
+    // check if the socket is ready
+    TIMEVAL Timeout;
+    Timeout.tv_sec = 2;
+    Timeout.tv_usec = 0;
+    if (::select(sock + 1, nullptr, &readFd, nullptr, &Timeout) > 0)
+    {
+        ::recv(sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
+    }
+    else
+    {  // -1 is error, 0 is timeout
+        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
+        return false;
+    }
+#endif
+#else
+    struct pollfd fd;
+    fd.fd = m_sock;
+    fd.events = POLLIN;
+    if (poll(&fd, 1, 10000) > 0)
+    {
+        if (::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0) <= 0)
+        {
+            qCCritical(rtlTcpInput) << "Server not responding.";
+            return;
+        }
+    }
+    else
+    {  // -1 is error, 0 is timeout
+        qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
+        return;
+    }
+#endif
+
+    // we are here when dongle information is received
+    if (dongleInfo.magic[0] == 'R' && dongleInfo.magic[1] == 'T' && dongleInfo.magic[2] == 'L' && dongleInfo.magic[3] == '0')
+    {
+        emit serverInfo(ntohl(dongleInfo.tunerType), ntohl(dongleInfo.tunerGainCount));
+    }
+    else
+    {
+        emit serverInfo(RTLSDR_TUNER_UNKNOWN, 0);
+    }
 
     // read samples
     while (INVALID_SOCKET != m_sock)

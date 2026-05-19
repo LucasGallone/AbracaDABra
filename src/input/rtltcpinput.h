@@ -76,10 +76,12 @@ public:
 
 protected:
     void run() override;
+
 signals:
     void agcLevel(float level);
     void recordBuffer(const uint8_t *buf, uint32_t len);
     void dataReady();
+    void serverInfo(uint32_t tunerType, uint32_t tunerGainCount);
 
 private:
     SOCKET m_sock;
@@ -180,6 +182,8 @@ private:
     float m_rfLevelOffset;
 
     void resetAgc();
+
+    void onServerInfo(uint32_t tunerType, uint32_t tunerGainCount);
 
     // private function
     // gain is set from outside using setGainMode() function
