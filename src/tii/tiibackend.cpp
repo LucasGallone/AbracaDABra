@@ -338,8 +338,16 @@ void TIIBackend::startStopLog()
             m_exportCoordinates = m_settings->tii.saveCoordinates;
             m_exportNoTii = m_settings->tii.saveNoTii;
             m_exportUTC = m_settings->tii.timestampInUTC;
-            m_exportRole =
-                m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTC : TxTableModel::TxTableModelRoles::ExportRole;
+            if (m_settings->tii.headersInEnglish)
+            {
+                m_exportRole = m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTCEnglish
+                                                              : TxTableModel::TxTableModelRoles::ExportRoleEnglish;
+            }
+            else
+            {
+                m_exportRole =
+                    m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTC : TxTableModel::TxTableModelRoles::ExportRole;
+            }
 
             // Header
             int lastCol = m_exportCoordinates ? (TxTableModel::LastColumn) : (TxTableModel::LastColumnWithoutCoordinates);

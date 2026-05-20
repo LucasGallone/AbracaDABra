@@ -49,7 +49,9 @@ public:
     enum TxTableModelRoles
     {
         ExportRole = Qt::UserRole,
-        ExportRoleUTC,  // this role is the same as export role but time is in UTC
+        ExportRoleUTC,    // this role is the same as export role but time is in UTC
+        ExportRoleEnglish,     // this role is the same as export role but untranslated
+        ExportRoleUTCEnglish,  // this role is the same as export role UTC but untranslated
         CoordinatesRole,
         TiiRole,
         MainIdRole,

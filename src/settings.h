@@ -231,6 +231,7 @@ public:
         bool inactiveTxTimeoutEna;
         int inactiveTxTimeout;
         bool timestampInUTC;
+        bool headersInEnglish;
         bool saveCoordinates;
         bool saveNoTii;
         bool centerMapToCurrentPosition;

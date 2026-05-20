@@ -3281,6 +3281,7 @@ void Application::loadSettings()
     m_settings->tii.inactiveTxTimeoutEna = settings->value("TII/inactiveTxTimeoutEna", false).toBool();
     m_settings->tii.inactiveTxTimeout = settings->value("TII/inactiveTxTimeout", 5).toInt();
     m_settings->tii.timestampInUTC = settings->value("TII/timestampInUTC", false).toBool();
+    m_settings->tii.headersInEnglish = settings->value("TII/headersInEnglish", false).toBool();
     m_settings->tii.saveCoordinates = settings->value("TII/saveCoordinates", false).toBool();
     m_settings->tii.saveNoTii = settings->value("TII/saveNoTii", false).toBool();
     m_settings->tii.centerMapToCurrentPosition = settings->value("TII/mapCenterCurrPos", true).toBool();
@@ -3613,6 +3614,7 @@ void Application::saveSettings()
     settings->setValue("TII/inactiveTxTimeoutEna", m_settings->tii.inactiveTxTimeoutEna);
     settings->setValue("TII/inactiveTxTimeout", m_settings->tii.inactiveTxTimeout);
     settings->setValue("TII/timestampInUTC", m_settings->tii.timestampInUTC);
+    settings->setValue("TII/headersInEnglish", m_settings->tii.headersInEnglish);
     settings->setValue("TII/saveCoordinates", m_settings->tii.saveCoordinates);
     settings->setValue("TII/saveNoTii", m_settings->tii.saveNoTii);
     settings->setValue("TII/mapCenterCurrPos", m_settings->tii.centerMapToCurrentPosition);

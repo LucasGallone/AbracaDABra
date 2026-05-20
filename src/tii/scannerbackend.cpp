@@ -484,6 +484,12 @@ void ScannerBackend::saveToFile(const QString &fileName)
     QTextStream out(&csvContent);
 
     auto exportRole = m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTC : TxTableModel::TxTableModelRoles::ExportRole;
+    if (m_settings->tii.headersInEnglish)
+    {
+        exportRole = m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTCEnglish
+                                                    : TxTableModel::TxTableModelRoles::ExportRoleEnglish;
+    }
+
     int lastCol = m_settings->tii.saveCoordinates ? TxTableModel::LastColumn : TxTableModel::LastColumnWithoutCoordinates;
 
     // Header
@@ -595,8 +601,16 @@ void ScannerBackend::startAutoSaveCsv()
         return;
     }
 
-    m_autoSaveExportRole =
-        m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTC : TxTableModel::TxTableModelRoles::ExportRole;
+    if (m_settings->tii.headersInEnglish)
+    {
+        m_autoSaveExportRole = m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTCEnglish
+                                                              : TxTableModel::TxTableModelRoles::ExportRoleEnglish;
+    }
+    else
+    {
+        m_autoSaveExportRole =
+            m_settings->tii.timestampInUTC ? TxTableModel::TxTableModelRoles::ExportRoleUTC : TxTableModel::TxTableModelRoles::ExportRole;
+    }
     m_autoSaveLastCol = m_settings->tii.saveCoordinates ? TxTableModel::LastColumn : TxTableModel::LastColumnWithoutCoordinates;
 
     // Write header

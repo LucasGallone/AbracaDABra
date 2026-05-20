@@ -195,11 +195,13 @@ QVariant TxTableModel::data(const QModelIndex &index, int role) const
         }
         case TxTableModelRoles::ExportRole:
         case TxTableModelRoles::ExportRoleUTC:
+        case TxTableModelRoles::ExportRoleEnglish:
+        case TxTableModelRoles::ExportRoleUTCEnglish:
         {
             switch (index.column())
             {
                 case ColTime:
-                    if (role == TxTableModelRoles::ExportRoleUTC)
+                    if (role == TxTableModelRoles::ExportRoleUTC || role == TxTableModelRoles::ExportRoleUTCEnglish)
                     {
                         return item.rxTime().toUTC().toString("yyyy-MM-dd hh:mm:ss");
                     }
@@ -421,6 +423,61 @@ QVariant TxTableModel::headerData(int section, Qt::Orientation orientation, int 
                     return tr("Latitude (RX)");
                 case ColRxCoordinatesLon:
                     return tr("Longitude (RX)");
+                default:
+                    break;
+            }
+        }
+        break;
+        case TxTableModelRoles::ExportRoleEnglish:
+        case TxTableModelRoles::ExportRoleUTCEnglish:
+        {
+            switch (section)
+            {
+                case ColTime:
+                    if (role == TxTableModelRoles::ExportRoleUTCEnglish)
+                    {
+                        return QString("Time (UTC)");
+                    }
+                    else
+                    {
+                        return QString("Time (%1)").arg(QDateTime::currentDateTime().timeZoneAbbreviation());
+                    }
+                case ColChannel:
+                    return "Channel";
+                case ColFreq:
+                    return "Frequency [kHz]";
+                case ColEnsId:
+                    return "UEID";
+                case ColEnsLabel:
+                    return "Label";
+                case ColNumServices:
+                    return "Services";
+                case ColSnr:
+                    return "SNR [dB]";
+                case ColRfLevel:
+                    return "RF Level [dBm]";
+                case ColMainId:
+                    return "Main";
+                case ColSubId:
+                    return "Sub";
+                case ColLevel:
+                    return "Level [dB]";
+                case ColLocation:
+                    return "Location";
+                case ColPower:
+                    return "Power [kW]";
+                case ColDist:
+                    return "Distance [km]";
+                case ColAzimuth:
+                    return "Azimuth [deg]";
+                case ColTxCoordinatesLat:
+                    return "Latitude (TX)";
+                case ColTxCoordinatesLon:
+                    return "Longitude (TX)";
+                case ColRxCoordinatesLat:
+                    return "Latitude (RX)";
+                case ColRxCoordinatesLon:
+                    return "Longitude (RX)";
                 default:
                     break;
             }

@@ -275,7 +275,7 @@ Item {
                                     Layout.fillWidth: true
                                     columnSpacing: UI.standardMargin
                                     rowSpacing: UI.standardMargin
-                                    columns: UI.isMobile ? 1 : 3
+                                    columns: UI.isMobile ? 1 : 2
                                     AbracaSwitch {
                                         Layout.fillWidth: true
                                         text: qsTr("Timestamp in UTC")
@@ -284,6 +284,17 @@ Item {
                                         onCheckedChanged: {
                                             if (settingsBackend.tiiLogUtcTimestamp !== checked) {
                                                 settingsBackend.tiiLogUtcTimestamp = checked
+                                            }
+                                        }
+                                    }
+                                    AbracaSwitch {
+                                        Layout.fillWidth: true
+                                        text: qsTr("Column names in English")
+                                        wrapMode: Text.WordWrap
+                                        checked: settingsBackend.tiiLogHeadersInEnglish
+                                        onCheckedChanged: {
+                                            if (settingsBackend.tiiLogHeadersInEnglish !== checked) {
+                                                settingsBackend.tiiLogHeadersInEnglish = checked
                                             }
                                         }
                                     }
