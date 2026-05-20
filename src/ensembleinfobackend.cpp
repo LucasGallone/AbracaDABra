@@ -548,6 +548,10 @@ void EnsembleInfoBackend::onRecording(bool isActive)
     recordingLength("");
     recordingSize("");
     isRecordingEnabled(true);
+    if (isActive == false)
+    {
+        emit showInfoMessage(tr("Raw data recording finished"), 1);
+    }
 }
 
 void EnsembleInfoBackend::updateRecordingStatus(uint64_t bytes, float ms)
