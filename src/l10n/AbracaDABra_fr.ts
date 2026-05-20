@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" sourcelanguage="en">
 <context>
     <name>AboutUI</name>
     <message>
         <location filename="../aboutui.cpp" line="41"/>
         <source>Based on Qt %1</source>
-        <translation>Založeno na Qt %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="42"/>
         <source>DAB SDR version %1.%2.%3</source>
-        <translation>DAB SDR verze %1.%2.%3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="43"/>
         <source>Developed by</source>
-        <translation>Autor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="44"/>
         <source>If you like the application you can</source>
-        <translation>Pokud se vám aplikace líbí, můžete mi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="44"/>
         <source>buy me a beer</source>
-        <translation>koupit pivo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="46"/>
         <source>AbracaDABra &amp; DAB SDR library use following libraries (special thanks to):</source>
-        <translation>AbracaDABra a DAB SDR knihovna využívají následující knihovny (speciální poděkování):</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="77"/>
         <source>Contributors to the translation:</source>
-        <translation>Přispěvatelé k překladu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="80"/>
         <source>Czech</source>
-        <translation>Čeština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="83"/>
         <source>German</source>
-        <translation>Němčina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="86"/>
         <source>Italian</source>
-        <translation>italština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="89"/>
         <source>Polish</source>
-        <translation>Polština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="92"/>
         <source>AbracaDABra uses some artwork created by</source>
-        <translation>AbracaDABra využívá některé grafické prvky od</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="94"/>
         <source>DAB transmitter database provided by</source>
-        <translation>databázi DAB vysílačů od</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../aboutui.cpp" line="95"/>
         <source>and country flags provided by</source>
-        <translation>a vlajky zemí od</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../qml/controls/AbracaDatePicker.qml" line="40"/>
         <source>Date</source>
-        <translation>Datum</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../qml/controls/AbracaRecordingButton.qml" line="60"/>
         <source>Stop recording</source>
-        <translation>Ukončit záznam</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -95,22 +95,22 @@
     <message>
         <location filename="../qml/controls/AbracaTimePicker.qml" line="38"/>
         <source>Time</source>
-        <translation>Čas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/controls/AbracaTimePicker.qml" line="147"/>
         <source>Hour</source>
-        <translation>Hodina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/controls/AbracaTimePicker.qml" line="217"/>
         <source>Minute</source>
-        <translation>Minuta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/controls/AbracaTimePicker.qml" line="271"/>
         <source>Period</source>
-        <translation>AM/PM</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -118,88 +118,88 @@
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="63"/>
         <source>Reload</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="73"/>
         <source>Use any available Airspy device if the selected one fails</source>
-        <translation>Použít jakékoli Airspy zařízení, pokud vybrané nelze připojit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="94"/>
         <source>Connected device:</source>
-        <translation>Připojené zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="97"/>
         <source>Serial number:</source>
-        <translation>Sériové číslo:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="115"/>
         <source>Gain control</source>
-        <translation>Ovládání zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="123"/>
         <source>Software</source>
-        <translation>Software</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="123"/>
         <source>Hybrid</source>
-        <translation>Hybridní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="123"/>
         <source>Sensitivity</source>
-        <translation>Citlivost</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="123"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="151"/>
         <source>Sensitivity gain</source>
-        <translation>Zesílení citlivosti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="172"/>
         <source>LNA gain</source>
-        <translation>Zesílení LNA</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="193"/>
         <location filename="../qml/settings/AirspyDevice.qml" line="222"/>
         <source>AGC</source>
-        <translation>AGC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="202"/>
         <source>Mixer gain</source>
-        <translation>Zesílení mixeru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="231"/>
         <source>IF gain</source>
-        <translation>Zesílení IF</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="260"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="270"/>
         <source>Bias Tee:</source>
-        <translation>Bias Tee:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AirspyDevice.qml" line="286"/>
         <source>Prefer 4096kHz rate:</source>
-        <translation>Upřednostnit vzorkovací frekvenci 4096kHz:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -207,22 +207,22 @@
     <message>
         <location filename="../qml/settings/AnnouncementSettings.qml" line="68"/>
         <source>Alarm announcements</source>
-        <translation>Hlášení alarmu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AnnouncementSettings.qml" line="98"/>
         <source>&lt;br&gt;Note: Alarm announcement cannot be disabled.</source>
-        <translation>&lt;br&gt;Poznámka: Hlášení alarmu nelze deaktivovat.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AnnouncementSettings.qml" line="103"/>
         <source>Bring window to foreground on alarm announcement</source>
-        <translation>Přenést okno do popředí při hlášení alarmu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AnnouncementSettings.qml" line="123"/>
         <source>Regular announcements</source>
-        <translation>Běžná hlášení</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../qml/AppLog.qml" line="34"/>
         <source>Application log</source>
-        <translation>Log aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -238,17 +238,17 @@
     <message>
         <location filename="../qml/AppLogView.qml" line="78"/>
         <source>Save to file</source>
-        <translation>Uložit do souboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/AppLogView.qml" line="82"/>
         <source>Copy to clipboard</source>
-        <translation>Kopírovat do schránky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/AppLogView.qml" line="87"/>
         <source>Clear log</source>
-        <translation>Smazat log</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -257,411 +257,407 @@
         <location filename="../application.cpp" line="397"/>
         <location filename="../application.cpp" line="399"/>
         <source>Mute</source>
-        <translation>Vypnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="399"/>
         <source>Unmute</source>
-        <translation>Zapnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="459"/>
         <source>Audio coding</source>
-        <translation>Kódování zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="464"/>
         <source>Ongoing announcement</source>
-        <translation>Probíhá hlášení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="953"/>
         <source>&lt;b&gt;Ensemble:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Short label:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;ECC:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;EID:&lt;/b&gt; 0x%4&lt;br&gt;&lt;b&gt;Country:&lt;/b&gt; %5</source>
-        <translation>&lt;b&gt;Multiplex:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Krátký název:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;ECC:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;EID:&lt;/b&gt; 0x%4&lt;br&gt;&lt;b&gt;Stát:&lt;/b&gt; %5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1159"/>
         <source>System time</source>
-        <translation>Systémový čas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1169"/>
         <location filename="../application.cpp" line="4462"/>
         <source>DAB time</source>
-        <translation>Čas z DAB vysílání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1179"/>
         <source>&lt;b&gt;DAB audio encoding&lt;/b&gt;&lt;br&gt;%1</source>
-        <translation>&lt;b&gt;Kódování zvuku DAB&lt;/b&gt;&lt;br&gt;%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1179"/>
         <source>MPEG-1 layer 2</source>
-        <translation>MPEG-1 layer 2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1183"/>
         <location filename="../application.cpp" line="1187"/>
         <location filename="../application.cpp" line="1191"/>
         <source>&lt;b&gt;DAB+ audio encoding&lt;/b&gt;&lt;br&gt;%1</source>
-        <translation>&lt;b&gt;Kódování zvuku DAB+&lt;/b&gt;&lt;br&gt;%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1183"/>
         <source>MPEG-4 Low Complexity AAC</source>
-        <translation>MPEG-4 Low Complexity AAC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1187"/>
         <source>MPEG-4 High Efficiency AAC</source>
-        <translation>MPEG-4 High Efficiency AAC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1191"/>
         <source>MPEG-4 High Efficiency AAC v2</source>
-        <translation>MPEG-4 High Efficiency AAC v2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1208"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;%1Stereo&lt;br&gt;Sample rate: %2 kHz</source>
-        <translation>&lt;b&gt;Formát zvuku&lt;/b&gt;&lt;br&gt;%1Stereo&lt;br&gt;Vzorkovací frekvence: %2 kHz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1212"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Stereo (PS %1)&lt;br&gt;Sample rate: %2 kHz (SBR %3)</source>
-        <translation>&lt;b&gt;Formát zvuku&lt;/b&gt;&lt;br&gt;Stereo (PS %1)&lt;br&gt;Vzorkovací frekvence: %2 kHz (SBR %3)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1213"/>
         <location filename="../application.cpp" line="1215"/>
         <source>on</source>
-        <translation>zapnuto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1213"/>
         <location filename="../application.cpp" line="1215"/>
         <source>off</source>
-        <translation>vypnuto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1223"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Sample rate: %1 kHz</source>
-        <translation>&lt;b&gt;Formát zvuku&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Vzorkovací frekvence: %1 kHz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1228"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Sample rate: %1 kHz (SBR: %2)</source>
-        <translation>&lt;b&gt;Formát zvuku&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Vzorkovací frekvence: %1 kHz (SBR: %2)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1249"/>
         <source>&lt;b&gt;Programme Type&lt;/b&gt;&lt;br&gt;%1 (dynamic)</source>
-        <translation>&lt;b&gt;Typ programu (PTY)&lt;/b&gt;&lt;br&gt;%1 (dynamický)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1256"/>
         <source>&lt;b&gt;Programme Type&lt;/b&gt;&lt;br&gt;%1</source>
-        <translation>&lt;b&gt;Typ programu (PTY)&lt;/b&gt;&lt;br&gt;%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1276"/>
         <source>Tuning...  </source>
-        <translation>Ladím...  </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1342"/>
         <location filename="../application.cpp" line="1354"/>
         <source>Tune to %1</source>
-        <translation>Přeladit na %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1510"/>
         <source>End of file</source>
-        <translation>Konec soubory</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1511"/>
         <source>Select any service to restart</source>
-        <translation>Přehrávání se restartuje po zvolení stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1525"/>
         <source>Input device error: Device disconnected</source>
-        <translation>Chyba vstupního zařízení: Zařízení odpojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1526"/>
         <location filename="../application.cpp" line="1538"/>
         <source>Try to reconnect the device or choose another device in Settings</source>
-        <translation>Zkuste zařízení znovu připojit nebo vyberte jiné zařízení v Nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1537"/>
         <source>Input device error: No data</source>
-        <translation>Chyba vstupního zařízení: Žádná data</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1561"/>
         <source>Audio recording is ongoing. It will be stopped and saved if you change DAB channel.</source>
-        <translation>Probíhá nahrávání zvuku. Záznam bude ukončen a uložen pokud přeladíte na jiný DAB kanál.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1564"/>
         <source>Audio recording is ongoing. It will be stopped and saved if you switch current service.</source>
-        <translation>Probíhá nahrávání zvuku. Záznam bude ukončen a uložen pokud přepnete na jinou stanici.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1569"/>
         <source>Stop audio recording?</source>
-        <translation>Ukončit nahrávání zvuku?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1586"/>
         <source>Keep recording</source>
-        <translation>Pokračovat v nahrávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1587"/>
         <source>Stop recording and do not ask again</source>
-        <translation>Ukončit nahrávání a příště se neptat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1588"/>
         <source>Stop recording</source>
-        <translation>Ukončit záznam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1833"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Short label:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;SId:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;SCIdS:&lt;/b&gt; %4&lt;br&gt;&lt;b&gt;Language:&lt;/b&gt; %5&lt;br&gt;&lt;b&gt;Country:&lt;/b&gt; %6</source>
-        <translation>&lt;b&gt;Stanice:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Krátký název:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;SId:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;SCIdS:&lt;/b&gt; %4&lt;br&gt;&lt;b&gt;Jazyk:&lt;/b&gt; %5&lt;br&gt;&lt;b&gt;Stát:&lt;/b&gt; %6</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1890"/>
         <source>&lt;B&gt;Error protection&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Coderate: %2/%3&lt;br&gt;Capacity units: %4 CU</source>
-        <translation>&lt;B&gt;Chybové zabezpečení&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Kódový poměr: %2/%3&lt;br&gt;Kapacitní jednotky: %4 CU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1901"/>
         <source>&lt;B&gt;Error protection&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Protection level: %2&lt;br&gt;Capacity units: %3 CU</source>
-        <translation>&lt;B&gt;Chybové zabezpečení&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Kódový poměr: %2&lt;br&gt;Kapacitní jednotky: %3 CU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1911"/>
         <source>%1 kbps</source>
-        <translation>%1 kb/s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1913"/>
         <source>&lt;b&gt;Service bitrate&lt;/b&gt;&lt;br&gt;Audio &amp; data: %1</source>
-        <translation>&lt;b&gt;Datový tok stanice&lt;/b&gt;&lt;br&gt;Audio a data: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1963"/>
         <source>Service currently unavailable</source>
-        <translation>Stanice je nedostupná</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1964"/>
         <source>Service was removed from ensemble</source>
-        <translation>Stanice byla odebraná z multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="1996"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Ongoing announcement&lt;br&gt;on current service</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Probíhá hlášení&lt;br&gt;na současné stanici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2010"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Ongoing announcement&lt;br&gt;Source service: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Click to suspend this announcement</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Probíhá hlášení&lt;br&gt;Na stanici: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Kliknutím pozastavíte toho hlášení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2027"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Suspended announcement&lt;br&gt;Source service: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Click to resume this announcement</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Pozastavené hlášení&lt;br&gt;Na stanici: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Kliknutím obnovíte toto hlášení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2072"/>
         <source>Default audio device</source>
-        <translation>Výchozí audio zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2149"/>
         <source>Stop audio recording</source>
-        <translation>Ukončit nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2155"/>
         <source>Start audio recording</source>
-        <translation>Spustit nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2165"/>
         <source>Audio recording ongoing (%2 kBytes recorded)
 File: %1</source>
-        <translation>Probíhá nahrávání audia (uloženo %2 kByte)
-Soubor: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2173"/>
         <source>Scheduled audio recording is getting ready</source>
-        <translation>Připravuje se plánované nahrávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2185"/>
         <source>Scheduled recording should start in %1 seconds</source>
-        <translation>Plánované nahrávání by mělo začít za %1 sekund</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2188"/>
         <source>Ongoing recording now prevents the start of a scheduled recording. The schedule will be cancelled if you do not choose otherwise. If you select to keep the schedule, the service might be switched.</source>
-        <translation>Probíhající nahrávání znemožňuje spuštění plánovaného nahrávání. Plán bude zrušen, pokud nezvolíte jinak.Pokud vyberete pokračovat podle plánu, stanice může být přepnuta.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2201"/>
         <source>Keep current recording</source>
-        <translation>Pokračovat v nahrávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2202"/>
         <source>Keep schedule</source>
-        <translation>Pokračovat podle plánu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2211"/>
         <source>Scheduled recording starts in %1 seconds</source>
-        <translation>Plánované nahrávání začne za %1 sekund</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2214"/>
         <source>Recording is going to start according to the schedule. The service might be switched if it differs from the current one.</source>
-        <translation>Nahrávání začne podle plánu. Stanice může být přepnuta, pokud je jiná než současná stanice.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2225"/>
         <source>Continue as planned</source>
-        <translation>Pokračovat podle plánu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2226"/>
         <source>Cancel plan</source>
-        <translation>Zrušit plán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2380"/>
         <source>SPI MOT directory not complete
 Decoded %1 / %2 MOT objects</source>
-        <translation>SPI MOT directory není kompletní
-Dekódováno %1 / %2 MOT objektů</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2384"/>
         <source>SPI MOT directory complete
 %1 MOT objects decoded</source>
-        <translation>SPI MOT directory je kompletní
-%1 MOT objektů dekódováno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2389"/>
         <source>SPI MOT directory decoding started</source>
-        <translation>Dekódování SPI MOT directory zahájeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2598"/>
         <source>No ensemble</source>
-        <translation>Žádný multiplex</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2599"/>
         <source>No ensemble tuned</source>
-        <translation>Není naladěný žádný multiplex</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2610"/>
         <source>No service</source>
-        <translation>Žádná stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="2616"/>
         <source>No service playing</source>
-        <translation>Nepřehrává žádnou stanici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4568"/>
         <source>Service list exported</source>
-        <translation>Seznam stanic vyexportován</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4572"/>
         <source>Failed to export service list</source>
-        <translation>Export seznamu stanic selhal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4579"/>
         <source>Clear service list?</source>
-        <translation>Vymazat seznam stanic?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4579"/>
         <source>Current service list including favorites will be deleted. This action is irreversible.</source>
-        <translation>Současný seznam stanic včetně oblíbených bude vymazán. Tato akce je nevratná.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4593"/>
         <source>Clear</source>
-        <translation>Vymazat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4594"/>
         <location filename="../application.cpp" line="4825"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4633"/>
         <location filename="../application.cpp" line="4683"/>
         <source>Failed to create backup</source>
-        <translation>Vytvoření zálohy selhalo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4678"/>
         <source>Settings backup created successfully</source>
-        <translation>Záloha byla úspěšně vytvořena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4709"/>
         <source>Restore settings?</source>
-        <translation>Obnovit nastavení?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4709"/>
         <source>Settings will be restored from backup.
 Application will restart after restore.</source>
-        <translation>Nastavení bude obnoveno ze zálohy.
-Aplikace se restartuje.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4722"/>
         <location filename="../application.cpp" line="4767"/>
         <source>Failed to restore settings</source>
-        <translation>Obnovení zálohy selhalo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4732"/>
         <location filename="../application.cpp" line="4740"/>
         <source>Invalid backup file</source>
-        <translation>Neplatný soubor zálohy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4812"/>
         <source>Settings restored, restarting...</source>
-        <translation>Nastavení obnoveno, restartuji...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="4824"/>
         <source>Restore</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -669,7 +665,7 @@ Aplikace se restartuje.</translation>
     <message>
         <location filename="../audiooutputqt.cpp" line="124"/>
         <source>DAB radio</source>
-        <translation>DAB radio</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -677,27 +673,27 @@ Aplikace se restartuje.</translation>
     <message>
         <location filename="../qml/audiorec/AudioRecordingItemDialog.qml" line="41"/>
         <source>Audio recording schedule</source>
-        <translation>Plán nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingItemDialog.qml" line="49"/>
         <source>Scheduled item name</source>
-        <translation>Název plánované položky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingItemDialog.qml" line="110"/>
         <source>Stop time:</source>
-        <translation>Čas konce:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingItemDialog.qml" line="211"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingItemDialog.qml" line="220"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -705,7 +701,7 @@ Aplikace se restartuje.</translation>
     <message>
         <location filename="../qml/audiorec/AudioRecordingStatus.qml" line="68"/>
         <source>Audio recording:</source>
-        <translation>Záznam zvuku:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -715,29 +711,27 @@ Aplikace se restartuje.</translation>
         <source>No scheduled recordings.
 
 Click &apos;Add&apos; to create a new recording.</source>
-        <translation>Žádný naplánovaný záznam zvuku.
-
-Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingView.qml" line="145"/>
         <source>Add</source>
-        <translation>Přidat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingView.qml" line="150"/>
         <source>Edit</source>
-        <translation>Upravit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingView.qml" line="155"/>
         <source>Delete</source>
-        <translation>Smazat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/audiorec/AudioRecordingView.qml" line="164"/>
         <source>Delete all</source>
-        <translation>Smazat vše</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -745,78 +739,78 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="65"/>
         <source>Audio decoder</source>
-        <translation>Audio dekodér</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="70"/>
         <source>Noise level during audio drop-out:</source>
-        <translation>Úroveň šumu při výpadku zvuku:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="104"/>
         <source>Audio recording</source>
-        <translation>Záznam zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="117"/>
         <source>Folder:</source>
-        <translation>Složka:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="132"/>
         <source>Record encoded DAB/DAB+ stream (MP2 or AAC format)</source>
-        <translation>Nahrávat kodovaná DAB/DAB+ data (MP2 nebo AAC formát)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="145"/>
         <source>Record decoded audio (WAV format)</source>
-        <translation>Nahrávat dekodované audio (WAV formát)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="159"/>
         <source>Do not ask to stop audio recording when service changes</source>
-        <translation>Neptat se na ukončení nahrávání audia při změně stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="169"/>
         <source>Record DL messages</source>
-        <translation>Zaznamenávat Dynamic Labels (DL)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="179"/>
         <source>Record DAB time for DL messages</source>
-        <translation>Zaznamenávat DAB čas příjmu zpráv DL</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="200"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="213"/>
         <source>AAC audio decoder:</source>
-        <translation>Dekodér AAC audia:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="233"/>
         <location filename="../qml/settings/AudioSettings.qml" line="273"/>
         <source>Restart</source>
-        <translation>Restartovat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="245"/>
         <source>Audio decoder change will take effect after application restart.</source>
-        <translation>Změna audio dekodéru se projeví po restartu aplikace.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="251"/>
         <source>Audio output framework:</source>
-        <translation>Framework pro audio výstup:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/AudioSettings.qml" line="284"/>
         <source>Audio output change will take effect after application restart.</source>
-        <translation>Změna audio výstupu se projeví po restartu aplikace.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -824,37 +818,37 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/BandScan.qml" line="47"/>
         <source>Band scan</source>
-        <translation>Hledání stanic</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="90"/>
         <source>Ensembles found:</source>
-        <translation>Počet multiplexů:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="99"/>
         <source>Services found:</source>
-        <translation>Počet stanic:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="114"/>
         <source>Clear service list on start</source>
-        <translation>Při spuštění vymazat seznam stanic</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="129"/>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="129"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/BandScan.qml" line="143"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -862,12 +856,12 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../bandscanbackend.cpp" line="61"/>
         <source>Press Start to perform band scan.</source>
-        <translation>Vyhledánání stanic spustíte tlačítkem Start.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../bandscanbackend.cpp" line="136"/>
         <source>Scanning channel:</source>
-        <translation>Prohledávám kanál:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -875,7 +869,7 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/CatSLS.qml" line="34"/>
         <source>Categorized slideshow</source>
-        <translation>Kategorizovaná slideshow</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -883,27 +877,27 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/tii/ChannelSelectionDialog.qml" line="39"/>
         <source>Channel selection</source>
-        <translation>Výběr kanálů</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ChannelSelectionDialog.qml" line="67"/>
         <source>Select all</source>
-        <translation>Vybrat vše</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ChannelSelectionDialog.qml" line="77"/>
         <source>Unselect all</source>
-        <translation>Zrušit výběr</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ChannelSelectionDialog.qml" line="102"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ChannelSelectionDialog.qml" line="117"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -911,17 +905,17 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/charts/ChartView.qml" line="295"/>
         <source>Reset</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/charts/ChartView.qml" line="323"/>
         <source>Live</source>
-        <translation>Live</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/charts/ChartView.qml" line="323"/>
         <source>Paused</source>
-        <translation>Zastaveno</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -929,7 +923,7 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/ContentView.qml" line="392"/>
         <source>Audio output</source>
-        <translation>Zvukový výstup</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -937,7 +931,7 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/DabSignal.qml" line="34"/>
         <source>DAB Signal</source>
-        <translation>DAB signál</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -945,72 +939,72 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/DabSignalView.qml" line="205"/>
         <source>RF level </source>
-        <translation>Úroveň </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="206"/>
         <source>Estimated RF level</source>
-        <translation>Odhadovaná úroveň signálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="223"/>
         <source>Gain </source>
-        <translation>Zisk </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="224"/>
         <source>Tuner gain</source>
-        <translation>Zisk tuneru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="241"/>
         <source>Frequency </source>
-        <translation>Frekvence </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="242"/>
         <source>Tuned frequency</source>
-        <translation>Naladěná frekvence</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="259"/>
         <source>Offset </source>
-        <translation>Odchylka </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="260"/>
         <source>Estimated frequency offset</source>
-        <translation>Odhadovaná frekvenční odchylka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="292"/>
         <source>Show NULL spectrum</source>
-        <translation>Zobrazit NULL spektrum</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="299"/>
         <source>Slow update (1.4 sec)</source>
-        <translation>Pomalu (1.4 s)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="305"/>
         <source>Normal update (1 sec)</source>
-        <translation>Normální rychlost (1 s)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="311"/>
         <source>Fast update (600 msec)</source>
-        <translation>Rychle (600 ms)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="317"/>
         <source>Very fast update (400 msec)</source>
-        <translation>Velmi rychle (400 ms)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/DabSignalView.qml" line="324"/>
         <source>Show SNR value</source>
-        <translation>Zobrazit hodnotu SNR</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1018,17 +1012,17 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/settings/DeviceSettings.qml" line="53"/>
         <source>Input device:</source>
-        <translation>Vstupní zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/DeviceSettings.qml" line="87"/>
         <source>Connect</source>
-        <translation>Připojit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/DeviceSettings.qml" line="87"/>
         <source>Disconnect</source>
-        <translation>Odpojit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1036,7 +1030,7 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/epg/EPG.qml" line="34"/>
         <source>Electronic Programme Guide</source>
-        <translation>Elektronický programový průvodce (EPG)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1044,34 +1038,34 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="87"/>
         <source>Today</source>
-        <translation>Dnes</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="121"/>
         <location filename="../qml/epg/EPGView.qml" line="163"/>
         <source>Hide services without schedule</source>
-        <translation>Skrýt stanice bez programu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="131"/>
         <location filename="../qml/epg/EPGView.qml" line="173"/>
         <source>Show only current ensemble</source>
-        <translation>Zobrazit jen současný multiplex</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="215"/>
         <source>Current time: </source>
-        <translation>Aktuální čas: </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="414"/>
         <source>No program available</source>
-        <translation>Program není k dispozici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/epg/EPGView.qml" line="599"/>
         <source>Schedule audio recording</source>
-        <translation>Naplánovat nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1079,17 +1073,17 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/EnsembleConfigDialog.qml" line="43"/>
         <source>Ensemble Information</source>
-        <translation>Informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleConfigDialog.qml" line="80"/>
         <source>Upload to FMLIST</source>
-        <translation>Nahrát na FMLIST</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleConfigDialog.qml" line="88"/>
         <source>Export as CSV</source>
-        <translation>Exportovat do CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1097,17 +1091,17 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/EnsembleConfigDrawer.qml" line="60"/>
         <source>Upload to FMLIST</source>
-        <translation>Nahrát na FMLIST</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleConfigDrawer.qml" line="69"/>
         <source>Export as CSV</source>
-        <translation>Exportovat do CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleConfigDrawer.qml" line="86"/>
         <source>Ensemble Information</source>
-        <translation>Informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1115,331 +1109,331 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="46"/>
         <source>Frequency</source>
-        <translation>Frekvence</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="46"/>
         <source>Tuned frequency</source>
-        <translation>Naladěná frekvence</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="47"/>
         <source>Channel</source>
-        <translation>Kanál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="47"/>
         <source>Tuned DAB channel</source>
-        <translation>Naladěný kanál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="48"/>
         <source>SNR</source>
-        <translation>SNR</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="48"/>
         <source>Estimated SNR</source>
-        <translation>Odhadovaný odstup signálu od šumu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="49"/>
         <source>Frequency offset</source>
-        <translation>Frekvenční odchylka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="49"/>
         <source>Estimated frequency offset</source>
-        <translation>Odhadovaná frekvenční odchylka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="50"/>
         <source>AGC gain</source>
-        <translation>Zisk AGC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="50"/>
         <source>Current AGC gain&lt;br&gt;(only in software mode)</source>
-        <translation>Současný zisk AGC&lt;br&gt;(jen pro SW mód)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="51"/>
         <source>RF level</source>
-        <translation>Úroveň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="51"/>
         <source>Estimated RF level&lt;br&gt;(only on supported devices)</source>
-        <translation>Odhadovaná úroveň signálu&lt;br&gt;(pouze podporovaná zařízení)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="54"/>
         <source>Service</source>
-        <translation>Stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="54"/>
         <source>Current service name</source>
-        <translation>Název současné stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="55"/>
         <source>Service ID</source>
-        <translation>Identifikátor stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="55"/>
         <source>Current Service Identifier</source>
-        <translation>Identifikátor současné stanice (SId)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="56"/>
         <source>SCIdS</source>
-        <translation>SCIdS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="56"/>
         <location filename="../ensembleinfobackend.cpp" line="57"/>
         <source>Service Component Identifier within the Service</source>
-        <translation>Identifikátor komponenty současné stanice (SCIdS)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="57"/>
         <location filename="../ensembleinfobackend.cpp" line="83"/>
         <source>SubChannel</source>
-        <translation>Subkanál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="58"/>
         <source>Start CU</source>
-        <translation>První CU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="58"/>
         <source>First capacity unit used by sub-channel</source>
-        <translation>První kapacitni jednotka (CU) subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="59"/>
         <source>Number of CU</source>
-        <translation>Počet CU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="59"/>
         <source>Number of capacity units used by sub-channel</source>
-        <translation>Počet kapacitních jednotek (CU) obsazených subkanálem</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="62"/>
         <source>Service bitrate</source>
-        <translation>Datový tok stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="62"/>
         <source>Gross bitrate</source>
-        <translation>Celkový datový tok</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="63"/>
         <source>Useful bitrate</source>
-        <translation>Užitečný datový tok</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="63"/>
         <source>Net bitrate</source>
-        <translation>Užitečný datový tok</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="64"/>
         <source>Audio bitrate</source>
-        <translation>Datový tok zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="64"/>
         <source>Net audio bitrate without PAD</source>
-        <translation>Užitečný datový tok zvuku bez PAD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="65"/>
         <source>PAD bitrate</source>
-        <translation>Datový tok PAD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="65"/>
         <source>Net PAD bitrate</source>
-        <translation>Užitečný datový tok PAD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="66"/>
         <source>Audio ratio</source>
-        <translation>Poměr zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="66"/>
         <source>Percentage of audio in useful bitrate</source>
-        <translation>Procento zvuku v užitečném datovém toku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="67"/>
         <source>PAD ratio</source>
-        <translation>Poměr PAD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="67"/>
         <source>Percentage of PAD in useful bitrate</source>
-        <translation>Procento PAD v užitečném datovém toku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="70"/>
         <source>FIB CRC errors</source>
-        <translation>Počet chybných CRC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="70"/>
         <source>Total number of FIB&apos;s with CRC error</source>
-        <translation>Počet FIB s chybným kontrolním součtem CRC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="71"/>
         <source>FIB error rate</source>
-        <translation>Chybovost FIB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="72"/>
         <source>RS uncorrectable</source>
-        <translation>RS neopravitelné</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="72"/>
         <source>Total number of uncorrectable Reed-Solomon code words (DAB+ only)</source>
-        <translation>Počed neopravidelných slov Reed-Solomonova kód (jen DAB+)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="73"/>
         <source>RS BER</source>
-        <translation>RS BER</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="73"/>
         <source>BER before Reed-Solomon decoder (DAB+ only)</source>
-        <translation>Bitová chybovost před Reed-Solomonovým dekodérem (jne DAB+)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="74"/>
         <source>Audio CRC errors</source>
-        <translation>Počet chybných AU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="74"/>
         <source>Total number of audio frames with CRC error (AU for DAB+)</source>
-        <translation>Celkový počet audio rámců s chybným kontrolním součtem CRC (AU v DAB+)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="75"/>
         <source>Audio error rate</source>
-        <translation>Chybovost AU</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="75"/>
         <source>Audio frame (AU for DAB+) error rate</source>
-        <translation>Chybovost audio rámců (AU v DAB+)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="78"/>
         <source>Allocated</source>
-        <translation>Využito</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="78"/>
         <source>Used capacity units</source>
-        <translation>Využité kapacitní jednotky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="79"/>
         <source>Free</source>
-        <translation>Volno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="79"/>
         <source>Unused capacity units</source>
-        <translation>Nevyužité kapacitní jednotky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="80"/>
         <source>Audio</source>
-        <translation>Audio</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="80"/>
         <source>Capacity units for allocated for audio services</source>
-        <translation>Kapacitní jednotky vyžité pro audio služby (stanice)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="81"/>
         <source>Data</source>
-        <translation>Data</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="81"/>
         <source>Capacity units for allocated for data services</source>
-        <translation>Kapacitní jednotky vyžité pro datové služby</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="83"/>
         <source>Sub-channel Identifier</source>
-        <translation>Číslo subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="84"/>
         <source>Capacity units</source>
-        <translation>Kapacitní jednotky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="84"/>
         <source>Number of capacity units allocated to sub-channel</source>
-        <translation>Počet kapacitních jednotek alokovaných subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="85"/>
         <source>Error protection</source>
-        <translation>Chybové zabezpečení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="85"/>
         <source>Sub-channel error protection</source>
-        <translation>Chybové zabezpečení subkanálu a kódový poměr</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="86"/>
         <source>Bitrate</source>
-        <translation>Datový tok</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="86"/>
         <source>Gross sub-channel bitrate</source>
-        <translation>Celkový datový tok subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="88"/>
         <source>Content</source>
-        <translation>Obsah</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="88"/>
         <source>Sub-channel content</source>
-        <translation>Obsah subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="89"/>
         <source>Services</source>
-        <translation>Stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="89"/>
         <location filename="../ensembleinfobackend.cpp" line="90"/>
         <location filename="../ensembleinfobackend.cpp" line="91"/>
         <source>List of services transmitted in sub-channel</source>
-        <translation>Seznam služeb přenášených v subkanálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="185"/>
@@ -1447,12 +1441,12 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
         <location filename="../ensembleinfobackend.cpp" line="187"/>
         <location filename="../ensembleinfobackend.cpp" line="189"/>
         <source>%1 CU (%2%)</source>
-        <translation>%1 CU (%2%)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="258"/>
         <source>No subchannel selected</source>
-        <translation>Není vybraný subkanál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="322"/>
@@ -1460,39 +1454,39 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
         <location filename="../ensembleinfobackend.cpp" line="457"/>
         <location filename="../ensembleinfobackend.cpp" line="461"/>
         <source>%1 kbps</source>
-        <translation>%1 kb/s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="379"/>
         <location filename="../ensembleinfobackend.cpp" line="391"/>
         <location filename="../ensembleinfobackend.cpp" line="482"/>
         <source>N/A</source>
-        <translation>Nedostupný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="556"/>
         <source> sec</source>
-        <translation> s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="591"/>
         <source>Ensemble information export failed</source>
-        <translation>Export informace o multiplexu selhal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="599"/>
         <source>No permission to write ensemble information</source>
-        <translation>Chybí oprávnění k zápisu informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="606"/>
         <source>Ensemble information exported</source>
-        <translation>Informace o multiplexu vyexportována</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensembleinfobackend.cpp" line="611"/>
         <source>Failed to export ensemble information</source>
-        <translation>Export informace o multiplexu selhal</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1500,64 +1494,64 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="211"/>
         <source>Reset statistics</source>
-        <translation>Vynulovat statistiky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="219"/>
         <source>Reset FIB statistics</source>
-        <translation>Vynulovat statistiku FIB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="225"/>
         <source>Reset MSC statistics</source>
-        <translation>Vynulovat statistiku MSC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="316"/>
         <source>Show ensemble configuration</source>
-        <translation>Ukázat konfiguraci multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="330"/>
         <source>Export as CSV</source>
-        <translation>Exportovat do CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="337"/>
         <source>Upload to FMLIST</source>
-        <translation>Nahrát na FMLIST</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="344"/>
         <source>Timeout</source>
-        <translation>Trvání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="345"/>
         <source>When checked recording stops automatically when timeout is reached.</source>
-        <translation>Pokud je aktivní, záznam automaticky skončí po nastaveném čase.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="372"/>
         <location filename="../qml/EnsembleInfoView.qml" line="374"/>
         <source>Stop recording</source>
-        <translation>Ukončit záznam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="372"/>
         <location filename="../qml/EnsembleInfoView.qml" line="375"/>
         <source>Record raw data</source>
-        <translation>Zaznamenat vstupní signál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="397"/>
         <source>Length:</source>
-        <translation>Délka:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/EnsembleInfoView.qml" line="405"/>
         <source>File size:</source>
-        <translation>Velikost souboru:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1565,42 +1559,42 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="65"/>
         <source>%1 CU [%2..%3]</source>
-        <translation>%1 CU [%2..%3]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="86"/>
         <source>%1 (coderate: %2/%3)</source>
-        <translation>%1 (poměr: %2/%3)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="92"/>
         <source>%1 (level: %2)</source>
-        <translation>%1 (úroveň: %2)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="97"/>
         <source>%1 kbps</source>
-        <translation>%1 kb/s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="103"/>
         <source>Audio AAC</source>
-        <translation>Audio AAC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="105"/>
         <source>Audio MP2</source>
-        <translation>Audio MP2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="107"/>
         <source>Data</source>
-        <translation>Data</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ensemblesubchmodel.cpp" line="116"/>
         <source>%1 (+%2)</source>
-        <translation>%1 (+%2)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1608,7 +1602,7 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/Main.qml" line="40"/>
         <source>AbracaDABra</source>
-        <translation>AbracaDABra</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1616,37 +1610,37 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../messageboxbackend.cpp" line="181"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="183"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="185"/>
         <source>Yes</source>
-        <translation>Ano</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="187"/>
         <source>No</source>
-        <translation>Ne</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="189"/>
         <source>Abort</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="191"/>
         <source>Retry</source>
-        <translation>Znovu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../messageboxbackend.cpp" line="193"/>
         <source>Ignore</source>
-        <translation>Ignorovat</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1654,147 +1648,147 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../navigationmodel.cpp" line="34"/>
         <source>List</source>
-        <translation>Seznam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="38"/>
         <source>Service</source>
-        <translation>Stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="38"/>
         <source>Current service</source>
-        <translation>Současná stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="44"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="44"/>
         <source>Ensemble information</source>
-        <translation>Informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="50"/>
         <source>EPG</source>
-        <translation>EPG</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="50"/>
         <source>Electronic Programme Guide</source>
-        <translation>Elektronický programový průvodce (EPG)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="57"/>
         <source>CatSLS</source>
-        <translation>CatSLS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="57"/>
         <source>Categorized slideshow</source>
-        <translation>Kategorizovaná slideshow</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="63"/>
         <source>TII</source>
-        <translation>TII</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="69"/>
         <source>Scanner</source>
-        <translation>Scanner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="69"/>
         <source>DAB Scanner</source>
-        <translation>DAB Scanner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="75"/>
         <source>Signal</source>
-        <translation>Signál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="75"/>
         <source>DAB Signal Overview</source>
-        <translation>DAB signál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="82"/>
         <source>Settings</source>
-        <translation>Nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="88"/>
         <source>Others</source>
-        <translation>Ostatní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="95"/>
         <source>Audio recording schedule</source>
-        <translation>Plán nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="95"/>
         <source>Audio recording schedule...</source>
-        <translation>Plán nahrávání zvuku...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="99"/>
         <source>Start audio recording</source>
-        <translation>Spustit nahrávání zvuku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="105"/>
         <source>Band scan</source>
-        <translation>Hledání stanic</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="105"/>
         <source>Band scan...</source>
-        <translation>Vyhledat stanice...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="107"/>
         <source>Export service list</source>
-        <translation>Exportovat seznam stanic</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="109"/>
         <source>Clear service list</source>
-        <translation>Vymazat seznam stanic</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="115"/>
         <source>Log</source>
-        <translation>Log</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="115"/>
         <source>Application log</source>
-        <translation>Log aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="117"/>
         <source>About</source>
-        <translation>O AbracaDABra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="117"/>
         <source>About AbracaDABra</source>
-        <translation>O AbracaDABra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="123"/>
         <source>Quit</source>
-        <translation>Ukončit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../navigationmodel.cpp" line="123"/>
         <source>Quit AbracaDABra</source>
-        <translation>Ukončit AbracaDABra</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1802,229 +1796,228 @@ Klikněte na &apos;Přidat&apos; pro vytvoření plánu.</translation>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="71"/>
         <source>Visual style</source>
-        <translation>Vzhled aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="80"/>
         <source>System</source>
-        <translation>Systém</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="80"/>
         <source>Light</source>
-        <translation>Světlý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="80"/>
         <source>Dark</source>
-        <translation>Tmavý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="105"/>
         <source>User interface</source>
-        <translation>Uživatelské rozhraní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="115"/>
         <source>Fullscreen mode</source>
-        <translation>Zobrazit na celou obrazovku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="128"/>
         <source>Keep screen on</source>
-        <translation>Nezhasínat obrazovku</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="141"/>
         <source>Compact view (smaller controls, etc.)</source>
-        <translation>Kompaktní zobrazení (menší ovládací prvky, atd.)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="154"/>
         <source>Dynamic Label Plus (DL+)</source>
-        <translation>Dynamic Label Plus (DL+)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="166"/>
         <source>Show tray icon</source>
-        <translation>Zobrazit ikonu v systémové části panelu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="178"/>
         <source>Show system time when DAB time is not available</source>
-        <translation>Zobrazit systémový čas, pokud DAB čas není k dispozici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="190"/>
         <source>Show ensemble country flag (internet connection required)</source>
-        <translation>Zobrazit vlajku státu multiplexu (vyžaduje připojení k internetu)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="202"/>
         <source>Show service country flag (internet connection required)</source>
-        <translation>Zobrazit vlajku státu stanice (vyžaduje připojení k internetu)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="219"/>
         <source>Slideshow background:</source>
-        <translation>Pozadí slideshow:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="241"/>
         <source>Language:</source>
-        <translation>Jazyk:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="263"/>
         <source>Restart</source>
-        <translation>Restartovat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="271"/>
         <source>Language change will take effect after application restart.</source>
-        <translation>Změna jazyka se projeví po restartu aplikace.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="287"/>
         <source>Data storage</source>
-        <translation>Ukládání dat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="304"/>
         <source>Folder:</source>
-        <translation>Složka:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="315"/>
         <source>Data storage folder...</source>
-        <translation>Adresář pro ukládání dat...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="325"/>
         <source>Application uses this folder to store all data like audio recording, IQ recording and logs, etc.</source>
-        <translation>Aplikace používá tento adresář pro ukládání všech soiuborů jako je záznam zvuku, záznam I, logy, atd.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="332"/>
         <source>Backup settings</source>
-        <translation>Zálohovat nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="336"/>
         <source>Restore settings...</source>
-        <translation>Obnovit nastavení...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="347"/>
         <source>Backup includes application settings, service list and audio recording schedule. Backup file is stored in data storage folder.</source>
-        <translation>Záloha zahrnuje nastavení aplikace, seznam stanic a plán nahrávání zvuku. Soubor se zálohou se uloží do adresáře pro ukládání dat.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="361"/>
         <source>Network proxy configuration</source>
-        <translation>Nastavení proxy serveru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="373"/>
         <source>Proxy type:</source>
-        <translation>Konfigurace:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="389"/>
         <source>Apply</source>
-        <translation>Použít</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="398"/>
         <source>Server:</source>
-        <translation>Server:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="414"/>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="435"/>
         <source>Username:</source>
-        <translation>Jméno:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="451"/>
         <source>Password:</source>
-        <translation>Heslo:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="477"/>
         <source>FMLIST</source>
-        <translation>FMLIST</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="488"/>
         <source>Upload ensemble information</source>
-        <translation>Nahrávat na server informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="503"/>
         <source>Ensemble information is a small CSV file with list of services in the ensemble,
 it is anonymous and contains no personal data.</source>
-        <translation>Informace o multiplexu je malý soubor CSV se seznamem stanic v multiplexu,
-je anonymní a neobsahuje žádná osobní data.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="510"/>
         <source>Application automatically uploads ensemble information to &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt;.</source>
-        <translation>Aplikace automaticky nahraje informace o multiplexu na &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt;.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="511"/>
         <source>Upload of ensemble information to &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt; is currently disabled.</source>
-        <translation>Nahrávání informace o multiplexu na &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt; není povoleno.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="519"/>
         <source>Thank you for supporting the community!</source>
-        <translation>Děkujeme, že podporujete komunitu!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="520"/>
         <source>Please consider enabling this option to help the community.</source>
-        <translation>Zvažte prosím povolení tété volby, pomůžete tím komunitě.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="534"/>
         <source>Restore application windows on start</source>
-        <translation>Po startu obnovit naposledy otevřená okna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="547"/>
         <source>Check for application update on start</source>
-        <translation>Zkontrolovat aktualizace při startu aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="560"/>
         <source>Include XML header in raw data recording</source>
-        <translation>Vkládat XML záhlaví na začátek souboru při záznamu vstupního signálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="572"/>
         <source>DAB cable channels (16A - 17D)</source>
-        <translation>DAB kanály kabelové TV (16A - 17D)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="608"/>
         <source>Select SLS Background Color</source>
-        <translation>Vybrat pozadí SLS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="622"/>
         <source>Data storage folder</source>
-        <translation>Složka pro ukládání dat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/OtherSettings.qml" line="646"/>
         <source>JSON files</source>
-        <translation>Soubory JSON</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2032,2090 +2025,2089 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../main.cpp" line="96"/>
         <source>Abraca DAB radio: DAB/DAB+ Software Defined Radio (SDR)</source>
-        <translation>Abraca DAB radio: DAB/DAB+ Software Defined Radio (SDR)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="102"/>
         <source>Optional INI file. If not specified AbracaDABra.ini in system directory will be used.</source>
-        <translation>Volitelný INI soubor. Pokud není vybraný, AbracaDABra.použije výchozí ini soubor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="107"/>
         <source>Optional service list JSON file. If not specified ServiceList.json in system directory will be used.</source>
-        <translation>Volitelný JSON soubor se seznamem stanic. Pokud není vybraný, použije se výchozí ServiceList.json.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dlplusmodel.cpp" line="208"/>
-        <location filename="../dlplusmodel.cpp" line="214"/>
-        <source>Open link</source>
-        <translation>Otevřít odkaz</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="286"/>
-        <source>Title</source>
-        <translation>Název</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="289"/>
-        <source>Album</source>
-        <translation>Album</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="292"/>
-        <source>Track Number</source>
-        <oldsource>Track Number:</oldsource>
-        <translation>Číslo skladby</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="295"/>
-        <source>Artist</source>
-        <translation>Umělec</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="298"/>
-        <source>Composition</source>
-        <translation>Skladbe</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="301"/>
-        <source>Movement</source>
-        <translation>Věta</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="304"/>
-        <source>Conductor</source>
-        <translation>Dirigent</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="307"/>
-        <source>Composer</source>
-        <translation>Skladatel</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="310"/>
-        <source>Band</source>
-        <translation>Skupina</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="313"/>
-        <source>Comment</source>
-        <translation>Komentář</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="316"/>
-        <source>Genre</source>
-        <translation>Žánr</translation>
+        <location filename="../dabtables.cpp" line="164"/>
+        <source>No programme type</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="166"/>
         <location filename="../dabtables.cpp" line="2201"/>
         <location filename="../dlplusmodel.cpp" line="319"/>
         <source>News</source>
-        <translation>Zprávy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dlplusmodel.cpp" line="322"/>
-        <source>News (local)</source>
-        <translation>Zprávy (místní)</translation>
+        <location filename="../dabtables.cpp" line="168"/>
+        <source>Current Affairs</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dlplusmodel.cpp" line="325"/>
-        <source>Stock Market</source>
-        <translation>Burza</translation>
+        <location filename="../dabtables.cpp" line="170"/>
+        <source>Information</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="172"/>
         <location filename="../dlplusmodel.cpp" line="328"/>
         <source>Sport</source>
-        <translation>Sport</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="331"/>
-        <source>Lottery</source>
-        <translation>Loterie</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="334"/>
-        <source>Horoscope</source>
-        <translation>Horoskop</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="337"/>
-        <source>Daily Diversion</source>
-        <translation>Pro tento den</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="340"/>
-        <source>Health</source>
-        <translation>Zdraví</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="2205"/>
-        <location filename="../dlplusmodel.cpp" line="343"/>
-        <source>Event</source>
-        <translation>Událost</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="346"/>
-        <source>Scene</source>
-        <translation>Scéna</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="349"/>
-        <source>Cinema</source>
-        <translation>Kino</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="352"/>
-        <source>TV</source>
-        <translation>TV</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="2203"/>
-        <location filename="../dlplusmodel.cpp" line="358"/>
-        <source>Weather</source>
-        <translation>Počasí</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="361"/>
-        <source>Traffic</source>
-        <translation>Doprava</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="2193"/>
-        <location filename="../dlplusmodel.cpp" line="364"/>
-        <source>Alarm</source>
-        <translation>Alarm</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="367"/>
-        <source>Advertisment</source>
-        <translation>Reklama</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="370"/>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="373"/>
-        <source>Other</source>
-        <translation>Ostatní</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="376"/>
-        <source>Station (short)</source>
-        <translation>Stanice (krátce)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="379"/>
-        <source>Station</source>
-        <translation>Stanice</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="382"/>
-        <source>Now</source>
-        <translation>Právě teď</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="385"/>
-        <source>Next</source>
-        <translation>Další</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="388"/>
-        <source>Programme Part</source>
-        <translation>Programová část</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="391"/>
-        <source>Host</source>
-        <translation>Moderátor</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="394"/>
-        <source>Editorial</source>
-        <translation>Redakce</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="400"/>
-        <source>Homepage</source>
-        <translation>Web</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="406"/>
-        <source>Phone (Hotline)</source>
-        <translation>Telefon (hotline)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="409"/>
-        <source>Phone (Studio)</source>
-        <translation>Telefon (studio)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="412"/>
-        <source>Phone (Other)</source>
-        <translation>Telefon (jiný)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="415"/>
-        <source>SMS (Studio)</source>
-        <translation>SMS (studio)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="418"/>
-        <source>SMS (Other)</source>
-        <translation>SMS (jiný)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="421"/>
-        <source>E-mail (Hotline)</source>
-        <translation>Email (hotline)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="424"/>
-        <source>E-mail (Studio)</source>
-        <translation>Email (studio)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="427"/>
-        <source>E-mail (Other)</source>
-        <translation>Email (jiný)</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="430"/>
-        <source>MMS</source>
-        <translation>MMS</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="433"/>
-        <source>Chat Message</source>
-        <translation>Z chatu</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="436"/>
-        <source>Chat</source>
-        <translation>Chat</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="439"/>
-        <source>Vote Question</source>
-        <translation>Hlasovací otázka</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="442"/>
-        <source>Vote Here</source>
-        <translation>Hlasujte</translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="447"/>
-        <source>Private 1</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="450"/>
-        <source>Private 2</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../dlplusmodel.cpp" line="453"/>
-        <source>Private 3</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="228"/>
-        <source>None</source>
-        <translation>Žádný</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="168"/>
-        <source>Current Affairs</source>
-        <translation>Aktuální události</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="164"/>
-        <source>No programme type</source>
-        <translation>Žádný typ programu</translation>
-    </message>
-    <message>
-        <location filename="../dabtables.cpp" line="170"/>
-        <source>Information</source>
-        <translation>Informace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="174"/>
         <source>Education</source>
-        <translation>Vzdělávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="176"/>
         <source>Drama</source>
-        <translation>Drama</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="178"/>
         <source>Culture</source>
-        <translation>Kultura</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="180"/>
         <source>Science</source>
-        <translation>Věda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="182"/>
         <source>Varied</source>
-        <translation>Různé</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="184"/>
         <source>Pop Music</source>
-        <translation>Pop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="186"/>
         <source>Rock Music</source>
-        <translation>Rock</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="188"/>
         <source>Easy Listening Music</source>
-        <translation>Easy Listening</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="190"/>
         <source>Light Classical</source>
-        <translation>Lehká klasika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="192"/>
         <source>Serious Classical</source>
-        <translation>Vážná hudba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="194"/>
         <source>Other Music</source>
-        <translation>Ostatní hudba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="196"/>
         <source>Weather/meteorology</source>
-        <translation>Počasí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="198"/>
         <source>Finance/Business</source>
-        <translation>Finance</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="200"/>
         <source>Children&apos;s programmes</source>
-        <translation>Dětský program</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="202"/>
         <source>Social Affairs</source>
-        <translation>Společenské události</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="204"/>
         <source>Religion</source>
-        <translation>Náboženství</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="206"/>
         <source>Phone In</source>
-        <translation>Zavolej</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="208"/>
         <source>Travel</source>
-        <translation>Cestování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="210"/>
         <source>Leisure</source>
-        <translation>Odpočinek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="212"/>
         <source>Jazz Music</source>
-        <translation>Jazz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="214"/>
         <source>Country Music</source>
-        <translation>Country</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="216"/>
         <source>National Music</source>
-        <translation>Lidovky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="218"/>
         <source>Oldies Music</source>
-        <translation>Oldies</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="220"/>
         <source>Folk Music</source>
-        <translation>Folk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="222"/>
         <source>Documentary</source>
-        <translation>Dokument</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dabtables.cpp" line="228"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="310"/>
         <source>Unknown/NA</source>
-        <translation>Neznámý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="312"/>
         <source>Albanian</source>
-        <translation>Albánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="314"/>
         <source>Breton</source>
-        <translation>bretonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="316"/>
         <source>Catalan</source>
-        <translation>katalánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="318"/>
         <source>Croatian</source>
-        <translation>chorvatština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="320"/>
         <source>Welsh</source>
-        <translation>velština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="322"/>
         <source>Czech</source>
-        <translation>Čeština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="324"/>
         <source>Danish</source>
-        <translation>dánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="326"/>
         <source>German</source>
-        <translation>Němčina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="328"/>
         <source>English</source>
-        <translation>angličtina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="330"/>
         <source>Spanish</source>
-        <translation>španělština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="332"/>
         <source>Esperanto</source>
-        <translation>esperanto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="334"/>
         <source>Estonian</source>
-        <translation>estonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="336"/>
         <source>Basque</source>
-        <translation>baskitština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="338"/>
         <source>Faroese</source>
-        <translation>faerština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="340"/>
         <source>French</source>
-        <translation>francouština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="342"/>
         <source>Frisian</source>
-        <translation>fríština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="344"/>
         <source>Irish</source>
-        <translation>irština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="346"/>
         <source>Gaelic</source>
-        <translation>gaelština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="348"/>
         <source>Galician</source>
-        <translation>galicijština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="350"/>
         <source>Icelandic</source>
-        <translation>islanština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="352"/>
         <source>Italian</source>
-        <translation>italština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="354"/>
         <source>Lappish</source>
-        <translation>laponština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="356"/>
         <source>Latin</source>
-        <translation>latina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="358"/>
         <source>Latvian</source>
-        <translation>lotyština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="360"/>
         <source>Luxembourgian</source>
-        <translation>lucemburština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="362"/>
         <source>Lithuanian</source>
-        <translation>litevština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="364"/>
         <source>Hungarian</source>
-        <translation>maďarština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="366"/>
         <source>Maltese</source>
-        <translation>maltština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="368"/>
         <source>Dutch</source>
-        <translation>holandština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="370"/>
         <source>Norwegian</source>
-        <translation>norština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="372"/>
         <source>Occitan</source>
-        <translation>okcitánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="374"/>
         <source>Polish</source>
-        <translation>Polština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="376"/>
         <source>Portuguese</source>
-        <translation>portugalština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="378"/>
         <source>Romanian</source>
-        <translation>rumunština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="380"/>
         <source>Romansh</source>
-        <translation>rétorománština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="382"/>
         <source>Serbian</source>
-        <translation>srbština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="384"/>
         <source>Slovak</source>
-        <translation>sloveština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="386"/>
         <source>Slovene</source>
-        <translation>slovinština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="388"/>
         <source>Finnish</source>
-        <translation>finština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="390"/>
         <source>Swedish</source>
-        <translation>švédština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="392"/>
         <source>Turkish</source>
-        <translation>turečtina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="394"/>
         <source>Flemish</source>
-        <translation>vlámština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="396"/>
         <source>Walloon</source>
-        <translation>valonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="398"/>
         <source>Background sound/clean feed</source>
-        <translation>Zvuky na pozadí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="400"/>
         <source>Zulu</source>
-        <translation>zuluština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="402"/>
         <source>Vietnamese</source>
-        <translation>vietnamština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="404"/>
         <source>Uzbek</source>
-        <translation>uzbečtina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="406"/>
         <source>Urdu</source>
-        <translation>urdština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="408"/>
         <source>Ukranian</source>
-        <translation>ukrajinština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="410"/>
         <source>Thai</source>
-        <translation>thajština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="412"/>
         <source>Telugu</source>
-        <translation>telugština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="414"/>
         <source>Tatar</source>
-        <translation>tatarština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="416"/>
         <source>Tamil</source>
-        <translation>tamilština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="418"/>
         <source>Tadzhik</source>
-        <translation>tádžičtina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="420"/>
         <source>Swahili</source>
-        <translation>svahilština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="422"/>
         <source>Sranan Tongo</source>
-        <translation>surinamština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="424"/>
         <source>Somali</source>
-        <translation>somálština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="426"/>
         <source>Sinhalese</source>
-        <translation>sinhálština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="428"/>
         <source>Shona</source>
-        <translation>shonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="430"/>
         <source>Serbo-Croat</source>
-        <translation>srbochorvatština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="432"/>
         <source>Rusyn</source>
-        <translation>rusínština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="434"/>
         <source>Russian</source>
-        <translation>ruština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="436"/>
         <source>Quechua</source>
-        <translation>kečuánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="438"/>
         <source>Pushtu</source>
-        <translation>paštština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="440"/>
         <source>Punjabi</source>
-        <translation>paňdžábština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="442"/>
         <source>Persian</source>
-        <translation>perština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="444"/>
         <source>Papiamento</source>
-        <translation>papiamento</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="446"/>
         <source>Oriya</source>
-        <translation>urijština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="448"/>
         <source>Nepali</source>
-        <translation>nepálština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="450"/>
         <source>Ndebele</source>
-        <translation>ndebele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="452"/>
         <source>Marathi</source>
-        <translation>maráthština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="454"/>
         <source>Moldavian</source>
-        <translation>moldavština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="456"/>
         <source>Malaysian</source>
-        <translation>malajština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="458"/>
         <source>Malagasay</source>
-        <translation>malgaština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="460"/>
         <source>Macedonian</source>
-        <translation>makedonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="462"/>
         <source>Laotian</source>
-        <translation>laoština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="464"/>
         <source>Korean</source>
-        <translation>korejština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="466"/>
         <source>Khmer</source>
-        <translation>khmerština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="468"/>
         <source>Kazakh</source>
-        <translation>kazaština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="470"/>
         <source>Kannada</source>
-        <translation>kannadština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="472"/>
         <source>Japanese</source>
-        <translation>japonština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="474"/>
         <source>Indonesian</source>
-        <translation>indonéština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="476"/>
         <source>Hindi</source>
-        <translation>hindština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="478"/>
         <source>Hebrew</source>
-        <translation>hebrejština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="480"/>
         <source>Hausa</source>
-        <translation>hauština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="482"/>
         <source>Gurani</source>
-        <translation>guaranština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="484"/>
         <source>Gujurati</source>
-        <translation>gudžarátština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="486"/>
         <source>Greek</source>
-        <translation>řečtina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="488"/>
         <source>Georgian</source>
-        <translation>gruzínština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="490"/>
         <source>Fulani</source>
-        <translation>fulbština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="492"/>
         <source>Dari</source>
-        <translation>darí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="494"/>
         <source>Chuvash</source>
-        <translation>čuvaština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="496"/>
         <source>Chinese</source>
-        <translation>čínština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="498"/>
         <source>Burmese</source>
-        <translation>barmština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="500"/>
         <source>Bulgarian</source>
-        <translation>bulharština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="502"/>
         <source>Bengali</source>
-        <translation>bengálština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="504"/>
         <source>Belorussian</source>
-        <translation>běloruština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="506"/>
         <source>Bambora</source>
-        <translation>bambarština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="508"/>
         <source>Azerbaijani</source>
-        <translation>ázerbájdžánština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="510"/>
         <source>Assamese</source>
-        <translation>ásámština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="512"/>
         <source>Armenian</source>
-        <translation>arménština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="514"/>
         <source>Arabic</source>
-        <translation>arabština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="516"/>
         <source>Amharic</source>
-        <translation>amharština</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="518"/>
         <location filename="../dabtables.cpp" line="1221"/>
         <location filename="../dabtables.cpp" line="2217"/>
         <source>Unknown</source>
-        <translation>neznámý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="767"/>
         <source>USA/Puerto Rico</source>
-        <translation>USA/Portoriko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="772"/>
         <source>Canada</source>
-        <translation>Kanada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="774"/>
         <source>Greenland</source>
-        <translation>Grónsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="776"/>
         <source>Anguilla</source>
-        <translation>Anguilla</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="778"/>
         <source>Antigua and Barbuda</source>
-        <translation>Antigua a Barbuda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="780"/>
         <source>Ecuador</source>
-        <translation>Ekvádor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="782"/>
         <source>Falkland Islands</source>
-        <translation>Falklanské ostrovy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="784"/>
         <source>Barbados</source>
-        <translation>Barbados</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="786"/>
         <source>Belize</source>
-        <translation>Belize</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="788"/>
         <source>Cayman Islands</source>
-        <translation>Kajmanské ostrovy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="790"/>
         <source>Costa Rica</source>
-        <translation>Kostarika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="792"/>
         <source>Cuba</source>
-        <translation>Kuba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="794"/>
         <source>Argentina</source>
-        <translation>Argentina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="796"/>
         <location filename="../dabtables.cpp" line="869"/>
         <source>Brazil</source>
-        <translation>Brazílie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="798"/>
         <source>Bermuda</source>
-        <translation>Bermudy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="800"/>
         <source>Netherlands Antilles</source>
-        <translation>Nizozemské Antily</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="802"/>
         <source>Guadeloupe</source>
-        <translation>Guadeloupe</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="804"/>
         <source>Bahamas</source>
-        <translation>Bahamy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="806"/>
         <source>Bolivia</source>
-        <translation>Bolívie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="808"/>
         <source>Colombia</source>
-        <translation>Kolumbie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="810"/>
         <source>Jamaica</source>
-        <translation>Jamajka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="812"/>
         <source>Martinique</source>
-        <translation>Martinik</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="814"/>
         <source>Paraguay</source>
-        <translation>Paraguay</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="816"/>
         <source>Nicaragua</source>
-        <translation>Nikaragua</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="818"/>
         <source>Panama</source>
-        <translation>Panama</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="820"/>
         <source>Dominica</source>
-        <translation>Dominika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="822"/>
         <source>Dominican Republic</source>
-        <translation>Dominikánská republika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="824"/>
         <source>Chile</source>
-        <translation>Chile</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="826"/>
         <source>Grenada</source>
-        <translation>Grenada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="828"/>
         <source>Turks and Caicos islands</source>
-        <translation>Turks a Caicos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="830"/>
         <source>Guyana</source>
-        <translation>Guyana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="832"/>
         <source>Guatemala</source>
-        <translation>Guatemala</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="834"/>
         <source>Honduras</source>
-        <translation>Honduras</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="836"/>
         <source>Aruba</source>
-        <translation>Aruba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="838"/>
         <source>Montserrat</source>
-        <translation>Montserrat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="840"/>
         <source>Trinidad and Tobago</source>
-        <translation>Trinidad a Tobago</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="842"/>
         <source>Peru</source>
-        <translation>Peru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="844"/>
         <source>Surinam</source>
-        <translation>Surinam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="846"/>
         <source>Uruguay</source>
-        <translation>Uruguay</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="848"/>
         <source>St. Kitts</source>
-        <translation>Svatý Kryštof</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="850"/>
         <source>St. Lucia</source>
-        <translation>Svatá Lucie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="852"/>
         <source>El Salvador</source>
-        <translation>Salvador</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="854"/>
         <source>Haiti</source>
-        <translation>Haiti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="856"/>
         <source>Venezuela</source>
-        <translation>Venezuela</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="858"/>
         <location filename="../dabtables.cpp" line="864"/>
         <source>Mexico</source>
-        <translation>Mexiko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="860"/>
         <source>St. Vincent</source>
-        <translation>Svatý Vincenc</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="871"/>
         <source>St. Pierre and Miquelon</source>
-        <translation>St. Pierre a Miquelon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="874"/>
         <source>Cameroon</source>
-        <translation>Kamerun</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="876"/>
         <source>Central African Republic</source>
-        <translation>Středoafrická republika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="878"/>
         <source>Djibouti</source>
-        <translation>Džibutsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="880"/>
         <source>Madagascar</source>
-        <translation>Madagaskar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="882"/>
         <source>Mali</source>
-        <translation>Mali</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="884"/>
         <source>Angola</source>
-        <translation>Angola</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="886"/>
         <source>Equatorial Guinea</source>
-        <translation>Rovníková Guinea</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="888"/>
         <source>Gabon</source>
-        <translation>Gabon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="890"/>
         <source>Republic of Guinea</source>
-        <translation>Guinea</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="892"/>
         <source>South Africa</source>
-        <translation>Jihoafrická republika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="894"/>
         <source>Burkina Faso</source>
-        <translation>Burkina Faso</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="896"/>
         <source>Congo</source>
-        <translation>Kongo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="898"/>
         <source>Togo</source>
-        <translation>Togo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="900"/>
         <source>Benin</source>
-        <translation>Benin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="902"/>
         <source>Malawi</source>
-        <translation>Malawi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="904"/>
         <source>Namibia</source>
-        <translation>Namibie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="906"/>
         <source>Liberia</source>
-        <translation>Libérie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="908"/>
         <source>Ghana</source>
-        <translation>Ghana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="910"/>
         <source>Mauritania</source>
-        <translation>Mauritánie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="912"/>
         <source>Sao Tome and Principe</source>
-        <translation>Svatý Tomáš a Princův ostrov</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="914"/>
         <source>Cape Verde</source>
-        <translation>Kapverdy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="916"/>
         <source>Senegal</source>
-        <translation>Senegal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="918"/>
         <source>Gambia</source>
-        <translation>Gambie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="920"/>
         <source>Burundi</source>
-        <translation>Burundi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="922"/>
         <source>Ascension Island</source>
-        <translation>Ascension</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="924"/>
         <source>Botswana</source>
-        <translation>Botswana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="926"/>
         <source>Comoros</source>
-        <translation>Komory</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="928"/>
         <source>Tanzania</source>
-        <translation>Tanzánie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="930"/>
         <source>Ethiopia</source>
-        <translation>Etiopie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="932"/>
         <source>Nigeria</source>
-        <translation>Nigerie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="934"/>
         <source>Sierra Leone</source>
-        <translation>Sierra Leone</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="936"/>
         <source>Zimbabwe</source>
-        <translation>Zimbabwe</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="938"/>
         <source>Mozambique</source>
-        <translation>Mosambik</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="940"/>
         <source>Uganda</source>
-        <translation>Uganda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="942"/>
         <source>Swaziland</source>
-        <translation>Svazijsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="944"/>
         <source>Kenya</source>
-        <translation>Keňa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="946"/>
         <source>Somalia</source>
-        <translation>Somálsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="948"/>
         <source>Niger</source>
-        <translation>Niger</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="950"/>
         <source>Chad</source>
-        <translation>Čad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="952"/>
         <source>Guinea-Bissau</source>
-        <translation>Guinea-Bissau</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="954"/>
         <source>Zaire</source>
-        <translation>Zair</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="956"/>
         <source>Cote d&apos;Ivoire</source>
-        <translation>Pobřeží slonoviny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="958"/>
         <source>Zanzibar</source>
-        <translation>Zanzibar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="960"/>
         <source>Zambia</source>
-        <translation>Zambie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="962"/>
         <source>Western Sahara</source>
-        <translation>Západní Sahara</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="964"/>
         <source>Rwanda</source>
-        <translation>Rwanda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="966"/>
         <source>Lesotho</source>
-        <translation>Lesotho</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="968"/>
         <source>Seychelles</source>
-        <translation>Seychely</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="970"/>
         <source>Mauritius</source>
-        <translation>Mauricius</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="972"/>
         <source>Sudan</source>
-        <translation>Súdán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="975"/>
         <location filename="../dabtables.cpp" line="999"/>
         <source>Germany</source>
-        <translation>Německo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="977"/>
         <source>Algeria</source>
-        <translation>Alžírsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="979"/>
         <source>Andorra</source>
-        <translation>Andora</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="981"/>
         <source>Israel</source>
-        <translation>Izrael</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="983"/>
         <source>Italy</source>
-        <translation>Itálie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="985"/>
         <source>Belgium</source>
-        <translation>Belgie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="987"/>
         <source>Russian Federation</source>
-        <translation>Rusko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="989"/>
         <source>Palestine</source>
-        <translation>Palestina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="991"/>
         <source>Albania</source>
-        <translation>Albánie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="993"/>
         <source>Austria</source>
-        <translation>Rakousko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="995"/>
         <source>Hungary</source>
-        <translation>Maďarsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="997"/>
         <source>Malta</source>
-        <translation>Malta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1001"/>
         <source>Egypt</source>
-        <translation>Egypt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1003"/>
         <source>Greece</source>
-        <translation>Řecko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1005"/>
         <source>Cyprus</source>
-        <translation>Kypr</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1007"/>
         <source>San Marino</source>
-        <translation>San Marino</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1009"/>
         <source>Switzerland</source>
-        <translation>Švýcarsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1011"/>
         <source>Jordan</source>
-        <translation>Jordánsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1013"/>
         <source>Finland</source>
-        <translation>Finsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1015"/>
         <source>Luxembourg</source>
-        <translation>Lucembursko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1017"/>
         <source>Bulgaria</source>
-        <translation>Bulharsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1019"/>
         <source>Denmark</source>
-        <translation>Dánsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1022"/>
         <source>Gibraltar</source>
-        <translation>Gibraltar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1024"/>
         <source>Iraq</source>
-        <translation>Irák</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1026"/>
         <source>United Kingdom</source>
-        <translation>Spojené království</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1028"/>
         <source>Libya</source>
-        <translation>Libye</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1030"/>
         <source>Romania</source>
-        <translation>Rumunsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1032"/>
         <source>France</source>
-        <translation>Francie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1034"/>
         <source>Morocco</source>
-        <translation>Maroko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1036"/>
         <source>Czech Republic</source>
-        <translation>Česká republika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1038"/>
         <source>Poland</source>
-        <translation>Polsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1040"/>
         <source>Vatican</source>
-        <translation>Vatikán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1042"/>
         <source>Slovakia</source>
-        <translation>Slovensko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1044"/>
         <source>Syria</source>
-        <translation>Sýrie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1046"/>
         <source>Tunisia</source>
-        <translation>Tunisko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1048"/>
         <source>Liechtenstein</source>
-        <translation>Lichtenštejnsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1050"/>
         <source>Iceland</source>
-        <translation>Island</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1052"/>
         <source>Monaco</source>
-        <translation>Monako</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1054"/>
         <source>Lithuania</source>
-        <translation>Litva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1056"/>
         <source>Serbia</source>
-        <translation>Srbsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1058"/>
         <source>Spain</source>
-        <translation>Španělsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1061"/>
         <source>Norway</source>
-        <translation>Norsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1063"/>
         <source>Montenegro</source>
-        <translation>Černá hora</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1065"/>
         <source>Ireland</source>
-        <translation>Irsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1067"/>
         <source>Turkey</source>
-        <translation>Turecko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1069"/>
         <source>Tajikistan</source>
-        <translation>Tádžikistán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1071"/>
         <source>Netherlands</source>
-        <translation>Nizozemsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1073"/>
         <source>Latvia</source>
-        <translation>Lotyšsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1075"/>
         <source>Lebanon</source>
-        <translation>Libanon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1077"/>
         <source>Azerbaijan</source>
-        <translation>Ázerbájdžán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1079"/>
         <source>Croatia</source>
-        <translation>Chorvatsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1081"/>
         <source>Kazakhstan</source>
-        <translation>Kazachstán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1083"/>
         <source>Sweden</source>
-        <translation>Švédsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1085"/>
         <source>Belarus</source>
-        <translation>Bělorusko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1087"/>
         <source>Moldova</source>
-        <translation>Moldavsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1089"/>
         <source>Estonia</source>
-        <translation>Estonsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1091"/>
         <source>Macedonia</source>
-        <translation>Makedonie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1093"/>
         <source>Ukraine</source>
-        <translation>Ukrajina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1095"/>
         <source>Kosovo</source>
-        <translation>Kosovo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1099"/>
         <source>Portugal</source>
-        <translation>Portugalsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1101"/>
         <source>Slovenia</source>
-        <translation>Slovinsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1103"/>
         <source>Armenia</source>
-        <translation>Arménie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1105"/>
         <source>Uzbekistan</source>
-        <translation>Uzbekistán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1107"/>
         <source>Georgia</source>
-        <translation>Gruzie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1109"/>
         <source>Turkmenistan</source>
-        <translation>Turkmenistán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1111"/>
         <source>Bosnia Herzegovina</source>
-        <translation>Bosna a Hercegovina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1113"/>
         <source>Kyrgyzstan</source>
-        <translation>Kyrgyzstán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1116"/>
         <source>Australia: Capital Cities (commercial and community broadcasters)</source>
-        <translation>Austrálie: Hlavní města (komerční a místní vysílání)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1118"/>
         <source>Australia: Regional New South Wales and ACT</source>
-        <translation>Austrálie: Region Nový Jižní Wales a ACT</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1120"/>
         <source>Australia: Capital Cities (national broadcasters)</source>
-        <translation>Australia: Hlavní města (národní vysílání)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1122"/>
         <source>Australia: Regional Queensland</source>
-        <translation>Austrálie: Region Queensland</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1124"/>
         <source>Australia: Regional South Australia and Northern Territory</source>
-        <translation>Austrálie: Region Jižní Austrálie a Severní teritorium</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1126"/>
         <source>Australia: Regional Western Australia</source>
-        <translation>Austrálie: Region Západní Austrálie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1128"/>
         <source>Australia: Regional Victoria and Tasmania</source>
-        <translation>Austálie: Region Victoria a Tasmania</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1130"/>
         <source>Australia: Regional (future)</source>
-        <translation>Austrálie: Region (budoucí)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1132"/>
         <source>Saudi Arabia</source>
-        <translation>Saudská Arábie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1134"/>
         <source>Afghanistan</source>
-        <translation>Afgánistán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1136"/>
         <source>Myanmar (Burma)</source>
-        <translation>Myanmar (Burma)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1138"/>
         <source>China</source>
-        <translation>Čína</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1140"/>
         <source>Korea (North)</source>
-        <translation>Severní Korea</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1142"/>
         <source>Bahrain</source>
-        <translation>Bahrain</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1144"/>
         <source>Malaysia</source>
-        <translation>Malajsie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1146"/>
         <source>Kiribati</source>
-        <translation>Kiribati</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1148"/>
         <source>Bhutan</source>
-        <translation>Bhútán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1150"/>
         <source>Bangladesh</source>
-        <translation>Bangladéš</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1152"/>
         <source>Pakistan</source>
-        <translation>Pákistán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1154"/>
         <source>Fiji</source>
-        <translation>Fidži</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1156"/>
         <source>Oman</source>
-        <translation>Omán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1158"/>
         <source>Nauru</source>
-        <translation>Nauru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1160"/>
         <source>Iran</source>
-        <translation>Írán</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1162"/>
         <source>New Zealand</source>
-        <translation>Nový Zéland</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1164"/>
         <source>Solomon Islands</source>
-        <translation>Šalomounovy ostrovy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1166"/>
         <source>Brunei Darussalam</source>
-        <translation>Brunej Darussalam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1168"/>
         <source>Sri Lanka</source>
-        <translation>Srí Lanka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1170"/>
         <source>Taiwan</source>
-        <translation>Taiwan</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1172"/>
         <source>Korea (South)</source>
-        <translation>Jižní Korea</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1174"/>
         <source>Hong Kong</source>
-        <translation>Hongkong</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1176"/>
         <source>Kuwait</source>
-        <translation>Kuvajt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1178"/>
         <source>Qatar</source>
-        <translation>Katar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1180"/>
         <source>Cambodia</source>
-        <translation>Kambodža</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1182"/>
         <source>Western Samoa</source>
-        <translation>Samoa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1184"/>
         <source>India</source>
-        <translation>Indie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1186"/>
         <source>Macau</source>
-        <translation>Macau</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1188"/>
         <source>Vietnam</source>
-        <translation>Vietnam</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1190"/>
         <source>Philippines</source>
-        <translation>Filipíny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1192"/>
         <source>Japan</source>
-        <translation>Japonsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1194"/>
         <source>Singapore</source>
-        <translation>Singapur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1196"/>
         <source>Maldives</source>
-        <translation>Maledivy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1198"/>
         <source>Indonesia</source>
-        <translation>Indonésie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1200"/>
         <source>United Arab Emirates</source>
-        <translation>Spojené arabské emiráty</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1202"/>
         <source>Nepal</source>
-        <translation>Nelál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1204"/>
         <source>Vanuatu</source>
-        <translation>Vanuatu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1206"/>
         <source>Laos</source>
-        <translation>Laos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1208"/>
         <source>Thailand</source>
-        <translation>Thajsko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1210"/>
         <source>Tonga</source>
-        <translation>Tonga</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1212"/>
         <source>Papua New Guinea</source>
-        <translation>Papua Nová Guinea</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1214"/>
         <source>Yemen</source>
-        <translation>Jemen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1216"/>
         <source>Micronesia</source>
-        <translation>Mikronésie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="1218"/>
         <source>Mongolia</source>
-        <translation>Mongolsko</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dabtables.cpp" line="2193"/>
+        <location filename="../dlplusmodel.cpp" line="364"/>
+        <source>Alarm</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2195"/>
         <source>Traffic News</source>
-        <translation>Dopravní informace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2197"/>
         <source>Transport News</source>
-        <translation>Cestovní zprávy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2199"/>
         <source>Warning</source>
-        <translation>Varování</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dabtables.cpp" line="2203"/>
+        <location filename="../dlplusmodel.cpp" line="358"/>
+        <source>Weather</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dabtables.cpp" line="2205"/>
+        <location filename="../dlplusmodel.cpp" line="343"/>
+        <source>Event</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2207"/>
         <source>Special event</source>
-        <translation>Speciální událost</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2209"/>
         <source>Radio Info</source>
-        <translation>Radio info</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2211"/>
         <source>Sport news</source>
-        <translation>Sportovní zprávy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2213"/>
         <source>Financial news</source>
-        <translation>Finanční zprávy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dabtables.cpp" line="2215"/>
         <source>Alarm Test</source>
-        <translation>Test alarmu</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="208"/>
+        <location filename="../dlplusmodel.cpp" line="214"/>
+        <source>Open link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="286"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="289"/>
+        <source>Album</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="292"/>
+        <source>Track Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="295"/>
+        <source>Artist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="298"/>
+        <source>Composition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="301"/>
+        <source>Movement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="304"/>
+        <source>Conductor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="307"/>
+        <source>Composer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="310"/>
+        <source>Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="313"/>
+        <source>Comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="316"/>
+        <source>Genre</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="322"/>
+        <source>News (local)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="325"/>
+        <source>Stock Market</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="331"/>
+        <source>Lottery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="334"/>
+        <source>Horoscope</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="337"/>
+        <source>Daily Diversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="340"/>
+        <source>Health</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="346"/>
+        <source>Scene</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="349"/>
+        <source>Cinema</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="352"/>
+        <source>TV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="361"/>
+        <source>Traffic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="367"/>
+        <source>Advertisment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="370"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="373"/>
+        <source>Other</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="376"/>
+        <source>Station (short)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="379"/>
+        <source>Station</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="382"/>
+        <source>Now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="385"/>
+        <source>Next</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="388"/>
+        <source>Programme Part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="391"/>
+        <source>Host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="394"/>
+        <source>Editorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="400"/>
+        <source>Homepage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="406"/>
+        <source>Phone (Hotline)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="409"/>
+        <source>Phone (Studio)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="412"/>
+        <source>Phone (Other)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="415"/>
+        <source>SMS (Studio)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="418"/>
+        <source>SMS (Other)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="421"/>
+        <source>E-mail (Hotline)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="424"/>
+        <source>E-mail (Studio)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="427"/>
+        <source>E-mail (Other)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="430"/>
+        <source>MMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="433"/>
+        <source>Chat Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="436"/>
+        <source>Chat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="439"/>
+        <source>Vote Question</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="442"/>
+        <source>Vote Here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="447"/>
+        <source>Private 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="450"/>
+        <source>Private 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dlplusmodel.cpp" line="453"/>
+        <source>Private 3</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4123,17 +4115,17 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/RartTcpDevice.qml" line="47"/>
         <source>IP address:</source>
-        <translation>IP adresa:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RartTcpDevice.qml" line="52"/>
         <source>IP address of RaRT-TCP server</source>
-        <translation>IP adresa a port RaRT-TCP serveru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RartTcpDevice.qml" line="64"/>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4141,72 +4133,72 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="52"/>
         <source>Open file</source>
-        <translation>Otevřít soubor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="84"/>
         <source>No file selected</source>
-        <translation>Není vybraný soubor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="123"/>
         <source>%1 / %2 sec</source>
-        <translation>%1 / %2 s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="138"/>
         <source>Disable repeat</source>
-        <translation>Vypnout opakování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="139"/>
         <source>Enable repeat</source>
-        <translation>Zapnout opakování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="159"/>
         <source>Recording date:</source>
-        <translation>Datum záznamu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="162"/>
         <source>Recorder:</source>
-        <translation>Zaznamenáno pomocí:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="165"/>
         <source>Device:</source>
-        <translation>Zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="168"/>
         <source>Model:</source>
-        <translation>Model:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="171"/>
         <source>Sample rate [Hz]:</source>
-        <translation>Vzorkovací frekvence [Hz]:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="174"/>
         <source>Frequency [kHz]:</source>
-        <translation>Frekvence [kHz]:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="177"/>
         <source>Recording length [sec]:</source>
-        <translation>Délka záznamu [s]:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="180"/>
         <source>Sample format:</source>
-        <translation>Formát vzorků:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RawFileDevice.qml" line="203"/>
         <source>Binary files</source>
-        <translation>Binární soubory</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4214,115 +4206,115 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="63"/>
         <source>Reload</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="73"/>
         <source>Use any available RTL-SDR device if the selected one fails</source>
-        <translation>Použít jakékoli RTL-SDR zařízení, pokud vybrané nelze připojit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="100"/>
         <source>Connected device:</source>
-        <translation>Připojené zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="103"/>
         <source>Serial number:</source>
-        <translation>Sériové číslo:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="106"/>
         <source>Tuner:</source>
-        <translation>Tuner:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="109"/>
         <source>Sample format:</source>
-        <translation>Formát vzorků:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="127"/>
         <source>Gain control</source>
-        <translation>Ovládání zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="135"/>
         <source>Software</source>
-        <translation>Software</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="135"/>
         <source>Driver</source>
-        <translation>Ovladač</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="135"/>
         <source>Device</source>
-        <translation>Zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="135"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="158"/>
         <source>Gain</source>
-        <translation>Zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="191"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="207"/>
         <source>Bandwidth:</source>
-        <translation>Šířka pásma:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="222"/>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="254"/>
         <source>Default</source>
-        <translation>Výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="228"/>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="260"/>
         <source>Set default</source>
-        <translation>Nastavit výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="240"/>
         <source>SW AGC level threshold:</source>
-        <translation>SW AGC práh úrovně:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="272"/>
         <source>Frequency correction:</source>
-        <translation>Korekce frekvence:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="292"/>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="343"/>
         <source>Reset</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="304"/>
         <source>RF level estimation:</source>
-        <translation>Estimace úrovně signálu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="318"/>
         <source>RF level correction:</source>
-        <translation>Korekce úrovně signálu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlSdrDevice.qml" line="356"/>
         <source>Bias Tee:</source>
-        <translation>Bias Tee:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4330,98 +4322,98 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="50"/>
         <source>IP address:</source>
-        <translation>IP adresa:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="56"/>
         <source>IP address of RTL-TCP server</source>
-        <translation>IP adresa a port RTL-TCP serveru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="70"/>
         <source>Port:</source>
-        <translation>Port:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="85"/>
         <source>Connect to control socket if available</source>
-        <translation>Připojit řídicí socket, pokud je k dispozici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="107"/>
         <source>Connected device:</source>
-        <translation>Připojené zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="110"/>
         <source>Tuner:</source>
-        <translation>Tuner:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="113"/>
         <source>Sample format:</source>
-        <translation>Formát vzorků:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="131"/>
         <source>Gain control</source>
-        <translation>Ovládání zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="139"/>
         <source>Software</source>
-        <translation>Software</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="139"/>
         <source>Device</source>
-        <translation>Zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="139"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="160"/>
         <source>Gain</source>
-        <translation>Zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="193"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="206"/>
         <source>SW AGC level threshold:</source>
-        <translation>SW AGC práh úrovně:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="220"/>
         <source>Default</source>
-        <translation>Výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="226"/>
         <source>Set default</source>
-        <translation>Nastavit výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="238"/>
         <source>Frequency correction:</source>
-        <translation>Korekce frekvence:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="257"/>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="291"/>
         <source>Reset</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/RtlTcpDevice.qml" line="269"/>
         <source>RF level correction:</source>
-        <translation>Korekce úrovně signálu:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4429,32 +4421,32 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../slsbackend.cpp" line="105"/>
         <source>Ongoing announcement:</source>
-        <translation>Probíhá hlášení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../slsbackend.cpp" line="151"/>
         <source>&lt;b&gt;Category:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Kategorie:&lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../slsbackend.cpp" line="161"/>
         <source>&lt;b&gt;Resolution:&lt;/b&gt; %1x%2 pixels&lt;br&gt;</source>
-        <translation>&lt;b&gt;Rozlišení:&lt;/b&gt; %1x%2 pixelů&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../slsbackend.cpp" line="162"/>
         <source>&lt;b&gt;Size:&lt;/b&gt; %1 bytes&lt;br&gt;</source>
-        <translation>&lt;b&gt;Velikost:&lt;/b&gt; %1 byte&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../slsbackend.cpp" line="163"/>
         <source>&lt;b&gt;Format:&lt;/b&gt; %1&lt;br&gt;</source>
-        <translation>&lt;b&gt;Formát:&lt;/b&gt; %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../slsbackend.cpp" line="164"/>
         <source>&lt;b&gt;Content name:&lt;/b&gt; &quot;%1&quot;</source>
-        <translation>&lt;b&gt;Název:&lt;/b&gt; &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4462,12 +4454,12 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/SLSView.qml" line="52"/>
         <source>Save to file</source>
-        <translation>Uložit do souboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SLSView.qml" line="56"/>
         <source>Copy to clipboard</source>
-        <translation>Kopírovat do schránky</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4475,7 +4467,7 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/tii/Scanner.qml" line="34"/>
         <source>DAB Scanning Tool</source>
-        <translation>DAB scanner</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4483,29 +4475,29 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="143"/>
         <source>Scanning finished</source>
-        <translation>Prohledávání ukončeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="162"/>
         <source>Replace data in the table?</source>
-        <translation>Nahradit data v tabulce?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="162"/>
         <source>Current data in the table will be deleted. This action is irreversible.</source>
-        <translation>Současná data v tabulce budou smazána. Tato akce je nevratná.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="173"/>
         <source>Replace</source>
-        <translation>Nahradit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="174"/>
         <location filename="../tii/scannerbackend.cpp" line="1177"/>
         <location filename="../tii/scannerbackend.cpp" line="1197"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="234"/>
@@ -4520,7 +4512,7 @@ je anonymní a neobsahuje žádná osobní data.</translation>
         <location filename="../tii/scannerbackend.cpp" line="391"/>
         <location filename="../tii/scannerbackend.cpp" line="429"/>
         <source>Failed to load file</source>
-        <translation>Načtení souboru se nezdařilo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="537"/>
@@ -4528,108 +4520,108 @@ je anonymní a neobsahuje žádná osobní data.</translation>
         <location filename="../tii/scannerbackend.cpp" line="575"/>
         <location filename="../tii/scannerbackend.cpp" line="594"/>
         <source>Failed to save log</source>
-        <translation>Uložení logu se nezdařilo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="555"/>
         <source>Log saved to CSV file</source>
-        <translation>Log byl uložen do souboru CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="585"/>
         <source>No permission to write log</source>
-        <translation>Chybí oprávnění k zápisu logu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="629"/>
         <source>Auto-save CSV started</source>
-        <translation>Automatický záznam CSV zahájen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="693"/>
         <source>Channel:</source>
-        <translation>Kanál:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="771"/>
         <source>%1  (cycle %2)</source>
-        <translation>%1  (cyklus %2)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="975"/>
         <source>Mark as local (known) transmitter</source>
-        <translation>Označit jako místní (známý) vysílač</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="975"/>
         <source>Unmark local (known) transmitter</source>
-        <translation>Odznačit místní (známý) vysílač</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="977"/>
         <source>Show ensemble information</source>
-        <translation>Zobrazit informace o multipelxu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1043"/>
         <source>No permission to write ensemble information</source>
-        <translation>Chybí oprávnění k zápisu informace o multiplexu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1054"/>
         <source>Ensemble information exported</source>
-        <translation>Informace o multiplexu vyexportována</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1059"/>
         <source>Failed to export ensemble information</source>
-        <translation>Export informace o multiplexu selhal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1094"/>
         <source>Scanning failed</source>
-        <translation>Prohledávání selhalo</translation>
-    </message>
-    <message>
-        <location filename="../tii/scannerbackend.cpp" line="1139"/>
-        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt; + &lt;b&gt;%2 m&lt;/b&gt;</source>
-        <translation>Nadmořská výška: &lt;b&gt;%1 m&lt;/b&gt; + &lt;b&gt;%2 m&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../tii/scannerbackend.cpp" line="1143"/>
-        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt;</source>
-        <translation>Nadmořská výška: &lt;b&gt;%1 m&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1132"/>
         <source>ERP: &lt;b&gt;%1 kW&lt;/b&gt;</source>
-        <translation>ERP: &lt;b&gt;%1 kW&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/scannerbackend.cpp" line="1139"/>
+        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt; + &lt;b&gt;%2 m&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/scannerbackend.cpp" line="1143"/>
+        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1160"/>
         <source>Clear scan results?</source>
-        <translation>Vymazat výsledky scanu?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1160"/>
         <source>You will loose current scan results, this action is irreversible.</source>
-        <translation>Ztratíte současné výsledky, tato akce je nevratná.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1176"/>
         <location filename="../tii/scannerbackend.cpp" line="1196"/>
         <source>Clear</source>
-        <translation>Vymazat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1185"/>
         <source>Clear local (known) transmitter database?</source>
-        <translation>Vymazat databázi místních (známých) vysílačů?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/scannerbackend.cpp" line="1185"/>
         <source>You will loose all records in the database, this action is irreversible.</source>
-        <translation>Ztratíte všechny záznamy v databázi, tata akce je nevratná.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4637,37 +4629,37 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="41"/>
         <source>Scanner configuration</source>
-        <translation>Nastavení scanneru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="54"/>
         <source>Mode:</source>
-        <translation>Mód:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="62"/>
         <source>Fast</source>
-        <translation>Rychlý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="66"/>
         <source>Normal</source>
-        <translation>Normální</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="70"/>
         <source>Precise</source>
-        <translation>Přesný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="90"/>
         <source>Number of cycles:</source>
-        <translation>Počet cyklů:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDialog.qml" line="107"/>
         <source>Inf</source>
-        <translation>Inf</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4675,82 +4667,82 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="76"/>
         <source>Mode:</source>
-        <translation>Mód:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="84"/>
         <source>Fast</source>
-        <translation>Rychlý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="88"/>
         <source>Normal</source>
-        <translation>Normální</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="92"/>
         <source>Precise</source>
-        <translation>Přesný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="112"/>
         <source>Number of cycles:</source>
-        <translation>Počet cyklů:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="129"/>
         <source>Inf</source>
-        <translation>Inf</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="141"/>
         <source>Channel selection</source>
-        <translation>Výběr kanálů</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="173"/>
         <source>Select all</source>
-        <translation>Vybrat vše</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="184"/>
         <source>Unselect all</source>
-        <translation>Zrušit výběr</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="202"/>
         <source>Clear scan results on start</source>
-        <translation>Vymazat výsledky při startu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="208"/>
         <source>Hide local (known) transmitters</source>
-        <translation>Skrýt místní (známé) vysílače</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="214"/>
         <source>AutoSave CSV</source>
-        <translation>Automaticky uložit CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="226"/>
         <source>Save as CSV</source>
-        <translation>Uložit jako CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="234"/>
         <source>Load from CSV</source>
-        <translation>Načíst CSV soubor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="242"/>
         <source>Clear scan results</source>
-        <translation>Vymazat výsledky prohledávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerSetupDrawer.qml" line="250"/>
         <source>Clear local (known) transmitter database</source>
-        <translation>Vymazat databázi místních (známých) vysílačů</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4758,92 +4750,92 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="88"/>
         <source>Configuration...</source>
-        <translation>Nastavení...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="159"/>
         <source>Mode:</source>
-        <translation>Mód:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="166"/>
         <source>Fast</source>
-        <translation>Rychlý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="170"/>
         <source>Normal</source>
-        <translation>Normální</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="174"/>
         <source>Precise</source>
-        <translation>Přesný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="195"/>
         <source>Number of cycles:</source>
-        <translation>Počet cyklů:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="212"/>
         <source>Inf</source>
-        <translation>Inf</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="219"/>
         <source>Select channels</source>
-        <translation>Vybrat kanály</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="226"/>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="226"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="257"/>
         <source>Clear scan results on start</source>
-        <translation>Vymazat výsledky při startu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="263"/>
         <source>Hide local (known) transmitters</source>
-        <translation>Skrýt místní (známé) vysílače</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="269"/>
         <source>AutoSave CSV</source>
-        <translation>Automaticky uložit CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="276"/>
         <source>Save as CSV</source>
-        <translation>Uložit jako CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="281"/>
         <source>Load from CSV</source>
-        <translation>Načíst CSV soubor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="286"/>
         <source>Clear scan results</source>
-        <translation>Vymazat výsledky prohledávání</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="291"/>
         <source>Clear local (known) transmitter database</source>
-        <translation>Vymazat databázi místních (známých) vysílačů</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/ScannerView.qml" line="484"/>
         <source>CSV files</source>
-        <translation>Soubory CSV</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4851,122 +4843,122 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="75"/>
         <source>Reload</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="80"/>
         <source>RX channel number:</source>
-        <translation>Číslo RX kanálu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="100"/>
         <source>Antenna:</source>
-        <translation>Anténa:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="124"/>
         <source>Use any available SDRplay device if the selected one fails</source>
-        <translation>Použít jakékoli SDRplay zařízení, pokud vybrané nelze připojit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="148"/>
         <source>Connected device:</source>
-        <translation>Připojené zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="151"/>
         <source>Serial number:</source>
-        <translation>Sériové číslo:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="169"/>
         <source>Gain control</source>
-        <translation>Ovládání zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="177"/>
         <source>Software</source>
-        <translation>Software</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="177"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="205"/>
         <source>RF gain</source>
-        <translation>Zesílení RF</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="236"/>
         <source>IF gain</source>
-        <translation>Zesílení IF</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="254"/>
         <source>N/A</source>
-        <translation>Nedostupný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="258"/>
         <source>AGC</source>
-        <translation>AGC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="275"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="289"/>
         <source>Frequency correction:</source>
-        <translation>Korekce frekvence:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="308"/>
         <source>Reset</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SdrPlayDevice.qml" line="320"/>
         <source>Bias Tee:</source>
-        <translation>Bias Tee:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ServiceList</name>
     <message>
-        <location filename="../servicelist.cpp" line="439"/>
-        <source>Service name;Short label;SID;SCIdS;Number of ensembles</source>
-        <translation>Service name;Short label;SID;SCIdS;Number of ensembles</translation>
-    </message>
-    <message>
         <location filename="../qml/ServiceList.qml" line="217"/>
         <source>Filter services...</source>
-        <translation>Filtrovat stanice...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceList.qml" line="502"/>
         <location filename="../qml/ServiceList.qml" line="746"/>
         <source>Remove service from favorites</source>
-        <translation>Odebraz stanici z oblíbených</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceList.qml" line="503"/>
         <location filename="../qml/ServiceList.qml" line="747"/>
         <source>Add service to favorites</source>
-        <translation>Přidat stanici k oblíbeným</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceList.qml" line="967"/>
         <source>Services</source>
-        <translation>Stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceList.qml" line="970"/>
         <source>Ensembles</source>
-        <translation>Multiplexy</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../servicelist.cpp" line="439"/>
+        <source>Service name;Short label;SID;SCIdS;Number of ensembles</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4974,12 +4966,12 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/ServicePanel.qml" line="117"/>
         <source>Dock page back to main window</source>
-        <translation>Dokovat stránku zpět do hlavního okna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServicePanel.qml" line="117"/>
         <source>Undock page to separate window</source>
-        <translation>Oddokovat stránku do samostaného okna</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4987,28 +4979,28 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/ServiceView.qml" line="146"/>
         <source>Remove service from favorites</source>
-        <translation>Odebraz stanici z oblíbených</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceView.qml" line="147"/>
         <source>Add service to favorites</source>
-        <translation>Přidat stanici k oblíbeným</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceView.qml" line="207"/>
         <source>Switch to another ensemble</source>
-        <translation>Přepnout na jiný multiplex</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceView.qml" line="287"/>
         <source>Right click to copy Dynamic label</source>
-        <translation>Kliknutím pravým tlačítkem se zkopíruje Dynamic Label</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/ServiceView.qml" line="312"/>
         <location filename="../qml/ServiceView.qml" line="324"/>
         <source>Right click to copy Dynamic label +</source>
-        <translation>Kliknutím pravým tlačítkem se zkopíruje Dynamic Label +</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5016,7 +5008,7 @@ je anonymní a neobsahuje žádná osobní data.</translation>
     <message>
         <location filename="../qml/settings/Settings.qml" line="34"/>
         <source>Settings</source>
-        <translation>Nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5028,145 +5020,141 @@ Enter coordinates in &quot;latitude, longitude&quot; format, for example: 1.234,
 &lt;p&gt;Tip: &lt;i&gt;Go to &lt;a href=&quot;https://www.google.com/maps&quot;&gt;Google maps&lt;/a&gt;,
 right click on your location, click on coordinates in popup menu to copy them
 and then insert the values here as they are.&lt;/i&gt;&lt;/p&gt;</source>
-        <translation>
-Zadejte souřadnice ve formátu &quot;zeměpisná šířka, zeměpisná délka&quot;, například: 1.234,-5.678&lt;/p&gt;
-&lt;p&gt;Tip: &lt;i&gt;Bežte na &lt;a href=&quot;https://www.google.com/maps&quot;&gt;Google maps&lt;/a&gt;,
-klikněte pravým tlačítkem na vaši polohu, klikněte na souřadnice v kontextovém menu, abyste je zkopírovali,
-a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="61"/>
         <source>Device</source>
-        <translation>Zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="62"/>
         <source>Audio</source>
-        <translation>Audio</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="63"/>
         <source>Announcements</source>
-        <translation>Hlášení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="64"/>
         <source>User applications</source>
-        <translation>Aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="65"/>
         <source>TII</source>
-        <translation>TII</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="66"/>
         <source>Others</source>
-        <translation>Ostatní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="85"/>
         <source>Unsigned 8 bits</source>
-        <translation>8 bitů bez znaménka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="86"/>
         <source>Signed 16 bits</source>
-        <translation>16 bitů se znaménkem</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="164"/>
         <source>Disabled</source>
-        <translation>Zakázáno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="225"/>
         <location filename="../settingsbackend.cpp" line="274"/>
         <source>System</source>
-        <translation>Systém</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="226"/>
         <location filename="../settingsbackend.cpp" line="275"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="228"/>
         <source>Serial port</source>
-        <translation>Sériový port</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="264"/>
         <source>System language</source>
-        <translation>Jazyk systému</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="273"/>
         <source>No proxy</source>
-        <translation>Nepoužívat proxy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="874"/>
         <location filename="../settingsbackend.cpp" line="912"/>
         <location filename="../settingsbackend.cpp" line="2073"/>
         <source>N/A</source>
-        <translation>Nedostupný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="927"/>
         <source>RTL SDR device connected</source>
-        <translation>RTL SDR zařízení připojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="930"/>
         <source>RTL TCP device connected</source>
-        <translation>RTL TCP zařízení připojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="933"/>
         <source>No device connected</source>
-        <translation>Žádné zařízení není připojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="936"/>
         <source>Raw file connected</source>
-        <translation>Raw soubor připojen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="939"/>
         <source>Airspy device connected</source>
-        <translation>Airspy zařízení připojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="942"/>
         <source>Soapy SDR device connected</source>
-        <translation>Soapy SDR zařízení připojeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="1405"/>
         <source>Update failed</source>
-        <translation>Aktualizace selhala</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="1415"/>
         <source>Last update: </source>
-        <translation>Poslední aktualizace: </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="1419"/>
         <source>Data not available</source>
-        <translation>Není k dispozici</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.cpp" line="1781"/>
         <source>sec</source>
-        <translation>s</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../settingsbackend.h" line="408"/>
         <source>No file selected</source>
-        <translation>Není vybraný soubor</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5174,27 +5162,27 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../signalbackend.cpp" line="93"/>
         <source>Frequency [MHz]</source>
-        <translation>Frekvence [MHz]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../signalbackend.cpp" line="94"/>
         <source>dBFS</source>
-        <translation>dBFS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../signalbackend.cpp" line="157"/>
         <source>Time</source>
-        <translation>Čas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../signalbackend.cpp" line="158"/>
         <source>SNR [dB]</source>
-        <translation>SNR [dB]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../signalbackend.cpp" line="290"/>
         <source>N/A</source>
-        <translation>Nedostupný</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5202,27 +5190,27 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/SignalState.qml" line="75"/>
         <source>DAB signal not detected&lt;br&gt;Looking for signal...</source>
-        <translation>DAB signál nenalezen&lt;br&gt;Hledám signál...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SignalState.qml" line="77"/>
         <source>Synchronized to DAB signal</source>
-        <translation>Přijímám DAB signál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SignalState.qml" line="78"/>
         <source>Found DAB signal,&lt;br&gt;trying to synchronize...</source>
-        <translation>DAB signál detekován,&lt;br&gt;zkouším synchronizovat...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SignalState.qml" line="84"/>
         <source>SNR</source>
-        <translation>SNR</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SignalState.qml" line="91"/>
         <source>DAB signal SNR</source>
-        <translation>Odstup DAB signálu od šumu</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5230,72 +5218,72 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="54"/>
         <source>Device arguments:</source>
-        <translation>Parametry zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="59"/>
         <source>Soapy SDR device arguments</source>
-        <translation>Argumenty Soapy SDR zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="68"/>
         <source>RX channel number:</source>
-        <translation>Číslo RX kanálu:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="85"/>
         <source>Antenna:</source>
-        <translation>Anténa:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="107"/>
         <source>Connected device:</source>
-        <translation>Připojené zařízení:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="125"/>
         <source>Gain control</source>
-        <translation>Ovládání zesílení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="133"/>
         <source>Device</source>
-        <translation>Zařízení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="133"/>
         <source>Manual</source>
-        <translation>Manuálně</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="214"/>
         <source>Expert settings</source>
-        <translation>Pokročilá nastavení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="228"/>
         <source>Bandwidth:</source>
-        <translation>Šířka pásma:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="243"/>
         <source>Default</source>
-        <translation>Výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="249"/>
         <source>Set default</source>
-        <translation>Nastavit výchozí</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="261"/>
         <source>Frequency correction:</source>
-        <translation>Korekce frekvence:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/SoapySdrDevice.qml" line="280"/>
         <source>Reset</source>
-        <translation>Obnovit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5303,12 +5291,12 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/StatusBar.qml" line="97"/>
         <source>Unmute audio</source>
-        <translation>Zapnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/StatusBar.qml" line="98"/>
         <source>Mute audio</source>
-        <translation>Vypnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5316,7 +5304,7 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/SubchannelsView.qml" line="87"/>
         <source>Subchannel </source>
-        <translation>Subkanál </translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5324,17 +5312,17 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/SystemTray.qml" line="47"/>
         <source>Unmute</source>
-        <translation>Zapnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SystemTray.qml" line="47"/>
         <source>Mute</source>
-        <translation>Vypnout zvuk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/SystemTray.qml" line="53"/>
         <source>Quit</source>
-        <translation>Ukončit</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5342,50 +5330,50 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/tii/TII.qml" line="34"/>
         <source>TII</source>
-        <translation>TII</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TIIBackend</name>
     <message>
-        <location filename="../tii/tiibackend.cpp" line="288"/>
-        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt;</source>
-        <translation>Nadmořská výška: &lt;b&gt;%1 m&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="../tii/tiibackend.cpp" line="277"/>
         <source>ERP: &lt;b&gt;%1 kW&lt;/b&gt;</source>
-        <translation>ERP: &lt;b&gt;%1 kW&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="284"/>
         <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt; + &lt;b&gt;%2 m&lt;/b&gt;</source>
-        <translation>Nadmořská výška: &lt;b&gt;%1 m&lt;/b&gt; + &lt;b&gt;%2 m&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/tiibackend.cpp" line="288"/>
+        <source>Altitude: &lt;b&gt;%1 m&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="307"/>
         <source>Failed to create TII log directory</source>
-        <translation>Nepodařilo se vytvořit TII adresář</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="315"/>
         <source>No permission to write log</source>
-        <translation>Chybí oprávnění k zápisu logu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="330"/>
         <source>TII log started</source>
-        <translation>Záznam TII logu zahájen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="358"/>
         <source>Failed to write TII log</source>
-        <translation>Zápis TII logu se nezdařil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiibackend.cpp" line="395"/>
         <source>Carrier pairs</source>
-        <translation>Carrier pairs</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5393,12 +5381,12 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/tii/TIIMap.qml" line="420"/>
         <source>Stop logging</source>
-        <translation>Zastavit logování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/tii/TIIMap.qml" line="420"/>
         <source>Record CSV log</source>
-        <translation>Zaznamenat CSV log</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5406,112 +5394,112 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="67"/>
         <source>Transmitter database</source>
-        <translation>Databáze vysílačů</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="79"/>
         <source>Application uses DAB transmiter database provided by &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt;.&lt;br&gt;By pressing &lt;i&gt;Update&lt;/i&gt; button you agree with data usage &lt;a href=&apos;https://www.fmlist.org/fmlist_copyright_disclaimer_legal_notice.php&apos;&gt;terms and conditions&lt;/a&gt;.</source>
-        <translation>Aplikace využívá databázi DAB vysílačů od &lt;a href=&quot;https://www.fmlist.org/&quot;&gt;FMLIST&lt;/a&gt;.&lt;br&gt;Kliknutím na tlačítko &lt;i&gt;Aktualizovat&lt;/i&gt; souhlasíte s &lt;a href=&apos;https://www.fmlist.org/fmlist_copyright_disclaimer_legal_notice.php&apos;&gt;všeobecnými smluvními podmínkami&lt;/a&gt; služby.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="98"/>
         <source>Update</source>
-        <translation>Aktualizovat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="114"/>
         <source>Receiver location</source>
-        <translation>Poloha prijímače</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="130"/>
         <source>Geolocation source:</source>
-        <translation>Určení polohy:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="153"/>
         <source>Apply</source>
-        <translation>Použít</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="178"/>
         <source>GPS coordinates:</source>
-        <translation>Souřadnice GPS:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="202"/>
         <source>Serial port:</source>
-        <translation>Sériový port:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="216"/>
         <source>Baudrate:</source>
-        <translation>Přenosová rychlost:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="251"/>
         <source>Logging</source>
-        <translation>Logování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="265"/>
         <source>Folder:</source>
-        <translation>Složka:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="281"/>
         <source>Timestamp in UTC</source>
-        <translation>Časová značka v UTC</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="292"/>
         <source>GPS coordinates</source>
-        <translation>GPS souřadnice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="303"/>
         <source>No TII (signal monitoring)</source>
-        <translation>Bez TII (monitorování signálu)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="323"/>
         <source>Detector</source>
-        <translation>Detektor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="329"/>
         <source>Reliable</source>
-        <translation>Spolehlivý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="345"/>
         <source>Sensitive</source>
-        <translation>Citlivý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="357"/>
         <source>User interface</source>
-        <translation>Uživatelské rozhraní</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="370"/>
         <source>Show spectrum plot</source>
-        <translation>Zobrazovat spektrum</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="382"/>
         <source>Keep no longer detected transmitters on map (grey marker)</source>
-        <translation>Zobrazovat v mapě i vysílače, které se už nedetekují (šedá značka)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="400"/>
         <source>Remove after:</source>
-        <translation>Odstranit po:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/TiiSettings.qml" line="433"/>
         <source>Transmitter table columns</source>
-        <translation>Sloupce tabulky vysílačů</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5519,32 +5507,32 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="35"/>
         <source>Code</source>
-        <translation>Kód</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="36"/>
         <source>Level</source>
-        <translation>Úroveň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="37"/>
         <source>Distance</source>
-        <translation>Vzdálenost</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="37"/>
         <source>Azimuth</source>
-        <translation>Azimut</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="38"/>
         <source>Location</source>
-        <translation>Umístění</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/tiitablecolssettingsmodel.cpp" line="38"/>
         <source>Power</source>
-        <translation>Výkon</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5552,22 +5540,22 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../tii/txmapbackend.cpp" line="301"/>
         <source>Ensemble: &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>Multiplex: &lt;b&gt;%1&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../tii/txmapbackend.cpp" line="306"/>
-        <source>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt; | TX: &lt;b&gt;%3&lt;/b&gt;</source>
-        <translation>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt; | TX: &lt;b&gt;%3&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../tii/txmapbackend.cpp" line="314"/>
-        <source>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txmapbackend.cpp" line="303"/>
         <source>Channel: &lt;b&gt;%1 (%2 kHz)&lt;/b&gt;</source>
-        <translation>Kanál: &lt;b&gt;%1 (%2 kHz)&lt;/b&gt;</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txmapbackend.cpp" line="306"/>
+        <source>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt; | TX: &lt;b&gt;%3&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txmapbackend.cpp" line="314"/>
+        <source>ECC: &lt;b&gt;%1&lt;/b&gt; | EID: &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5575,151 +5563,151 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../tii/txtablemodel.cpp" line="333"/>
         <source>Time (UTC)</source>
-        <translation>Čas (UTC)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="337"/>
         <location filename="../tii/txtablemodel.cpp" line="382"/>
         <location filename="../tii/txtablemodel.cpp" line="386"/>
         <source>Time</source>
-        <translation>Čas</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="340"/>
         <location filename="../tii/txtablemodel.cpp" line="389"/>
         <source>Channel</source>
-        <translation>Kanál</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="342"/>
         <source>Frequency</source>
-        <translation>Frekvence</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="344"/>
         <location filename="../tii/txtablemodel.cpp" line="393"/>
         <source>UEID</source>
-        <translation>UEID</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="346"/>
         <location filename="../tii/txtablemodel.cpp" line="395"/>
         <source>Label</source>
-        <translation>Název</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="348"/>
         <location filename="../tii/txtablemodel.cpp" line="397"/>
         <source>Services</source>
-        <translation>Stanice</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="350"/>
         <source>SNR</source>
-        <translation>SNR</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="352"/>
         <source>RF Level</source>
-        <translation>Úroveň signálu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="354"/>
         <location filename="../tii/txtablemodel.cpp" line="403"/>
         <source>Main</source>
-        <translation>Main</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="356"/>
         <location filename="../tii/txtablemodel.cpp" line="405"/>
         <source>Sub</source>
-        <translation>Sub</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="358"/>
         <source>Code</source>
-        <translation>Kód</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="360"/>
         <source>Level</source>
-        <translation>Úroveň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="362"/>
         <location filename="../tii/txtablemodel.cpp" line="409"/>
         <source>Location</source>
-        <translation>Umístění</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="364"/>
         <source>Power</source>
-        <translation>Výkon</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="366"/>
         <source>Distance</source>
-        <translation>Vzdálenost</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="368"/>
         <source>Azimuth</source>
-        <translation>Azimut</translation>
-    </message>
-    <message>
-        <location filename="../tii/txtablemodel.cpp" line="401"/>
-        <source>RF Level [dBm]</source>
-        <translation>Úroveň signálu [dBm]</translation>
-    </message>
-    <message>
-        <location filename="../tii/txtablemodel.cpp" line="417"/>
-        <source>Latitude (TX)</source>
-        <translation>Zem. šířka (TX)</translation>
-    </message>
-    <message>
-        <location filename="../tii/txtablemodel.cpp" line="419"/>
-        <source>Longitude (TX)</source>
-        <translation>Zem. délka (TX)</translation>
-    </message>
-    <message>
-        <location filename="../tii/txtablemodel.cpp" line="421"/>
-        <source>Latitude (RX)</source>
-        <translation>Zem. šířka (RX)</translation>
-    </message>
-    <message>
-        <location filename="../tii/txtablemodel.cpp" line="423"/>
-        <source>Longitude (RX)</source>
-        <translation>Zem. délka (RX)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="391"/>
         <source>Frequency [kHz]</source>
-        <translation>Frekvence [kHz]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="399"/>
         <source>SNR [dB]</source>
-        <translation>SNR [dB]</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txtablemodel.cpp" line="401"/>
+        <source>RF Level [dBm]</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="407"/>
         <source>Level [dB]</source>
-        <translation>Úroveň [dB]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="411"/>
         <source>Power [kW]</source>
-        <translation>Výkon [kW]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="413"/>
         <source>Distance [km]</source>
-        <translation>Vzdálenost [km]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tii/txtablemodel.cpp" line="415"/>
         <source>Azimuth [deg]</source>
-        <translation>Azimut [°]</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txtablemodel.cpp" line="417"/>
+        <source>Latitude (TX)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txtablemodel.cpp" line="419"/>
+        <source>Longitude (TX)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txtablemodel.cpp" line="421"/>
+        <source>Latitude (RX)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tii/txtablemodel.cpp" line="423"/>
+        <source>Longitude (RX)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5727,117 +5715,117 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="68"/>
         <source>SPI application</source>
-        <translation>SPI aplikace</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="79"/>
         <source>Enable SPI application</source>
-        <translation>Povolit SPI aplikaci</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="92"/>
         <source>Download data from internet</source>
-        <translation>Stahovat data z internetu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="106"/>
         <source>RadioDNS</source>
-        <translation>RadioDNS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="119"/>
         <source>Show decoding progress</source>
-        <translation>Zobrazit průběh dekódování</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="132"/>
         <source>Hide progress when completed</source>
-        <translation>Skrýt průběh po dokončení</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="152"/>
         <source>Data storage</source>
-        <translation>Ukládání dat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="165"/>
         <source>Folder:</source>
-        <translation>Složka:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="177"/>
         <source>Overwrite existing files</source>
-        <translation>Přepisovat soubory</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="198"/>
         <source>Slideshow data</source>
-        <translation>Obrázky slideshow (SLS)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="210"/>
         <source>SLS folder template</source>
-        <translation>Šablona SLS cesty</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="221"/>
         <source>SPI data</source>
-        <translation>Data SPI</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="234"/>
         <source>SPI folder template</source>
-        <translation>Šablona SPI cesty</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="248"/>
         <source>Data storage path pattern supports these tokens.</source>
-        <translation>Šablona cesty podporuje tyto proměnné.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="249"/>
         <source>For more information see</source>
-        <translation>Pro více informací si přečtěte</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="250"/>
         <source>Documentation</source>
-        <translation>Dokumentaci</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="287"/>
         <source>current audio service ID (hex number)</source>
-        <translation>ID současné stanice (hexadecimální číslo)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="297"/>
         <source>current ensemble ID (hex number)</source>
-        <translation>ID současného multiplexu (hexadecimální číslo)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="307"/>
         <source>transport ID</source>
-        <translation>transport ID MOT objektu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="317"/>
         <source>content name</source>
-        <translation>jméno MOT objektu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="327"/>
         <source>content name with extension (only SLS)</source>
-        <translation>jméno MOT objektu s příponou (jen SLS)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="337"/>
         <source>transport ID of directory (only SPI)</source>
-        <translation>transport ID MOT adresáře (jen SPI)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/settings/UaSettings.qml" line="347"/>
         <source>service component ID (only SPI)</source>
-        <translation>service component ID (jen SPI)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5845,14 +5833,13 @@ a pak vložte zkopírované hodnoty do vstupního pole nahoře.&lt;/i&gt;&lt;/p&
     <message>
         <location filename="../qml/UndockablePage.qml" line="109"/>
         <source>Page is currently undocked</source>
-        <translation>Stránka je momentálně oddokovaná</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UndockablePage.qml" line="117"/>
         <source>The content is displayed in a separate window.
 Use the &apos;Dock Page&apos; button above to bring it back.</source>
-        <translation>Obsah je zobrazený v samostatném okně.
-Použijte dokovací tlačítko nahoře pro opětovné připojení.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5860,32 +5847,32 @@ Použijte dokovací tlačítko nahoře pro opětovné připojení.</translation>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="43"/>
         <source>AbracaDABra update available</source>
-        <translation>Je k dispozici nová verze AbracaDABra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="67"/>
         <source>Current version:</source>
-        <translation>Současná verze:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="76"/>
         <source>Available version:</source>
-        <translation>Nová verze:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="111"/>
         <source>Do not show again</source>
-        <translation>Znovu nezobrazovat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="120"/>
         <source>Go to release page</source>
-        <translation>Přejít na stránku s aktualizací</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/UpdateDialog.qml" line="130"/>
         <source>Close</source>
-        <translation>Zavřít</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

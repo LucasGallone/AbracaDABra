@@ -254,412 +254,412 @@
 <context>
     <name>Application</name>
     <message>
-        <location filename="../application.cpp" line="347"/>
-        <location filename="../application.cpp" line="349"/>
+        <location filename="../application.cpp" line="397"/>
+        <location filename="../application.cpp" line="399"/>
         <source>Mute</source>
         <translation>Stummschalten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="349"/>
+        <location filename="../application.cpp" line="399"/>
         <source>Unmute</source>
         <translation>Stummschaltung aufheben</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="409"/>
+        <location filename="../application.cpp" line="459"/>
         <source>Audio coding</source>
         <translation>Audiokodierung</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="414"/>
+        <location filename="../application.cpp" line="464"/>
         <source>Ongoing announcement</source>
         <translation>Laufende Durchsage</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="829"/>
+        <location filename="../application.cpp" line="953"/>
         <source>&lt;b&gt;Ensemble:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Short label:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;ECC:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;EID:&lt;/b&gt; 0x%4&lt;br&gt;&lt;b&gt;Country:&lt;/b&gt; %5</source>
         <translation>&lt;b&gt;Ensemble:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Kurzbezeichnung:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;ECC:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;EID:&lt;/b&gt; 0x%4&lt;br&gt;&lt;b&gt;Land:&lt;/b&gt; %5</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1029"/>
+        <location filename="../application.cpp" line="1159"/>
         <source>System time</source>
         <translation>Systemzeit</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1039"/>
-        <location filename="../application.cpp" line="4277"/>
+        <location filename="../application.cpp" line="1169"/>
+        <location filename="../application.cpp" line="4462"/>
         <source>DAB time</source>
         <translation>DAB-Zeit</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1049"/>
+        <location filename="../application.cpp" line="1179"/>
         <source>&lt;b&gt;DAB audio encoding&lt;/b&gt;&lt;br&gt;%1</source>
         <translation>&lt;b&gt;DAB Audioformat&lt;/b&gt;&lt;br&gt;%1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1049"/>
+        <location filename="../application.cpp" line="1179"/>
         <source>MPEG-1 layer 2</source>
         <translation>MPEG-1 Layer 2</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1053"/>
-        <location filename="../application.cpp" line="1057"/>
-        <location filename="../application.cpp" line="1061"/>
+        <location filename="../application.cpp" line="1183"/>
+        <location filename="../application.cpp" line="1187"/>
+        <location filename="../application.cpp" line="1191"/>
         <source>&lt;b&gt;DAB+ audio encoding&lt;/b&gt;&lt;br&gt;%1</source>
         <translation>&lt;b&gt;DAB+ Audioformat&lt;/b&gt;&lt;br&gt;%1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1053"/>
+        <location filename="../application.cpp" line="1183"/>
         <source>MPEG-4 Low Complexity AAC</source>
         <translation>MPEG-4 Low Complexity AAC</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1057"/>
+        <location filename="../application.cpp" line="1187"/>
         <source>MPEG-4 High Efficiency AAC</source>
         <translation>MPEG-4 High Efficiency AAC</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1061"/>
+        <location filename="../application.cpp" line="1191"/>
         <source>MPEG-4 High Efficiency AAC v2</source>
         <translation>MPEG-4 High Efficiency AAC v2</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1078"/>
+        <location filename="../application.cpp" line="1208"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;%1Stereo&lt;br&gt;Sample rate: %2 kHz</source>
         <translation>&lt;b&gt;Audiosignal&lt;/b&gt;&lt;br&gt;%1Stereo&lt;br&gt;Abtastrate: %2 kHz</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1082"/>
+        <location filename="../application.cpp" line="1212"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Stereo (PS %1)&lt;br&gt;Sample rate: %2 kHz (SBR %3)</source>
         <translation>&lt;b&gt;Audiosignal&lt;/b&gt;&lt;br&gt;Stereo (PS %1)&lt;br&gt;Abtastrate: %2 kHz (SBR %3)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1083"/>
-        <location filename="../application.cpp" line="1085"/>
+        <location filename="../application.cpp" line="1213"/>
+        <location filename="../application.cpp" line="1215"/>
         <source>on</source>
         <translation>ein</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1083"/>
-        <location filename="../application.cpp" line="1085"/>
+        <location filename="../application.cpp" line="1213"/>
+        <location filename="../application.cpp" line="1215"/>
         <source>off</source>
         <translation>aus</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1093"/>
+        <location filename="../application.cpp" line="1223"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Sample rate: %1 kHz</source>
         <translation>&lt;b&gt;Audiosignal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Abtastrate: %1 kHz</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1098"/>
+        <location filename="../application.cpp" line="1228"/>
         <source>&lt;b&gt;Audio signal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Sample rate: %1 kHz (SBR: %2)</source>
         <translation>&lt;b&gt;Audiosignal&lt;/b&gt;&lt;br&gt;Mono&lt;br&gt;Abtastrate: %1 kHz (SBR: %2)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1119"/>
+        <location filename="../application.cpp" line="1249"/>
         <source>&lt;b&gt;Programme Type&lt;/b&gt;&lt;br&gt;%1 (dynamic)</source>
         <translation>&lt;b&gt;Programmtyp&lt;/b&gt;&lt;br&gt;%1 (dynamisch)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1126"/>
+        <location filename="../application.cpp" line="1256"/>
         <source>&lt;b&gt;Programme Type&lt;/b&gt;&lt;br&gt;%1</source>
         <translation>&lt;b&gt;Programmtyp&lt;/b&gt;&lt;br&gt;%1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1146"/>
+        <location filename="../application.cpp" line="1276"/>
         <source>Tuning...  </source>
         <translation>Tune...  </translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1212"/>
-        <location filename="../application.cpp" line="1224"/>
+        <location filename="../application.cpp" line="1342"/>
+        <location filename="../application.cpp" line="1354"/>
         <source>Tune to %1</source>
         <translation>Gehe auf %1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1311"/>
+        <location filename="../application.cpp" line="1510"/>
         <source>End of file</source>
         <translation>Ende der Datei</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1312"/>
+        <location filename="../application.cpp" line="1511"/>
         <source>Select any service to restart</source>
         <translation>Einen Dienst wählen um neu zu starten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1326"/>
+        <location filename="../application.cpp" line="1525"/>
         <source>Input device error: Device disconnected</source>
         <translation>Fehler des Eingabegeräts: Verbindung getrennt</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1327"/>
-        <location filename="../application.cpp" line="1339"/>
+        <location filename="../application.cpp" line="1526"/>
+        <location filename="../application.cpp" line="1538"/>
         <source>Try to reconnect the device or choose another device in Settings</source>
         <translation>Versuche, das Gerät neu zu verbinden, oder wähle anderes in den Einstellungen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1338"/>
+        <location filename="../application.cpp" line="1537"/>
         <source>Input device error: No data</source>
         <translation>Fehler des Eingabegeräts: Keine Daten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1362"/>
+        <location filename="../application.cpp" line="1561"/>
         <source>Audio recording is ongoing. It will be stopped and saved if you change DAB channel.</source>
         <translation>Audioaufnahme läuft. Sie wird beendet und gespeichert, falls der DAB Kanal gewechselt wird.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1365"/>
+        <location filename="../application.cpp" line="1564"/>
         <source>Audio recording is ongoing. It will be stopped and saved if you switch current service.</source>
         <translation>Audioaufnahme läuft. Sie wird beendet und gespeichert, falls  aktueller Dienst gewechselt wird.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1370"/>
+        <location filename="../application.cpp" line="1569"/>
         <source>Stop audio recording?</source>
         <translation>Audioaufzeichnung beenden?</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1387"/>
+        <location filename="../application.cpp" line="1586"/>
         <source>Keep recording</source>
         <translation>Aufnahme behalten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1388"/>
+        <location filename="../application.cpp" line="1587"/>
         <source>Stop recording and do not ask again</source>
         <translation>Aufnahme beenden und nicht mehr fragen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1389"/>
+        <location filename="../application.cpp" line="1588"/>
         <source>Stop recording</source>
         <translation>Aufnahme beenden</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1628"/>
+        <location filename="../application.cpp" line="1833"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Short label:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;SId:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;SCIdS:&lt;/b&gt; %4&lt;br&gt;&lt;b&gt;Language:&lt;/b&gt; %5&lt;br&gt;&lt;b&gt;Country:&lt;/b&gt; %6</source>
         <translation>&lt;b&gt;Dienst:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Kurzbez.:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;SId:&lt;/b&gt; 0x%3&lt;br&gt;&lt;b&gt;SCIdS:&lt;/b&gt; %4&lt;br&gt;&lt;b&gt;Sprache:&lt;/b&gt; %5&lt;br&gt;&lt;b&gt;Land:&lt;/b&gt; %6</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1685"/>
+        <location filename="../application.cpp" line="1890"/>
         <source>&lt;B&gt;Error protection&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Coderate: %2/%3&lt;br&gt;Capacity units: %4 CU</source>
         <translation>&lt;B&gt;Fehlerschutz&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Coderate: %2/%3&lt;br&gt;Kapazitätseinheiten: %4 CU</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1696"/>
+        <location filename="../application.cpp" line="1901"/>
         <source>&lt;B&gt;Error protection&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Protection level: %2&lt;br&gt;Capacity units: %3 CU</source>
         <translation>&lt;B&gt;Fehlerschutz&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;Fehlerschutzklasse: %2&lt;br&gt;Kapazitätseinheiten: %3 CU</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1706"/>
+        <location filename="../application.cpp" line="1911"/>
         <source>%1 kbps</source>
         <translation>%1 kbps</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1708"/>
+        <location filename="../application.cpp" line="1913"/>
         <source>&lt;b&gt;Service bitrate&lt;/b&gt;&lt;br&gt;Audio &amp; data: %1</source>
         <translation>&lt;b&gt;Dienstbitrate&lt;/b&gt;&lt;br&gt;Audio &amp; Daten: %1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1758"/>
+        <location filename="../application.cpp" line="1963"/>
         <source>Service currently unavailable</source>
         <translation>Dienst derzeit nicht verfügbar</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1759"/>
+        <location filename="../application.cpp" line="1964"/>
         <source>Service was removed from ensemble</source>
         <translation>Dienst wurde aus Ensemble entfernt</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1791"/>
+        <location filename="../application.cpp" line="1996"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Ongoing announcement&lt;br&gt;on current service</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Laufende Durchsage&lt;br&gt;auf derzeitigem Kanal</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1805"/>
+        <location filename="../application.cpp" line="2010"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Ongoing announcement&lt;br&gt;Source service: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Click to suspend this announcement</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Laufende Durchsage&lt;br&gt;Quelldienst: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Klicken, um die Durchsage zu unterbrechen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1822"/>
+        <location filename="../application.cpp" line="2027"/>
         <source>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Suspended announcement&lt;br&gt;Source service: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Click to resume this announcement</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Unterbrochene Durchsage&lt;br&gt;Quelldienst: &lt;i&gt;%2&lt;/i&gt;&lt;br&gt;&lt;br&gt;Klicken, um die Durchsage fortzuführen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1867"/>
+        <location filename="../application.cpp" line="2072"/>
         <source>Default audio device</source>
         <translation>Standard-Audiogerät</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1944"/>
+        <location filename="../application.cpp" line="2149"/>
         <source>Stop audio recording</source>
         <translation>Audioaufnahme beenden</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1950"/>
+        <location filename="../application.cpp" line="2155"/>
         <source>Start audio recording</source>
         <translation>Audioaufnahme starten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1960"/>
+        <location filename="../application.cpp" line="2165"/>
         <source>Audio recording ongoing (%2 kBytes recorded)
 File: %1</source>
         <translation>Audioaufnahme läuft (%2 kBytes gespeichert)
 Datei: %1</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1968"/>
+        <location filename="../application.cpp" line="2173"/>
         <source>Scheduled audio recording is getting ready</source>
         <translation>Audioaufnahmeplan ist fertig</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1980"/>
+        <location filename="../application.cpp" line="2185"/>
         <source>Scheduled recording should start in %1 seconds</source>
         <translation>Geplante Aufnahme sollte in %1 Sekunden starten</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1983"/>
+        <location filename="../application.cpp" line="2188"/>
         <source>Ongoing recording now prevents the start of a scheduled recording. The schedule will be cancelled if you do not choose otherwise. If you select to keep the schedule, the service might be switched.</source>
         <translation>Laufende Aufnahme unterbindet jetzt den Start einer geplanten Aufnahme. Der Plan wird abgebrochen, wenn Sie sich nicht anderswertig entscheiden. Wenn Sie den Plan behalten, könnte der Dienst umgeschaltet werden.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1996"/>
+        <location filename="../application.cpp" line="2201"/>
         <source>Keep current recording</source>
         <translation>Behalte aktuelle Aufnahme</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="1997"/>
+        <location filename="../application.cpp" line="2202"/>
         <source>Keep schedule</source>
         <translation>Behalte Plan</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2006"/>
+        <location filename="../application.cpp" line="2211"/>
         <source>Scheduled recording starts in %1 seconds</source>
         <translation>Geplante Aufnahme startet in %1 Sekunden</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2009"/>
+        <location filename="../application.cpp" line="2214"/>
         <source>Recording is going to start according to the schedule. The service might be switched if it differs from the current one.</source>
         <translation>Aufnahme wird anhand des Plans beginnen. Der Dienst könnte umgeschaltet werden, wenn er vom aktuellen abweicht.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2020"/>
+        <location filename="../application.cpp" line="2225"/>
         <source>Continue as planned</source>
         <translation>Fortsetzen wie geplant</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2021"/>
+        <location filename="../application.cpp" line="2226"/>
         <source>Cancel plan</source>
         <translation>Plan abbrechen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2175"/>
+        <location filename="../application.cpp" line="2380"/>
         <source>SPI MOT directory not complete
 Decoded %1 / %2 MOT objects</source>
         <translation>SPI MOT Verzeichnis nicht vollständig
 %1 / %2 MOT Objekte dekodiert</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2179"/>
+        <location filename="../application.cpp" line="2384"/>
         <source>SPI MOT directory complete
 %1 MOT objects decoded</source>
         <translation>SPI MOT Verzeichnis vollständig
 %1 MOT Objekte dekodiert</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2184"/>
+        <location filename="../application.cpp" line="2389"/>
         <source>SPI MOT directory decoding started</source>
         <translation>Dekodierung des SPI MOT Verzeichnisses gestartet</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2393"/>
+        <location filename="../application.cpp" line="2598"/>
         <source>No ensemble</source>
         <translation>Kein Ensemble</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2394"/>
+        <location filename="../application.cpp" line="2599"/>
         <source>No ensemble tuned</source>
         <translation>Kein Ensemble abgestimmt</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2405"/>
+        <location filename="../application.cpp" line="2610"/>
         <source>No service</source>
         <translation>Kein Dienst</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="2411"/>
+        <location filename="../application.cpp" line="2616"/>
         <source>No service playing</source>
         <translation>Kein Dienst wiedergegeben</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4383"/>
+        <location filename="../application.cpp" line="4568"/>
         <source>Service list exported</source>
         <translation>Dienstliste exportiert</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4387"/>
+        <location filename="../application.cpp" line="4572"/>
         <source>Failed to export service list</source>
         <translation>Export der Dienstliste fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4394"/>
+        <location filename="../application.cpp" line="4579"/>
         <source>Clear service list?</source>
         <translation>Dienstliste leeren?</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4394"/>
+        <location filename="../application.cpp" line="4579"/>
         <source>Current service list including favorites will be deleted. This action is irreversible.</source>
         <translation>Aktuelle Dienstliste inkl. Favoriten wird gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4408"/>
+        <location filename="../application.cpp" line="4593"/>
         <source>Clear</source>
         <translation>Leeren</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4409"/>
-        <location filename="../application.cpp" line="4640"/>
+        <location filename="../application.cpp" line="4594"/>
+        <location filename="../application.cpp" line="4825"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4448"/>
-        <location filename="../application.cpp" line="4498"/>
+        <location filename="../application.cpp" line="4633"/>
+        <location filename="../application.cpp" line="4683"/>
         <source>Failed to create backup</source>
         <translation>Erstellen der Sicherung fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4493"/>
+        <location filename="../application.cpp" line="4678"/>
         <source>Settings backup created successfully</source>
         <translation>Sicherung der Einstellungen erfolgreich erstellt</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4524"/>
+        <location filename="../application.cpp" line="4709"/>
         <source>Restore settings?</source>
         <translation>Einstellungen wiederherstellen?</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4524"/>
+        <location filename="../application.cpp" line="4709"/>
         <source>Settings will be restored from backup.
 Application will restart after restore.</source>
         <translation>Die Einstellungen werden von der Sicherung wiederhergestellt.
 Nach der Wiederherstellung startet die Applikation erneut.</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4537"/>
-        <location filename="../application.cpp" line="4582"/>
+        <location filename="../application.cpp" line="4722"/>
+        <location filename="../application.cpp" line="4767"/>
         <source>Failed to restore settings</source>
         <translation>Wiederherstellen der Einstellungen fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4547"/>
-        <location filename="../application.cpp" line="4555"/>
+        <location filename="../application.cpp" line="4732"/>
+        <location filename="../application.cpp" line="4740"/>
         <source>Invalid backup file</source>
         <translation>Ungültige Backupdatei</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4627"/>
+        <location filename="../application.cpp" line="4812"/>
         <source>Settings restored, restarting...</source>
         <translation>Einstellungen wiederhergestellt, starte erneut...</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="4639"/>
+        <location filename="../application.cpp" line="4824"/>
         <source>Restore</source>
         <translation>Wiederherstellen</translation>
     </message>
@@ -5106,59 +5106,59 @@ dann die Wert hier einfügen.&lt;/i&gt;&lt;/p&gt;</translation>
         <translation>Kein Proxy</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="870"/>
-        <location filename="../settingsbackend.cpp" line="908"/>
-        <location filename="../settingsbackend.cpp" line="2069"/>
+        <location filename="../settingsbackend.cpp" line="874"/>
+        <location filename="../settingsbackend.cpp" line="912"/>
+        <location filename="../settingsbackend.cpp" line="2073"/>
         <source>N/A</source>
         <translation>k.A.</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="923"/>
+        <location filename="../settingsbackend.cpp" line="927"/>
         <source>RTL SDR device connected</source>
         <translation>RTL-SDR-Gerät verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="926"/>
+        <location filename="../settingsbackend.cpp" line="930"/>
         <source>RTL TCP device connected</source>
         <translation>RTL-TCP-Gerät verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="929"/>
+        <location filename="../settingsbackend.cpp" line="933"/>
         <source>No device connected</source>
         <translation>Kein Gerät verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="932"/>
+        <location filename="../settingsbackend.cpp" line="936"/>
         <source>Raw file connected</source>
         <translation>Rohdatei verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="935"/>
+        <location filename="../settingsbackend.cpp" line="939"/>
         <source>Airspy device connected</source>
         <translation>Airspygerät verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="938"/>
+        <location filename="../settingsbackend.cpp" line="942"/>
         <source>Soapy SDR device connected</source>
         <translation>Soapy SDR-Gerät verbunden</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="1401"/>
+        <location filename="../settingsbackend.cpp" line="1405"/>
         <source>Update failed</source>
         <translation>Aktualisierung fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="1411"/>
+        <location filename="../settingsbackend.cpp" line="1415"/>
         <source>Last update: </source>
         <translation>Letze Aktualisierung: </translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="1415"/>
+        <location filename="../settingsbackend.cpp" line="1419"/>
         <source>Data not available</source>
         <translation>Daten nicht verfügbar</translation>
     </message>
     <message>
-        <location filename="../settingsbackend.cpp" line="1777"/>
+        <location filename="../settingsbackend.cpp" line="1781"/>
         <source>sec</source>
         <translation>sec</translation>
     </message>
@@ -5857,32 +5857,32 @@ Verwende die obige Schaltfläche, um es zurückzubringen.</translation>
 <context>
     <name>UpdateDialog</name>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="42"/>
+        <location filename="../qml/UpdateDialog.qml" line="43"/>
         <source>AbracaDABra update available</source>
         <translation>Aktualisierung für AbracaDABra verfügbar</translation>
     </message>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="66"/>
+        <location filename="../qml/UpdateDialog.qml" line="67"/>
         <source>Current version:</source>
         <translation>Aktuelle Version:</translation>
     </message>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="75"/>
+        <location filename="../qml/UpdateDialog.qml" line="76"/>
         <source>Available version:</source>
         <translation>Verfügbare Version:</translation>
     </message>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="105"/>
+        <location filename="../qml/UpdateDialog.qml" line="111"/>
         <source>Do not show again</source>
         <translation>Nicht wieder anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="114"/>
+        <location filename="../qml/UpdateDialog.qml" line="120"/>
         <source>Go to release page</source>
         <translation>Zur Release-Seite gehen</translation>
     </message>
     <message>
-        <location filename="../qml/UpdateDialog.qml" line="124"/>
+        <location filename="../qml/UpdateDialog.qml" line="130"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
