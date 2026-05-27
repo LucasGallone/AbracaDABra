@@ -35,7 +35,7 @@
 #include <QWaitCondition>
 
 // this is chunk that is received from input device to be stored in input FIFO
-#define INPUT_CHUNK_MS (50)
+#define INPUT_CHUNK_MS (64)
 #define INPUT_CHUNK_IQ_SAMPLES (2048 * INPUT_CHUNK_MS)
 
 // Input FIFO size in bytes - FIFO contains float _Complex samples => [float float]
