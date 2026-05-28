@@ -39,6 +39,7 @@ Rectangle {
 
     function storeSplitterState() {
         signalBackend.splitterState = splitView.saveState();
+        signalBackend.waterfallSplitterState = signalSpectrumView.saveInnerState();
     }
     Component.onCompleted: {
         splitView.restoreState(signalBackend.splitterState);
@@ -63,37 +64,49 @@ Rectangle {
         orientation: Qt.Vertical
         snapThreshold: 100
         minVisibleSize: 120
-        ChartView {
+        SpectrumWaterfallView {
             id: signalSpectrumView
+
+            // signalBackend: mainItem.signalBackend
+            showWaterfall: signalBackend.showWaterfall
+            splitterState: signalBackend.waterfallSplitterState
 
             SplitView.fillWidth: true
             SplitView.fillHeight: true
             SplitView.minimumHeight: 200
 
-            historyCapacity: 2048
-            dataMode: "replace"
-            followTail: false
+            spectrumChart.historyCapacity: 2048
+            spectrumChart.dataMode: "replace"
+            spectrumChart.followTail: false
 
-            majorTickStepX: 0.2
-            minorSectionsX: 4
-            majorTickStepY: 10
-            minorSectionsY: 5
+            spectrumChart.majorTickStepX: 0.2
+            spectrumChart.minorSectionsX: 4
+            spectrumChart.majorTickStepY: 10
+            spectrumChart.minorSectionsY: 5
 
             // Hard limits: 0 to -150 dB
-            chart.defaultYMin: -170  // Bottom of chart
-            chart.defaultYMax: 0     // Top of chart
-            chart.maxYSpan: 210
-            chart.minYSpan: 10
+            spectrumChart.chart.defaultYMin: -170
+            spectrumChart.chart.defaultYMax: 0
+            spectrumChart.chart.maxYSpan: 210
+            spectrumChart.chart.minYSpan: 10
 
-            showButton: true
+            spectrumChart.showButton: true
 
             Component.onCompleted: {
                 mainItem.signalBackend.registerSpectrumPlot(signalSpectrumView.chart);
+                if (signalBackend.showWaterfall) {
+                    mainItem.signalBackend.registerWaterfallPlot(signalSpectrumView.waterfall);
+                }
             }
             Component.onDestruction: {
                 mainItem.signalBackend.registerSpectrumPlot(null);
+                mainItem.signalBackend.registerWaterfallPlot(null);
+            }
+            onShowWaterfallChanged: {
+                mainItem.signalBackend.registerWaterfallPlot(showWaterfall ? signalSpectrumView.waterfall : null);
             }
         }
+
         RowLayout {
             id: snrLayout
             SplitView.fillWidth: true
@@ -293,6 +306,13 @@ Rectangle {
                     checkable: true
                     checked: signalBackend.showNULL
                     onTriggered: signalBackend.showNULL = checked
+                }
+                AbracaMenuSeparator {}
+                AbracaMenuItem {
+                    text: qsTr("Show waterfall")
+                    checkable: true
+                    checked: signalBackend.showWaterfall
+                    onTriggered: signalBackend.showWaterfall = checked
                 }
                 AbracaMenuSeparator {}
                 AbracaMenuItem {

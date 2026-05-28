@@ -356,6 +356,7 @@ qt_add_qml_module(${TARGET}
         qml/settings/OtherSettings.qml
 
         qml/charts/ChartView.qml
+        qml/charts/SpectrumWaterfallView.qml
 
     SOURCES
         itemmodel.h itemmodel.cpp
@@ -363,6 +364,8 @@ qt_add_qml_module(${TARGET}
         charts/linechartitem.h
         charts/lineseries.h
         charts/markerline.h
+        charts/waterfallitem.cpp
+        charts/waterfallitem.h
 
         navigationmodel.h navigationmodel.cpp
         navigationproxymodel.h navigationproxymodel.cpp

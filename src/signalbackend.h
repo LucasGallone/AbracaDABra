@@ -35,6 +35,7 @@
 #include "uicontrolprovider.h"
 
 class LineChartItem;
+class WaterfallItem;
 class SignalBackend : public UIControlProvider
 {
     Q_OBJECT
@@ -50,13 +51,16 @@ class SignalBackend : public UIControlProvider
     UI_PROPERTY_SETTINGS(int, spectrumUpdate, m_settings->signal.spectrumUpdate)
     UI_PROPERTY_SETTINGS(bool, showSNR, m_settings->signal.showSNR)
     UI_PROPERTY_SETTINGS(bool, showNULL, m_settings->signal.showNULL)
+    UI_PROPERTY_SETTINGS(bool, showWaterfall, m_settings->signal.showWaterfall)
     UI_PROPERTY_SETTINGS(QVariant, splitterState, m_settings->signal.splitterState)
+    UI_PROPERTY_SETTINGS(QVariant, waterfallSplitterState, m_settings->signal.waterfallSplitterState)
 
 public:
     explicit SignalBackend(Settings *settings, int freq, QObject *parent = nullptr);
     ~SignalBackend();
     Q_INVOKABLE void registerSpectrumPlot(QQuickItem *item);
     Q_INVOKABLE void registerSnrPlot(QQuickItem *item);
+    Q_INVOKABLE void registerWaterfallPlot(QQuickItem *item);
 
     void setIsActive(bool isActive);
     void setIsUndocked(bool isUndocked);
@@ -99,6 +103,7 @@ private:
 
     LineChartItem *m_spectrumPlot = nullptr;
     LineChartItem *m_snrPlot = nullptr;
+    WaterfallItem *m_waterfallItem = nullptr;
     int m_signalSpectSeriesId = -1;
     int m_nullSpectSeriesId = -1;
     int m_spectLeftMarginId = -1;

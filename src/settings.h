@@ -258,9 +258,11 @@ public:
     struct SignalDialog
     {
         QVariant splitterState;
+        QVariant waterfallSplitterState;
         bool restore;
         bool showSNR;
         bool showNULL;
+        bool showWaterfall;
         int spectrumUpdate;
     } signal;
     struct EPGSettings

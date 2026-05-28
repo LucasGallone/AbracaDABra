@@ -30,6 +30,7 @@
 
 #include "linechartitem.h"
 #include "radiocontrol.h"
+#include "waterfallitem.h"
 
 SignalBackend::SignalBackend(Settings *settings, int freq, QObject *parent) : UIControlProvider(parent), m_settings(settings), m_frequency(freq)
 {
@@ -127,6 +128,26 @@ void SignalBackend::registerSpectrumPlot(QQuickItem *item)
         connect(m_spectrumPlot, &QObject::destroyed, this, [this]() { m_spectrumPlot = nullptr; });
 
         setFreqRange();
+    }
+}
+
+void SignalBackend::registerWaterfallPlot(QQuickItem *item)
+{
+    if (item == nullptr)
+    {
+        m_waterfallItem = nullptr;
+        return;
+    }
+
+    WaterfallItem *wf = dynamic_cast<WaterfallItem *>(item);
+    if (wf && wf != m_waterfallItem)
+    {
+        m_waterfallItem = wf;
+        m_waterfallItem->setDataRange((-1024 + m_frequency) * 0.001, (1024 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerLeft((-768 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerRight((768 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerCenter(m_frequency * 0.001);
+        connect(m_waterfallItem, &QObject::destroyed, this, [this]() { m_waterfallItem = nullptr; });
     }
 }
 
@@ -262,6 +283,13 @@ void SignalBackend::setFreqRange()
         m_spectrumPlot->setMarkerLinePosition(m_spectLeftMarginId, (-768 + m_frequency) * 0.001);
         m_spectrumPlot->setMarkerLinePosition(m_spectRightMarginId, (768 + m_frequency) * 0.001);
         m_spectrumPlot->setMarkerLinePosition(m_spectCenterId, (0 + m_frequency) * 0.001);
+    }
+    if (m_waterfallItem)
+    {
+        m_waterfallItem->setDataRange((-1024 + m_frequency) * 0.001, (1024 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerLeft((-768 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerRight((768 + m_frequency) * 0.001);
+        m_waterfallItem->setMarkerCenter(m_frequency * 0.001);
     }
 }
 
@@ -445,6 +473,10 @@ void SignalBackend::onSignalSpectrum(std::shared_ptr<std::vector<float>> data, i
                 {
                     m_spectrumPlot->setProgrammaticYRange(m_spectYViewMin, m_spectYViewMax);
                 }
+            }
+            if (m_waterfallItem)
+            {
+                m_waterfallItem->addRow(bins);
             }
         }
     }

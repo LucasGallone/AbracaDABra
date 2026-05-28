@@ -3341,10 +3341,12 @@ void Application::loadSettings()
 #endif
 
     m_settings->signal.splitterState = settings->value("SignalDialog/layout");
+    m_settings->signal.waterfallSplitterState = settings->value("SignalDialog/waterfallLayout");
     m_settings->signal.restore = settings->value("SignalDialog/restore", false).toBool();
     m_settings->signal.spectrumUpdate = settings->value("SignalDialog/spectrumUpdate", 1).toInt();
     m_settings->signal.showSNR = settings->value("SignalDialog/showSNR", 0).toBool();
     m_settings->signal.showNULL = settings->value("SignalDialog/showNULL", 0).toBool();
+    m_settings->signal.showWaterfall = settings->value("SignalDialog/showWaterfall", false).toBool();
 
     m_settings->ensembleInfo.restore = settings->value("EnsembleInfo/restore", false).toBool();
     m_settings->ensembleInfo.recordingTimeoutEna = settings->value("EnsembleInfo/recordingTimeoutEna", false).toBool();
@@ -3678,10 +3680,12 @@ void Application::saveSettings()
 #endif
 
     settings->setValue("SignalDialog/layout", m_settings->signal.splitterState);
+    settings->setValue("SignalDialog/waterfallLayout", m_settings->signal.waterfallSplitterState);
     settings->setValue("SignalDialog/restore", m_settings->signal.restore);
     settings->setValue("SignalDialog/spectrumUpdate", m_settings->signal.spectrumUpdate);
     settings->setValue("SignalDialog/showSNR", m_settings->signal.showSNR);
     settings->setValue("SignalDialog/showNULL", m_settings->signal.showNULL);
+    settings->setValue("SignalDialog/showWaterfall", m_settings->signal.showWaterfall);
 
     settings->setValue("UA-STORAGE/overwriteEna", m_settings->uaDump.overwriteEna);
     settings->setValue("UA-STORAGE/slsEna", m_settings->uaDump.slsEna);
