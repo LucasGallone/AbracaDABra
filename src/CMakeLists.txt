@@ -536,6 +536,7 @@ qt_add_translations(${TARGET} TS_FILES ${TSFILES}
 
 # Set a custom plist file for the app bundle
 if(APPLE AND APPLE_APP_BUNDLE)
+    set(APP_ENTITLEMENTS "${CMAKE_CURRENT_SOURCE_DIR}/resources/debug.entitlements")
     set_target_properties(${TARGET} PROPERTIES
         ${BUNDLE_ID_OPTION}
         MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/resources/Info.plist.in
@@ -543,9 +544,22 @@ if(APPLE AND APPLE_APP_BUNDLE)
         MACOSX_BUNDLE_SHORT_VERSION_STRING  "${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}"
         MACOSX_BUNDLE TRUE
     )
-    if (NOT CMAKE_GENERATOR STREQUAL "Xcode")
+    if (CMAKE_GENERATOR STREQUAL "Xcode")
+        # Allow debugger attachment only for Debug configuration.
+        set_target_properties(${TARGET} PROPERTIES
+            XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS[variant=Debug] "${APP_ENTITLEMENTS}"
+        )
+    else()
         # Need to sign application for location permissions to work
-        add_custom_command(TARGET ${TARGET} POST_BUILD COMMAND codesign -s - ${TARGET}.app)
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+            add_custom_command(TARGET ${TARGET} POST_BUILD
+                COMMAND /usr/bin/codesign --force --sign - --entitlements ${APP_ENTITLEMENTS} ${TARGET}.app
+            )
+        else()
+            add_custom_command(TARGET ${TARGET} POST_BUILD
+                COMMAND /usr/bin/codesign --force --sign - ${TARGET}.app
+            )
+        endif()
     endif()
 endif(APPLE AND APPLE_APP_BUNDLE)
 
