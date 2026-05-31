@@ -50,6 +50,8 @@ Q_LOGGING_CATEGORY(scanner, "Scanner", QtDebugMsg)
 ScannerBackend::ScannerBackend(Settings *settings, QObject *parent) : TxMapBackend(settings, false, parent)
 {
     m_sortedFilteredModel->setColumnsFilter(false);
+    m_txMapModel = new TxMapModel(m_model, this);
+    m_mapModel = m_txMapModel;
     m_channelSelectionModel = new ChannelSelectionModel(settings, this);
     m_messageBoxBackend = new MessageBoxBackend(this);
     m_contextMenuModel = new ContextMenuModel(this);
@@ -1125,6 +1127,20 @@ void ScannerBackend::loadSettings()
     }
 
     m_sortedFilteredModel->setLocalTxFilter(m_settings->scanner.hideLocalTx);
+}
+
+void ScannerBackend::selectTxOnMap(int markerIndex)
+{
+    if (markerIndex == -1)
+    {
+        selectTx(-1);
+        return;
+    }
+    const int proxyRow = m_txMapModel->lastProxyRowForMarker(markerIndex, m_sortedFilteredModel);
+    if (proxyRow >= 0)
+    {
+        selectTx(proxyRow);
+    }
 }
 
 void ScannerBackend::onSelectedRowChanged()

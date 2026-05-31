@@ -36,6 +36,7 @@
 
 #include "radiocontrol.h"
 #include "txmapbackend.h"
+#include "txmapmodel.h"
 #include "uicontrolprovider.h"
 
 struct CsvRowData
@@ -105,6 +106,7 @@ public:
     Q_INVOKABLE void createContextMenu(int row);
     Q_INVOKABLE void showEnsembleConfig(int row);
     Q_INVOKABLE void saveEnsembleCSV(int srcModelRow);
+    Q_INVOKABLE void selectTxOnMap(int index) override;
 
     void setIsActive(bool isActive);
     void onTuneDone(uint32_t freq);
@@ -208,6 +210,7 @@ private:
 
     // Async CSV loading
     QFutureWatcher<CsvParseResult> *m_csvFutureWatcher = nullptr;
+    TxMapModel *m_txMapModel = nullptr;
     static CsvParseResult parseCsvFile(const QString &fileName);
     void onCsvParsed();
 };

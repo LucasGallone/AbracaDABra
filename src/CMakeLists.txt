@@ -372,6 +372,7 @@ qt_add_qml_module(${TARGET}
 
         # TII decoder
         tii/txmapbackend.h tii/txmapbackend.cpp
+        tii/txmapmodel.h tii/txmapmodel.cpp
         tii/tiibackend.cpp tii/tiibackend.h
         tii/tiitablecolssettingsmodel.h tii/tiitablecolssettingsmodel.cpp
 

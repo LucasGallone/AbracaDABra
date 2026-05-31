@@ -54,6 +54,7 @@ class TxMapBackend : public UIControlProvider
     Q_PROPERTY(float zoomLevel READ zoomLevel WRITE setZoomLevel NOTIFY zoomLevelChanged FINAL)
     Q_PROPERTY(QGeoCoordinate mapCenter READ mapCenter WRITE setMapCenter NOTIFY mapCenterChanged FINAL)
     Q_PROPERTY(QAbstractItemModel *tableModel READ tableModel CONSTANT FINAL)
+    Q_PROPERTY(QAbstractItemModel *mapModel READ mapModel CONSTANT FINAL)
     Q_PROPERTY(QItemSelectionModel *tableSelectionModel READ tableSelectionModel CONSTANT FINAL)
     Q_PROPERTY(bool showSpetrumPlot READ showSpetrumPlot WRITE setShowSpetrumPlot NOTIFY showSpetrumPlotChanged FINAL)
     UI_PROPERTY(QString, infoMessageText);
@@ -96,7 +97,10 @@ public:
     void setCenterToCurrentPosition(bool centerToCurrentPosition);
 
     QAbstractItemModel *tableModel() const { return m_tableModel; }
+    QAbstractItemModel *mapModel() const { return m_mapModel; }
     QItemSelectionModel *tableSelectionModel() const { return m_tableSelectionModel; }
+
+    Q_INVOKABLE virtual void selectTxOnMap(int index);
 
     bool showSpetrumPlot() const { return m_showSpetrumPlot; }
     void setShowSpetrumPlot(bool showSpetrumPlot);
@@ -127,6 +131,7 @@ protected:
     TxTableModel *m_model = nullptr;
     TxTableProxyModel *m_sortedFilteredModel = nullptr;
     QAbstractItemModel *m_tableModel = nullptr;  // exposed model (m_sortedFilteredModel or column proxy on top)
+    QAbstractItemModel *m_mapModel = nullptr;    // model exposed to MapItemView (deduped in scanner, proxy in TII)
     QItemSelectionModel *m_tableSelectionModel = nullptr;
     QGeoCoordinate m_currentPosition;
     QGeoCoordinate m_currentPositionBackup;  // used to store current position when switching to offline mode

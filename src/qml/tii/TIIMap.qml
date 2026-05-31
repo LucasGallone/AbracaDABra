@@ -108,7 +108,7 @@ Item {
             gesturePolicy: TapHandler.WithinBounds
             onTapped: {
                 // deselection of transmitter
-                backend.selectTx(-1);
+                backend.selectTxOnMap(-1);
             }
         }
         Shortcut {
@@ -133,7 +133,7 @@ Item {
         }
 
         MapItemView {
-            model: backend.tableModel
+            model: backend.mapModel
             delegate: TransmitterMarker {
                 id: marker
                 parent: map
@@ -149,7 +149,7 @@ Item {
                     acceptedButtons: Qt.LeftButton
                     gesturePolicy: TapHandler.WithinBounds
                     onTapped: {
-                        backend.selectTx(index);
+                        backend.selectTxOnMap(index);
                     }
                 }
             }

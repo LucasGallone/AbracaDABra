@@ -123,6 +123,7 @@ public:
     void endLoadingFromFile();
 signals:
     void rowCountChanged();
+    void selectedRowsChanged(const QSet<int> &rows);
 
 private:
     bool m_displayTimeInUTC = false;

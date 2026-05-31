@@ -44,6 +44,7 @@ TxMapBackend::TxMapBackend(Settings *settings, bool isTii, QObject *parent) : UI
     m_sortedFilteredModel = new TxTableProxyModel(this);
     m_sortedFilteredModel->setSourceModel(m_model);
     m_tableModel = m_sortedFilteredModel;
+    m_mapModel = m_sortedFilteredModel;
     m_tableSelectionModel = nullptr;
     setupSelectionModel();
     m_mapCenter = QGeoCoordinate(50.08804, 14.42076);  // Prague
@@ -358,6 +359,11 @@ void TxMapBackend::onSelectionChanged(const QItemSelection &selected, const QIte
     QModelIndex currentIndex = selectedRows.at(0);
     currentIndex = mapToSourceModel(currentIndex);
     setSelectedRow(currentIndex.row());
+}
+
+void TxMapBackend::selectTxOnMap(int index)
+{
+    selectTx(index);
 }
 
 void TxMapBackend::selectTx(int index)

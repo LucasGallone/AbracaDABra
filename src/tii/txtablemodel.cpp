@@ -533,6 +533,7 @@ void TxTableModel::setSelectedRows(const QSet<int> &rows)
     {
         m_selectedRows = rows;
         emit dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {TxTableModelRoles::SelectedTxRole});
+        emit selectedRowsChanged(m_selectedRows);
     }
 }
 
