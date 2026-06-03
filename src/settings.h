@@ -311,6 +311,7 @@ public:
         bool clearOnStart;
         bool hideLocalTx;
         bool autoSave;
+        bool incrementalScan;
         bool centerMapToCurrentPosition;
         QGeoCoordinate mapCenter;
         float mapZoom;

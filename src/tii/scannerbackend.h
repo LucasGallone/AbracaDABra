@@ -59,6 +59,15 @@ struct CsvParseResult
     QString errorMessage;
 };
 
+struct IncrementalChannelRecord
+{
+    bool hasData = false;
+    uint32_t ueid = 0;
+    QString ensLabel;
+    int numServices = 0;
+    QSet<int> tiiIds;  // id() = (subId<<8)|mainId for each known TII code
+};
+
 class Settings;
 class ChannelSelectionModel;
 class MessageBoxBackend;
@@ -85,6 +94,7 @@ class ScannerBackend : public TxMapBackend
     UI_PROPERTY_SETTINGS(bool, clearOnStart, m_settings->scanner.clearOnStart)
     UI_PROPERTY_SETTINGS(bool, autoSave, m_settings->scanner.autoSave)
     UI_PROPERTY_SETTINGS(bool, hideLocalTx, m_settings->scanner.hideLocalTx)
+    UI_PROPERTY_SETTINGS(bool, incrementalScan, m_settings->scanner.incrementalScan)
     UI_PROPERTY_SETTINGS(int, mode, m_settings->scanner.mode)
     UI_PROPERTY_SETTINGS(int, numCycles, m_settings->scanner.numCycles)
     UI_PROPERTY_SETTINGS(int, txTableSortCol, m_settings->scanner.txTableSortCol)
@@ -213,6 +223,10 @@ private:
     TxMapModel *m_txMapModel = nullptr;
     static CsvParseResult parseCsvFile(const QString &fileName);
     void onCsvParsed();
+
+    // Incremental scan
+    bool m_dataLoadedFromCsv = false;
+    QHash<uint32_t, IncrementalChannelRecord> m_incrementalBaseline;  // key = frequency
 };
 
 class ChannelSelectionModel : public QAbstractListModel

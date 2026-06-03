@@ -3312,6 +3312,7 @@ void Application::loadSettings()
     m_settings->scanner.clearOnStart = settings->value("Scanner/clearOnStart", true).toBool();
     m_settings->scanner.hideLocalTx = settings->value("Scanner/hideLocalTx", false).toBool();
     m_settings->scanner.autoSave = settings->value("Scanner/autoSave", false).toBool();
+    m_settings->scanner.incrementalScan = settings->value("Scanner/incrementalScan", false).toBool();
     m_settings->scanner.waitForSync = settings->value("Scanner/waitForSyncSec", 3).toInt();
     m_settings->scanner.waitForEnsemble = settings->value("Scanner/waitForEnsembleSec", 6).toInt();
     m_settings->scanner.centerMapToCurrentPosition = settings->value("Scanner/mapCenterCurrPos", true).toBool();
@@ -3644,6 +3645,7 @@ void Application::saveSettings()
     settings->setValue("Scanner/clearOnStart", m_settings->scanner.clearOnStart);
     settings->setValue("Scanner/hideLocalTx", m_settings->scanner.hideLocalTx);
     settings->setValue("Scanner/autoSave", m_settings->scanner.autoSave);
+    settings->setValue("Scanner/incrementalScan", m_settings->scanner.incrementalScan);
     settings->setValue("Scanner/mapCenterCurrPos", m_settings->scanner.centerMapToCurrentPosition);
     settings->setValue("Scanner/mapCenterLat", m_settings->scanner.mapCenter.latitude());
     settings->setValue("Scanner/mapCenterLon", m_settings->scanner.mapCenter.longitude());

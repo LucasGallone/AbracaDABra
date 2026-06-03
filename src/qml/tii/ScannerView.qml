@@ -254,6 +254,13 @@ Item {
                             return result + padding * 2;
                         }
                         AbracaMenuItem {
+                            text: qsTr("Incremental scan")
+                            checkable: true
+                            enabled: !scannerBackend.isScanning
+                            onTriggered: scannerBackend.incrementalScan = checked
+                            Component.onCompleted: checked = scannerBackend.incrementalScan
+                        }
+                        AbracaMenuItem {
                             text: qsTr("Clear scan results on start")
                             checkable: true
                             onTriggered: scannerBackend.clearOnStart = checked
@@ -269,6 +276,7 @@ Item {
                             text: qsTr("AutoSave CSV")
                             checkable: true
                             onTriggered: scannerBackend.autoSave = checked
+                            enabled: !scannerBackend.isScanning
                             Component.onCompleted: checked = scannerBackend.autoSave
                         }
                         AbracaMenuSeparator {}

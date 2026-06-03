@@ -199,6 +199,13 @@ AbracaDrawer {
                 }
 
                 AbracaMenuItem {
+                    text: qsTr("Incremental scan")
+                    checkable: true
+                    enabled: !scannerBackend.isScanning
+                    onTriggered: scannerBackend.incrementalScan = checked
+                    Component.onCompleted: checked = scannerBackend.incrementalScan
+                }
+                AbracaMenuItem {
                     text: qsTr("Clear scan results on start")
                     checkable: true
                     onTriggered: scannerBackend.clearOnStart = checked
@@ -211,8 +218,9 @@ AbracaDrawer {
                     Component.onCompleted: checked = scannerBackend.hideLocalTx
                 }
                 AbracaMenuItem {
-                    text: qsTr("AutoSave CSV")
+                    text: qsTr("AutoSave CSV")                    
                     checkable: true
+                    enabled: !scannerBackend.isScanning
                     onTriggered: scannerBackend.autoSave = checked
                     Component.onCompleted: checked = scannerBackend.autoSave
                 }

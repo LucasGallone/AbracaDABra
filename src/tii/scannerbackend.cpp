@@ -461,6 +461,7 @@ void ScannerBackend::onCsvParsed()
                             << result.offlineCoords.longitude();
             setOfflinePosition(result.offlineCoords);
         }
+        m_dataLoadedFromCsv = true;
     }
     else
     {
@@ -699,11 +700,16 @@ void ScannerBackend::startScan()
 
     clearOfflineMode();
 
-    if (m_settings->scanner.clearOnStart)
+    // If data was loaded from CSV, always force-clear the table regardless of clearOnStart setting
+    const bool forceClear = m_dataLoadedFromCsv || m_settings->scanner.clearOnStart;
+    m_dataLoadedFromCsv = false;
+    if (forceClear)
     {
         reset();
         m_sortedFilteredModel->setRfLevelFilter(m_deviceHasRfLevel == false);
+        m_incrementalBaseline.clear();
     }
+
     m_scanStartTime = QDateTime::currentDateTime();
     m_scanStartLocation = m_currentPosition;
     scanningLabel(tr("Channel:"));
@@ -939,8 +945,60 @@ void ScannerBackend::storeEnsembleData(const RadioControlTIIData &tiiData, const
 
     int firstNewRow = m_model->rowCount();
 
-    m_model->appendEnsData(QDateTime::currentDateTime(), tiiData.idList, ServiceListId(m_ensemble), m_ensemble.label, conf, csvConf,
-                           m_numServicesFound, m_snr / m_snrCntr, m_rfLevel);
+    if (m_settings->scanner.incrementalScan)
+    {
+        IncrementalChannelRecord &baseline = m_incrementalBaseline[m_frequency];
+        const ServiceListId currentEnsId(m_ensemble);
+
+        const bool ueidChanged = !baseline.hasData || (baseline.ueid != currentEnsId.ueid());
+        const bool labelChanged = baseline.hasData && (baseline.ensLabel != m_ensemble.label);
+        const bool numServicesChanged = baseline.hasData && (baseline.numServices != m_numServicesFound);
+
+        QList<dabsdrTii_t> newTiiCodes;
+        for (const auto &tii : tiiData.idList)
+        {
+            const int id = (tii.sub << 8) | tii.main;
+            if (!baseline.tiiIds.contains(id))
+            {
+                newTiiCodes.append(tii);
+            }
+        }
+        const bool newTiiDetected = !newTiiCodes.isEmpty();
+
+        if (ueidChanged || labelChanged || numServicesChanged || newTiiDetected)
+        {
+            const QList<dabsdrTii_t> &toStore = (ueidChanged || labelChanged || numServicesChanged) ? tiiData.idList : newTiiCodes;
+            m_model->appendEnsData(QDateTime::currentDateTime(), toStore, currentEnsId, m_ensemble.label, conf, csvConf, m_numServicesFound,
+                                   m_snr / m_snrCntr, m_rfLevel);
+            // qCInfo(scanner) << "Incremental: storing" << toStore.size() << "row(s) @" << m_frequency << "ueidChanged" << ueidChanged <<
+            // "labelChanged"
+            //                 << labelChanged << "numServicesChanged" << numServicesChanged << "newTiiDetected" << newTiiDetected;
+        }
+        else
+        {
+            qCInfo(scanner) << "Incremental: no change @" << m_frequency;
+        }
+
+        // Always update baseline (union for TII codes, replace for scalar fields)
+        baseline.hasData = true;
+        baseline.ueid = currentEnsId.ueid();
+        baseline.ensLabel = m_ensemble.label;
+        baseline.numServices = m_numServicesFound;
+        if (ueidChanged)
+        {
+            // UEID changed — old TII codes belong to a different ensemble, start fresh
+            baseline.tiiIds.clear();
+        }
+        for (const auto &tii : tiiData.idList)
+        {
+            baseline.tiiIds.insert((tii.sub << 8) | tii.main);
+        }
+    }
+    else
+    {
+        m_model->appendEnsData(QDateTime::currentDateTime(), tiiData.idList, ServiceListId(m_ensemble), m_ensemble.label, conf, csvConf,
+                               m_numServicesFound, m_snr / m_snrCntr, m_rfLevel);
+    }
 
     int lastNewRow = m_model->rowCount() - 1;
     if (m_autoSaveFile != nullptr && lastNewRow >= firstNewRow)
@@ -1197,6 +1255,7 @@ void ScannerBackend::clearTableAction()
                                    {
                                        reset();
                                        m_sortedFilteredModel->setRfLevelFilter(m_deviceHasRfLevel == false);
+                                       m_incrementalBaseline.clear();
                                    });
             }
             else
