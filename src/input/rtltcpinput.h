@@ -32,6 +32,8 @@
 #include <QObject>
 #include <QTcpSocket>
 #include <QThread>
+#include <QMutex>
+#include <QQueue>
 #include <QTimer>
 #include <rtl-sdr.h>
 #include "inputdevice.h"
@@ -206,7 +208,7 @@ private:
 
 #else  // RTLTCP_USE_NATIVE_SOCKET
 
-class RtlTcpWorker : public QObject
+class RtlTcpWorker : public QThread
 {
     Q_OBJECT
 public:
@@ -214,7 +216,8 @@ public:
     void captureIQ(bool ena);
     void startStopRecording(bool ena);
     bool isRunning();
-    void readData();
+    void writeData(const QByteArray &data);
+    void requestStop();
 
 signals:
     void agcLevel(float level);
@@ -222,14 +225,19 @@ signals:
     void dataReady();
     void serverInfo(uint32_t tunerType, uint32_t tunerGainCount);
 
+protected:
+    void run() override;
+
 private:
     QTcpSocket *m_streamSocket;
 
+    QMutex m_commandMutex;
+    QQueue<QByteArray> m_commandQueue;
+    std::atomic<bool> m_stopRequested;
     std::atomic<bool> m_isRecording;
     std::atomic<bool> m_enaCaptureIQ;
     std::atomic<bool> m_watchdogFlag;
     std::atomic<int8_t> m_captureStartCntr;
-    bool m_isInitialized;
 
     // DOC memory
     float m_dcI = 0.0;
@@ -249,6 +257,7 @@ private:
     // input buffer
     uint8_t m_bufferIQ[RTLTCP_CHUNK_SIZE];
     void processInputData(unsigned char *buf, uint32_t len);
+    void flushCommandQueue();
 };
 
 class RtlTcpInput : public InputDevice
@@ -299,9 +308,6 @@ public:
     void startStopRecording(bool start) override;
     QList<float> getGainList() const;
 
-signals:
-    void writeCommand(const QByteArray &data);
-
 private:
     uint32_t m_frequency;
     QString m_address;
@@ -311,7 +317,6 @@ private:
     bool m_controlSocketEna;
     bool m_haveControlSocket;
 
-    QThread *m_workerThread;
     RtlTcpWorker *m_worker;
     QTimer m_watchdogTimer;
     RtlGainMode m_gainMode = RtlGainMode::Undefined;

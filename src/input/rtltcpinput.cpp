@@ -1165,7 +1165,6 @@ RtlTcpInput::RtlTcpInput(QObject *parent) : InputDevice(parent)
 
     m_gainList = nullptr;
     m_worker = nullptr;
-    m_workerThread = nullptr;
     m_streamSocket = nullptr;
     m_controlSocket = nullptr;
     m_controlSocketEna = false;
@@ -1189,18 +1188,15 @@ RtlTcpInput::~RtlTcpInput()
     if (nullptr != m_worker)
     {
         m_worker->captureIQ(false);
-
-        // stop thread
-        m_workerThread->quit();  // this deletes worker and socket
-        m_workerThread->wait(2000);
-        while (m_workerThread->isRunning())
+        m_worker->requestStop();
+        m_worker->wait(2000);
+        while (!m_worker->isFinished())
         {
             qCWarning(rtlTcpInput) << "Worker thread not finished after timeout - this should not happen :-(";
 
             inputBuffer.flush();
-            m_workerThread->wait(2000);
+            m_worker->wait(2000);
         }
-        delete m_workerThread;
     }
     if (nullptr != m_gainList)
     {
@@ -1236,32 +1232,32 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
     if (m_streamSocket->waitForConnected(5000) == false)
     {
         qCCritical(rtlTcpInput) << "Unable to connect";
+        delete m_streamSocket;
+        m_streamSocket = nullptr;
         return false;
     }
-
-    // we are connected -> lets start worker thread
-    m_workerThread = new QThread(this);
-    m_workerThread->setObjectName("rtlTcpWorkerThr");
-    m_streamSocket->moveToThread(m_workerThread);
+    // Increase OS receive buffer to 2 MB to avoid TCP backpressure at 4 MB/s with
+    // 256 KB chunks. Default SO_RCVBUF on many systems (~128-256 KB) is too small.
+    // QAbstractSocket::ReceiveBufferSizeSocketOption maps to SO_RCVBUF on all platforms
+    // (Linux, macOS, Windows). Must be called after waitForConnected() because Qt's
+    // setSocketOption() is a no-op before the internal socket engine is created.
+    m_streamSocket->setSocketOption(QAbstractSocket::ReceiveBufferSizeSocketOption, 2 * 1024 * 1024);
 
     m_worker = new RtlTcpWorker(m_streamSocket);
-    m_worker->moveToThread(m_workerThread);
-
-    connect(this, &RtlTcpInput::writeCommand, m_streamSocket, qOverload<const QByteArray &>(&QTcpSocket::write), Qt::QueuedConnection);
-    connect(m_streamSocket, &QTcpSocket::readyRead, m_worker, &RtlTcpWorker::readData, Qt::DirectConnection);
+    m_streamSocket->moveToThread(m_worker);
 
     connect(m_worker, &RtlTcpWorker::serverInfo, this, &RtlTcpInput::onServerInfo, Qt::QueuedConnection);
     connect(m_worker, &RtlTcpWorker::agcLevel, this, &RtlTcpInput::onAgcLevel, Qt::QueuedConnection);
     connect(m_worker, &RtlTcpWorker::dataReady, this, [=]() { emit tuned(m_frequency); }, Qt::QueuedConnection);
     connect(m_worker, &RtlTcpWorker::recordBuffer, this, &InputDevice::recordBuffer, Qt::DirectConnection);
 
-    connect(m_workerThread, &QThread::finished, m_worker, &QObject::deleteLater);
-    connect(m_workerThread, &QThread::finished, m_streamSocket, &QObject::deleteLater);
+    connect(m_worker, &QThread::finished, m_streamSocket, &QObject::deleteLater);
+    connect(m_worker, &QThread::finished, m_worker, &QObject::deleteLater);
     connect(m_worker, &RtlTcpWorker::destroyed, this, [=]() { m_worker = nullptr; });
     connect(m_streamSocket, &QTcpSocket::destroyed, this, [=]() { m_streamSocket = nullptr; });
-    // connect(m_worker, &RtlTcpWorker::finished, m_worker, &QObject::deleteLater);
+    connect(m_streamSocket, &QAbstractSocket::errorOccurred, this, &RtlTcpInput::onStreamSocketError, Qt::QueuedConnection);
 
-    m_workerThread->start();
+    m_worker->start();
 
     if (m_controlSocketEna)
     {  // try to connect to control socket
@@ -1585,17 +1581,18 @@ void RtlTcpInput::onStreamSocketError(QAbstractSocket::SocketError)
 
     m_watchdogTimer.stop();
 
-    // stop thread
-    m_workerThread->quit();  // this deletes worker and socket
-    m_workerThread->wait(2000);
-    while (m_workerThread->isRunning())
+    if (m_worker)
     {
-        qCWarning(rtlTcpInput) << "Worker thread not finished after timeout - this should not happen :-(";
+        m_worker->requestStop();
+        m_worker->wait(2000);
+        while (!m_worker->isFinished())
+        {
+            qCWarning(rtlTcpInput) << "Worker thread not finished after timeout - this should not happen :-(";
 
-        inputBuffer.flush();
-        m_workerThread->wait(2000);
+            inputBuffer.flush();
+            m_worker->wait(2000);
+        }
     }
-    delete m_workerThread;
 
     // flush buffer to avoid blocking of the DAB processing thread
     inputBuffer.flush();
@@ -1611,17 +1608,15 @@ void RtlTcpInput::onWatchdogTimeout()
         {  // some problem in data input
             qCCritical(rtlTcpInput) << "Watchdog timeout";
 
-            // stop thread
-            m_workerThread->quit();  // this deletes worker and socket
-            m_workerThread->wait(2000);
-            while (m_workerThread->isRunning())
+            m_worker->requestStop();
+            m_worker->wait(2000);
+            while (!m_worker->isFinished())
             {
                 qCWarning(rtlTcpInput) << "Worker thread not finished after timeout - this should not happen :-(";
 
                 inputBuffer.flush();
-                m_workerThread->wait(2000);
+                m_worker->wait(2000);
             }
-            delete m_workerThread;
 
             inputBuffer.flush();
             emit error(InputDevice::ErrorCode::NoDataAvailable);
@@ -1698,20 +1693,20 @@ void RtlTcpInput::sendCommand(const RtlTcpCommand &cmd, uint32_t param)
     cmdBuffer[2] = (param >> 16) & 0xFF;
     cmdBuffer[1] = (param >> 24) & 0xFF;
 
-    emit writeCommand(QByteArray((char *)cmdBuffer, 5));
+    m_worker->writeData(QByteArray((char *)cmdBuffer, 5));
 }
 
-RtlTcpWorker::RtlTcpWorker(QTcpSocket *streamSocket, QObject *parent) : QObject{parent}, m_streamSocket(streamSocket)
+RtlTcpWorker::RtlTcpWorker(QTcpSocket *streamSocket, QObject *parent) : QThread{parent}, m_streamSocket(streamSocket)
 {
     m_isRecording = false;
     m_enaCaptureIQ = false;
+    m_stopRequested = false;
 
     m_dcI = 0.0;
     m_dcQ = 0.0;
     m_agcLevel = 0.0;
     m_agcLevelEmitCntr = 0;
-    m_isInitialized = false;
-    m_watchdogFlag = false;  // first callback sets it to true
+    m_watchdogFlag = false;
 }
 
 void RtlTcpWorker::startStopRecording(bool ena)
@@ -1719,82 +1714,149 @@ void RtlTcpWorker::startStopRecording(bool ena)
     m_isRecording = ena;
 }
 
-void RtlTcpWorker::readData()
+void RtlTcpWorker::run()
 {
-    if (m_isInitialized == false)
+    m_dcI = 0.0;
+    m_dcQ = 0.0;
+    m_agcLevel = 0.0;
+    m_agcLevelEmitCntr = 0;
+    m_watchdogFlag = false;
+
+    // --- read dongle info (blocking) ---
+    struct
     {
-        // read dongle info
-        struct
-        {
-            char magic[4];
-            uint32_t tunerType;
-            uint32_t tunerGainCount;
-        } dongleInfo;
+        char magic[4];
+        uint32_t tunerType;
+        uint32_t tunerGainCount;
+    } dongleInfo;
 
-        if (m_streamSocket->bytesAvailable() > sizeof(dongleInfo))
+    while (m_streamSocket->bytesAvailable() < (qint64)sizeof(dongleInfo))
+    {
+        if (!m_streamSocket->waitForReadyRead(10000))
         {
-            m_streamSocket->read((char *)&dongleInfo, sizeof(dongleInfo));
-
-            if (dongleInfo.magic[0] == 'R' && dongleInfo.magic[1] == 'T' && dongleInfo.magic[2] == 'L' && dongleInfo.magic[3] == '0')
-            {
-                emit serverInfo(qFromBigEndian<quint32>(dongleInfo.tunerType), qFromBigEndian<quint32>(dongleInfo.tunerGainCount));
-            }
-            else
-            {
-                emit serverInfo(RTLSDR_TUNER_UNKNOWN, 0);
-            }
-
-            m_streamSocket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
-            m_isInitialized = true;
-        }
-        else
-        {
+            qCCritical(rtlTcpInput) << "Server not responding.";
             return;
         }
     }
+    m_streamSocket->read((char *)&dongleInfo, sizeof(dongleInfo));
 
-    // lets process all available input data
-    while (m_streamSocket->bytesAvailable() >= RTLTCP_CHUNK_SIZE)
+    if (dongleInfo.magic[0] == 'R' && dongleInfo.magic[1] == 'T' && dongleInfo.magic[2] == 'L' && dongleInfo.magic[3] == '0')
     {
-        // reset watchDog flag, timer sets it to true
+        emit serverInfo(qFromBigEndian<quint32>(dongleInfo.tunerType), qFromBigEndian<quint32>(dongleInfo.tunerGainCount));
+    }
+    else
+    {
+        emit serverInfo(RTLSDR_TUNER_UNKNOWN, 0);
+    }
+
+    m_streamSocket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
+
+    // --- main sample loop ---
+    // Blocking waitForReadyRead() uses select()/poll()/kqueue directly, avoiding
+    // the per-TCP-segment event-loop wakeups of the readyRead-signal approach.
+    //
+    // accumulated persists across outer loop iterations: waitForReadyRead() returns
+    // as soon as any data arrives (~MSS or SO_RCVBUF worth), which is far less than
+    // RTLTCP_CHUNK_SIZE (256 KB). We accumulate reads until a full chunk is assembled.
+    size_t accumulated = 0;
+
+    while (!m_stopRequested)
+    {
+        // Flush any commands (SET_FREQ, SET_GAIN, etc.) queued by the main thread.
+        flushCommandQueue();
+
+        if (m_streamSocket->bytesAvailable() == 0)
+        {
+            if (!m_streamSocket->waitForReadyRead(500))
+            {
+                if (m_stopRequested)
+                {
+                    break;
+                }
+                if (m_streamSocket->state() != QAbstractSocket::ConnectedState)
+                {
+                    qCCritical(rtlTcpInput) << "Socket disconnected";
+                    return;  // Unexpected disconnect — errorOccurred + finished handle the rest
+                }
+                continue;  // Timeout but still connected — re-check stop flag
+            }
+        }
+
         m_watchdogFlag = true;
 
-        m_streamSocket->read((char *)m_bufferIQ, RTLTCP_CHUNK_SIZE);
+        // Read all available bytes, filling and processing one chunk at a time.
+        while (m_streamSocket->bytesAvailable() > 0)
+        {
+            qint64 n = m_streamSocket->read((char *)m_bufferIQ + accumulated, RTLTCP_CHUNK_SIZE - accumulated);
+            if (n <= 0)
+            {
+                break;
+            }
+            accumulated += (size_t)n;
 
-        // full chunk is read at this point
-        if (m_enaCaptureIQ)
-        {  // process data
-            if (m_captureStartCntr > 0)
-            {  // reset procedure
-                if (0 == --m_captureStartCntr)
-                {  // restart finished
+            if (accumulated >= RTLTCP_CHUNK_SIZE)
+            {
+                accumulated = 0;
 
-                    // clear buffer to avoid mixing of channels
-                    inputBuffer.reset();
+                if (m_enaCaptureIQ)
+                {  // process data
+                    if (m_captureStartCntr > 0)
+                    {  // reset procedure
+                        if (0 == --m_captureStartCntr)
+                        {  // restart finished — process this chunk normally
 
-                    m_dcI = 0.0;
-                    m_dcQ = 0.0;
-                    // m_agcLevel = 0.0;
+                            // clear buffer to avoid mixing of channels
+                            inputBuffer.reset();
 
-                    emit dataReady();
-                }
-                else
-                {  // only reecord if recording
-                    if (m_isRecording)
-                    {
-                        emit recordBuffer(m_bufferIQ, RTLTCP_CHUNK_SIZE);
+                            m_dcI = 0.0;
+                            m_dcQ = 0.0;
+                            // m_agcLevel = 0.0;
+
+                            emit dataReady();
+                            processInputData(m_bufferIQ, RTLTCP_CHUNK_SIZE);
+                        }
+                        else
+                        {  // only record if recording, skip DSP
+                            if (m_isRecording)
+                            {
+                                emit recordBuffer(m_bufferIQ, RTLTCP_CHUNK_SIZE);
+                            }
+                        }
                     }
                     else
-                    { /* not recording */
+                    {
+                        processInputData(m_bufferIQ, RTLTCP_CHUNK_SIZE);
                     }
-
-                    // done
-                    continue;
                 }
             }
-            processInputData(m_bufferIQ, RTLTCP_CHUNK_SIZE);
         }
     }
+}
+
+void RtlTcpWorker::writeData(const QByteArray &data)
+{
+    QMutexLocker locker(&m_commandMutex);
+    m_commandQueue.enqueue(data);
+}
+
+void RtlTcpWorker::requestStop()
+{
+    m_stopRequested = true;
+}
+
+void RtlTcpWorker::flushCommandQueue()
+{
+    QMutexLocker locker(&m_commandMutex);
+    if (m_commandQueue.isEmpty())
+    {
+        return;
+    }
+    while (!m_commandQueue.isEmpty())
+    {
+        m_streamSocket->write(m_commandQueue.dequeue());
+    }
+    locker.unlock();
+    m_streamSocket->flush();
 }
 
 void RtlTcpWorker::captureIQ(bool ena)
@@ -1988,7 +2050,7 @@ void RtlTcpWorker::processInputData(unsigned char *buf, uint32_t len)
 #if (RTLTCP_AGC_ENABLE > 0)
     // store memory
     m_agcLevel = agcLev;
-    if (0 == (++m_agcLevelEmitCntr & 0x0F))
+    if (0 == (++m_agcLevelEmitCntr & 0x03))
     {
         emit agcLevel(agcLev);
     }
