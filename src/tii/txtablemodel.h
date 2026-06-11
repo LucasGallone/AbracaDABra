@@ -49,7 +49,7 @@ public:
     enum TxTableModelRoles
     {
         ExportRole = Qt::UserRole,
-        ExportRoleUTC,    // this role is the same as export role but time is in UTC
+        ExportRoleUTC,         // this role is the same as export role but time is in UTC
         ExportRoleEnglish,     // this role is the same as export role but untranslated
         ExportRoleUTCEnglish,  // this role is the same as export role UTC but untranslated
         CoordinatesRole,
@@ -83,13 +83,19 @@ public:
         ColAzimuth,           // keep order of these
         ColTxCoordinatesLat,  // this is used as first column for no coordinates case (do not add items below)
         ColTxCoordinatesLon,
+        ColTxAltidude,
+        ColTxAntennaHeight,
         ColRxCoordinatesLat,
         ColRxCoordinatesLon,
+        ColRxAltitude,
         ColCode,  // this is only used to display in TII table, skipped for scanner and export
         NumCols,
-        LastColumn = ColRxCoordinatesLon,
+        LastColumn = ColRxAltitude,
         LastColumnWithoutCoordinates = ColAzimuth,
         NumColsWithoutCoordinates = LastColumnWithoutCoordinates + 1,
+
+        LastColumnV1Coords = 18,  // frozen: CSV format with only Lat/Lon (no altitude), no RF Level = 18 cols
+                                  // LastColumnV1Coords + 1 = 19 cols (same format, with RF Level)
     };
     Q_ENUM(TxTableCols)
 

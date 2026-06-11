@@ -200,6 +200,8 @@ class SettingsBackend : public UIControlProvider
     UI_PROPERTY_SETTINGS(bool, tiiShowInactive, m_settings->tii.showInactiveTx)
     UI_PROPERTY_SETTINGS(bool, isTiiInactiveTimeoutEnabled, m_settings->tii.inactiveTxTimeoutEna)
     UI_PROPERTY_SETTINGS(int, tiiInactiveTimeout, m_settings->tii.inactiveTxTimeout)
+    UI_PROPERTY_SETTINGS(bool, tiiManualAltitude, m_settings->tii.manualAltitude)
+    UI_PROPERTY_SETTINGS(int, tiiAltitude, m_settings->tii.altitude)
 
     UI_PROPERTY_DEFAULT(int, applicationTheme, 0)
     UI_PROPERTY_SETTINGS(bool, showDlPlus, m_settings->dlPlusEna)

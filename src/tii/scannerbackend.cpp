@@ -241,7 +241,8 @@ CsvParseResult ScannerBackend::parseCsvFile(const QString &fileName)
     bool timeIsUTC = in.readLine().contains("(UTC)");
     int lineNum = 2;
     int numCols = 0;
-    bool hasRfLevel = false;  // true for new CSV format with RF Level column
+    bool hasRfLevel = false;   // true for new CSV format with RF Level column
+    bool hasAltitude = false;  // true for V2 format with altitude columns
     while (!in.atEnd())
     {
         QString line = in.readLine();
@@ -249,29 +250,49 @@ CsvParseResult ScannerBackend::parseCsvFile(const QString &fileName)
         QStringList qsl = line.split(';');
         if (numCols == 0)
         {  // detect column count from first data row
-            if (qsl.size() == TxTableModel::NumColsWithoutCoordinates)
+            if (qsl.size() == TxTableModel::LastColumnWithoutCoordinates + 1)
             {  // new format without coordinates
-                numCols = TxTableModel::NumColsWithoutCoordinates;
+                numCols = TxTableModel::LastColumnWithoutCoordinates + 1;
                 hasRfLevel = true;
+                hasAltitude = false;
+            }
+            else if (qsl.size() == TxTableModel::LastColumnWithoutCoordinates)
+            {  // old format without coordinates (no RF Level column)
+                numCols = TxTableModel::LastColumnWithoutCoordinates;
+                hasRfLevel = false;
+                hasAltitude = false;
             }
             else if (qsl.size() == TxTableModel::LastColumn + 1)
-            {  // new format with coordinates
+            {  // V2 format with coordinates
                 numCols = TxTableModel::LastColumn + 1;
                 hasRfLevel = true;
-            }
-            else if (qsl.size() == TxTableModel::NumColsWithoutCoordinates - 1)
-            {  // old format without coordinates (no RF Level column)
-                numCols = TxTableModel::NumColsWithoutCoordinates - 1;
-                hasRfLevel = false;
+                hasAltitude = true;
             }
             else if (qsl.size() == TxTableModel::LastColumn)
             {  // old format with coordinates (no RF Level column)
                 numCols = TxTableModel::LastColumn;
                 hasRfLevel = false;
+                hasAltitude = true;
+            }
+            else if (qsl.size() == TxTableModel::LastColumnV1Coords + 1)
+            {
+                numCols = TxTableModel::LastColumnV1Coords + 1;
+                hasRfLevel = true;
+                hasAltitude = false;
+            }
+            else if (qsl.size() == TxTableModel::LastColumnV1Coords)
+            {
+                numCols = TxTableModel::LastColumnV1Coords;
+                hasRfLevel = false;
+                hasAltitude = false;
             }
         }
         // colOffset accounts for missing ColRfLevel in old CSV files
-        const int colOffset = hasRfLevel ? 0 : -1;
+        const int rfLevelOffset = hasRfLevel ? 0 : -1;
+
+        // coordOffset: -2 for old coord formats (ColTxAltitude and ColTxAntennaHeight absent)
+        const int coordOffset = hasAltitude ? 0 : -2;
+
         if (qsl.size() == numCols)
         {
 #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
@@ -367,28 +388,28 @@ CsvParseResult ScannerBackend::parseCsvFile(const QString &fileName)
             }
 
             QList<dabsdrTii_t> tiiList;
-            if (!qsl.at(TxTableModel::ColMainId + colOffset).isEmpty())
+            if (!qsl.at(TxTableModel::ColMainId + rfLevelOffset).isEmpty())
             {
-                uint8_t main = qsl.at(TxTableModel::ColMainId + colOffset).toUInt(&isOk);
+                uint8_t main = qsl.at(TxTableModel::ColMainId + rfLevelOffset).toUInt(&isOk);
                 if (!isOk)
                 {
-                    qCWarning(scanner) << "Invalid TII code" << qsl.at(TxTableModel::ColMainId + colOffset) << "line #" << lineNum;
+                    qCWarning(scanner) << "Invalid TII code" << qsl.at(TxTableModel::ColMainId + rfLevelOffset) << "line #" << lineNum;
                     result.success = false;
                     result.errorMessage = tr("Failed to load file");
                     return result;
                 }
-                uint8_t sub = qsl.at(TxTableModel::ColSubId + colOffset).toUInt(&isOk);
+                uint8_t sub = qsl.at(TxTableModel::ColSubId + rfLevelOffset).toUInt(&isOk);
                 if (!isOk)
                 {
-                    qCWarning(scanner) << "Invalid TII code" << qsl.at(TxTableModel::ColSubId + colOffset) << "line #" << lineNum;
+                    qCWarning(scanner) << "Invalid TII code" << qsl.at(TxTableModel::ColSubId + rfLevelOffset) << "line #" << lineNum;
                     result.success = false;
                     result.errorMessage = tr("Failed to load file");
                     return result;
                 }
-                float level = qsl.at(TxTableModel::ColLevel + colOffset).toFloat(&isOk);
+                float level = qsl.at(TxTableModel::ColLevel + rfLevelOffset).toFloat(&isOk);
                 if (!isOk)
                 {
-                    qCWarning(scanner) << "Invalid TX level value" << qsl.at(TxTableModel::ColLevel + colOffset) << "line #" << lineNum;
+                    qCWarning(scanner) << "Invalid TX level value" << qsl.at(TxTableModel::ColLevel + rfLevelOffset) << "line #" << lineNum;
                     result.success = false;
                     result.errorMessage = tr("Failed to load file");
                     return result;
@@ -408,18 +429,46 @@ CsvParseResult ScannerBackend::parseCsvFile(const QString &fileName)
             result.rows.append(rowData);
 
             // Parse RX coordinates from first row with coordinate columns
-            const bool hasCoordsCols = (numCols == TxTableModel::LastColumn + 1) || (numCols == TxTableModel::LastColumn);
+            const bool hasCoordsCols = (numCols == TxTableModel::LastColumn + 1) || (numCols == TxTableModel::LastColumnV1Coords + 1) ||
+                                       (numCols == TxTableModel::LastColumnV1Coords);
+
             if (!result.offlineCoords.isValid() && hasCoordsCols)
             {
                 bool latOk = false, lonOk = false;
-                double lat = qsl.at(TxTableModel::ColRxCoordinatesLat + colOffset).toDouble(&latOk);
-                double lon = qsl.at(TxTableModel::ColRxCoordinatesLon + colOffset).toDouble(&lonOk);
+                double lat = qsl.at(TxTableModel::ColRxCoordinatesLat + rfLevelOffset + coordOffset).toDouble(&latOk);
+                double lon = qsl.at(TxTableModel::ColRxCoordinatesLon + rfLevelOffset + coordOffset).toDouble(&lonOk);
                 if (latOk && lonOk)
                 {
                     QGeoCoordinate candidate(lat, lon);
                     if (candidate.isValid())
                     {
                         result.offlineCoords = candidate;
+                    }
+                }
+                else
+                {
+                    qCWarning(scanner) << "Invalid coordinates value" << qsl.at(TxTableModel::ColLevel + rfLevelOffset + coordOffset) << "line #"
+                                       << lineNum;
+                    result.success = false;
+                    result.errorMessage = tr("Failed to load file");
+                    return result;
+                }
+                // ColRxAltitude only valid in V2 format:
+                if (hasAltitude)
+                {
+                    bool altOk = false;
+                    int alt = qsl.at(TxTableModel::ColRxAltitude + rfLevelOffset + coordOffset + coordOffset).toInt(&altOk);
+                    if (altOk)
+                    {
+                        result.offlineCoords.setAltitude(alt);
+                    }
+                    else
+                    {
+                        qCWarning(scanner) << "Invalid altitude value" << qsl.at(TxTableModel::ColLevel + rfLevelOffset + coordOffset) << "line #"
+                                           << lineNum;
+                        result.success = false;
+                        result.errorMessage = tr("Failed to load file");
+                        return result;
                     }
                 }
             }

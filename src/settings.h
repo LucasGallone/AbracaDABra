@@ -221,6 +221,8 @@ public:
     {
         GeolocationSource locationSource;
         QGeoCoordinate coordinates;
+        bool manualAltitude;
+        int altitude;
         QString serialPort;
         int serialPortBaudrate;
         bool showSpectumPlot;

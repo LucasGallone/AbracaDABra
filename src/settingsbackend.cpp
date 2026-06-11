@@ -257,6 +257,8 @@ SettingsBackend::SettingsBackend(QQmlApplicationEngine *qmlEngine, QObject *pare
     connect(this, &SettingsBackend::tiiShowInactiveChanged, this, &SettingsBackend::tiiSettingsChanged);
     connect(this, &SettingsBackend::isTiiInactiveTimeoutEnabledChanged, this, &SettingsBackend::tiiSettingsChanged);
     connect(this, &SettingsBackend::tiiInactiveTimeoutChanged, this, &SettingsBackend::tiiSettingsChanged);
+    connect(this, &SettingsBackend::tiiManualAltitudeChanged, this, &SettingsBackend::tiiSettingsChanged);
+    connect(this, &SettingsBackend::tiiAltitudeChanged, this, &SettingsBackend::tiiSettingsChanged);
 
     m_languageSelectionModel = new ItemModel(this);
 

@@ -255,18 +255,32 @@ QVariant TxTableModel::data(const QModelIndex &index, int role) const
                     return QVariant("");
                 case ColRxCoordinatesLat:
                     return QString("%1").arg(static_cast<double>(m_coordinates.latitude()), 0, 'f');
+                case ColRxCoordinatesLon:
+                    return QString("%1").arg(static_cast<double>(m_coordinates.longitude()), 0, 'f');
+                case ColRxAltitude:
+                    return QString("%1").arg(static_cast<int>(qRound(m_coordinates.altitude())));
                 case ColTxCoordinatesLat:
                     if (item.hasTxData())
                     {
                         return QString("%1").arg(static_cast<double>(item.transmitterData().coordinates().latitude()), 0, 'f');
                     }
                     return QVariant("");
-                case ColRxCoordinatesLon:
-                    return QString("%1").arg(static_cast<double>(m_coordinates.longitude()), 0, 'f');
                 case ColTxCoordinatesLon:
                     if (item.hasTxData())
                     {
                         return QString("%1").arg(static_cast<double>(item.transmitterData().coordinates().longitude()), 0, 'f');
+                    }
+                    return QVariant("");
+                case ColTxAltidude:
+                    if (item.hasTxData())
+                    {
+                        return QString("%1").arg(static_cast<int>(item.transmitterData().coordinates().altitude()));
+                    }
+                    return QVariant("");
+                case ColTxAntennaHeight:
+                    if (item.hasTxData())
+                    {
+                        return QString("%1").arg(static_cast<int>(item.transmitterData().antHeight()));
                     }
                     return QVariant("");
             }
@@ -419,10 +433,16 @@ QVariant TxTableModel::headerData(int section, Qt::Orientation orientation, int 
                     return tr("Latitude (TX)");
                 case ColTxCoordinatesLon:
                     return tr("Longitude (TX)");
+                case ColTxAltidude:
+                    return tr("Altitude (TX)");
+                case ColTxAntennaHeight:
+                    return tr("Antenna Height (TX)");
                 case ColRxCoordinatesLat:
                     return tr("Latitude (RX)");
                 case ColRxCoordinatesLon:
                     return tr("Longitude (RX)");
+                case ColRxAltitude:
+                    return tr("Altitude (RX)");
                 default:
                     break;
             }
@@ -474,10 +494,16 @@ QVariant TxTableModel::headerData(int section, Qt::Orientation orientation, int 
                     return "Latitude (TX)";
                 case ColTxCoordinatesLon:
                     return "Longitude (TX)";
+                case ColTxAltidude:
+                    return "Altitude (TX)";
+                case ColTxAntennaHeight:
+                    return "Antenna Height (TX)";
                 case ColRxCoordinatesLat:
                     return "Latitude (RX)";
                 case ColRxCoordinatesLon:
                     return "Longitude (RX)";
+                case ColRxAltitude:
+                    return "Altitude (RX)";
                 default:
                     break;
             }

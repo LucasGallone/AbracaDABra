@@ -3271,6 +3271,8 @@ void Application::loadSettings()
     m_settings->tii.locationSource = static_cast<Settings::GeolocationSource>(
         settings->value("TII/locationSource", static_cast<int>(Settings::GeolocationSource::System)).toInt());
     m_settings->tii.coordinates = QGeoCoordinate(settings->value("TII/latitude", 0.0).toDouble(), settings->value("TII/longitude", 0.0).toDouble());
+    m_settings->tii.manualAltitude = settings->value("TII/manualAltitude", false).toBool();
+    m_settings->tii.altitude = settings->value("TII/altitude", 280).toInt();
     m_settings->tii.serialPort = settings->value("TII/serialPort", "").toString();
     m_settings->tii.serialPortBaudrate = settings->value("TII/serialPortBaudrate", 4800).toInt();
     m_settings->tii.showSpectumPlot = settings->value("TII/showSpectrumPlot", false).toBool();
@@ -3607,6 +3609,8 @@ void Application::saveSettings()
     settings->setValue("TII/locationSource", static_cast<int>(m_settings->tii.locationSource));
     settings->setValue("TII/latitude", m_settings->tii.coordinates.latitude());
     settings->setValue("TII/longitude", m_settings->tii.coordinates.longitude());
+    settings->setValue("TII/manualAltitude", m_settings->tii.manualAltitude);
+    settings->setValue("TII/altitude", m_settings->tii.altitude);
     settings->setValue("TII/serialPort", m_settings->tii.serialPort);
     settings->setValue("TII/serialPortBaudrate", m_settings->tii.serialPortBaudrate);
     settings->setValue("TII/showSpectrumPlot", m_settings->tii.showSpectumPlot);

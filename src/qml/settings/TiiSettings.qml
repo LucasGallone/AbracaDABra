@@ -183,12 +183,6 @@ Item {
                                             readonly property regexp coordRegExp: /^\s*[+-]?\d+(?:\.\d+)?\s*,\s*[+-]?\d+(?:\.\d+)?\s*$/
                                             validator: RegularExpressionValidator { regularExpression: coordinatesTextField.coordRegExp }
                                             text: settingsBackend.locationCoordinates
-                                            // onEditingFinished: {
-                                            //     var txt = text.trim();
-                                            //     if (settingsBackend.locationCoordinates !== txt) {
-                                            //         settingsBackend.locationCoordinates = txt
-                                            //     }
-                                            // }
                                         }
                                     }
                                     GridLayout {
@@ -226,7 +220,7 @@ Item {
                                             }
                                         }
                                     }
-                                }
+                                }                                
                                 AbracaLabel {
                                     id: coordinatesHelpLabel
                                     Layout.fillWidth: true
@@ -236,6 +230,37 @@ Item {
                                     text: settingsBackend.coordinatesHelp
                                     wrapMode: Text.WordWrap
                                     role: UI.LabelRole.Secondary
+                                }
+                                RowLayout {
+                                    id: altitudeLayout
+                                    AbracaLabel {
+                                        id: altitudeLabel
+                                        text: qsTr("Altitude source:")
+                                        Layout.preferredWidth: receiverLocationLayout.labelWidth
+                                    }
+                                    AbracaSwitch {
+                                        id: manualAltitudeSwitch
+                                        text: qsTr("Manual")
+                                        enabled: settingsBackend.locationSourceModel.currentIndex !== 1
+                                        checked: settingsBackend.tiiManualAltitude || settingsBackend.locationSourceModel.currentIndex === 1
+                                        onToggled: {
+                                            if (settingsBackend.tiiManualAltitude !== checked) {
+                                                settingsBackend.tiiManualAltitude = checked
+                                            }
+                                        }
+                                    }
+                                    AbracaSpinBox {
+                                        enabled: manualAltitudeSwitch.checked || settingsBackend.locationSourceModel.currentIndex === 1
+                                        stepSize: 10
+                                        from: 0
+                                        to: 5000
+                                        editable: true
+                                        suffix: " m"
+                                        value: settingsBackend.tiiAltitude
+                                        onValueChanged: if (value !== settingsBackend.tiiAltitude) {
+                                            settingsBackend.tiiAltitude = value;
+                                        }
+                                    }
                                 }
                             }
                         }
