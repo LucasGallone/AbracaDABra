@@ -259,7 +259,7 @@ private:
     // input buffer
     uint8_t m_bufferIQ[RTLTCP_CHUNK_SIZE];
     void processInputData(unsigned char *buf, uint32_t len);
-    void flushCommandQueue(QTcpSocket *socket);
+    void flushCommandQueue(QTcpSocket &socket);
 };
 
 class RtlTcpInput : public InputDevice
