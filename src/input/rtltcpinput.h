@@ -212,7 +212,7 @@ class RtlTcpWorker : public QThread
 {
     Q_OBJECT
 public:
-    explicit RtlTcpWorker(QTcpSocket *streamSocket, QObject *parent = nullptr);
+    explicit RtlTcpWorker(const QString &address, int port, QObject *parent = nullptr);
     void captureIQ(bool ena);
     void startStopRecording(bool ena);
     bool isRunning();
@@ -224,12 +224,14 @@ signals:
     void recordBuffer(const uint8_t *buf, uint32_t len);
     void dataReady();
     void serverInfo(uint32_t tunerType, uint32_t tunerGainCount);
+    void errorOccurred(QAbstractSocket::SocketError socketError);
 
 protected:
     void run() override;
 
 private:
-    QTcpSocket *m_streamSocket;
+    QString m_address;
+    int m_port;
 
     QMutex m_commandMutex;
     QQueue<QByteArray> m_commandQueue;
@@ -257,7 +259,7 @@ private:
     // input buffer
     uint8_t m_bufferIQ[RTLTCP_CHUNK_SIZE];
     void processInputData(unsigned char *buf, uint32_t len);
-    void flushCommandQueue();
+    void flushCommandQueue(QTcpSocket *socket);
 };
 
 class RtlTcpInput : public InputDevice
@@ -312,7 +314,6 @@ private:
     uint32_t m_frequency;
     QString m_address;
     int m_port;
-    QTcpSocket *m_streamSocket;
     QTcpSocket *m_controlSocket;
     bool m_controlSocketEna;
     bool m_haveControlSocket;
@@ -342,7 +343,7 @@ private:
     void onAgcLevel(float agcLevel);
 
     void sendCommand(const RtlTcpCommand &cmd, uint32_t param);
-    void onStreamSocketError(QAbstractSocket::SocketError error);
+    void onStreamSocketError(QAbstractSocket::SocketError e);
     void onWatchdogTimeout();
 
     void initControlSocket();
