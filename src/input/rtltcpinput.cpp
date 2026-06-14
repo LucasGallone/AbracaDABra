@@ -987,8 +987,11 @@ void RtlTcpWorker::runNativeSocket()
 
                     m_dcI = 0.0;
                     m_dcQ = 0.0;
+                    m_bufferFillCntr = RTLTCP_START_COUNTER_FILL_BUFFER;
+                    processInputData(m_bufferIQ, RTLTCP_CHUNK_SIZE);
 
-                    emit dataReady();
+                    // dataReady() is emitted from processInputData when buffer is filled to avoid audio dropouts
+                    // emit dataReady()
                 }
                 else
                 {
@@ -1104,9 +1107,11 @@ void RtlTcpWorker::runQtSocket()
 
                             m_dcI = 0.0;
                             m_dcQ = 0.0;
-
-                            emit dataReady();
+                            m_bufferFillCntr = RTLTCP_START_COUNTER_FILL_BUFFER;
                             processInputData(m_bufferIQ, RTLTCP_CHUNK_SIZE);
+
+                            // dataReady() is emitted from processInputData when buffer is filled to avoid audio dropouts
+                            // emit dataReady()
                         }
                         else
                         {
@@ -1354,4 +1359,13 @@ void RtlTcpWorker::processInputData(unsigned char *buf, uint32_t len)
     inputBuffer.count = inputBuffer.count + len * sizeof(float);
     pthread_cond_signal(&inputBuffer.countCondition);
     pthread_mutex_unlock(&inputBuffer.countMutex);
+
+    if (m_bufferFillCntr > 0)
+    {
+        m_bufferFillCntr -= 1;
+        if (m_bufferFillCntr <= 0)
+        {
+            emit dataReady();
+        }
+    }
 }
