@@ -525,6 +525,13 @@ Item {
         visible: scannerBackend.isLoading
         z: 100
 
+        // we need to consume all mouse events to prevent interaction with the UI while loading
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.AllButtons
+            hoverEnabled: true
+        }
+
         AbracaBusyIndicator {
             anchors.centerIn: parent
             drawColor: "white"
