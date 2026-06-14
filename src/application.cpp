@@ -4129,7 +4129,14 @@ void Application::close()
 
         m_allowQuitEvent = true;  // allow the quit event to proceed if we intercepted it
 
-        qApp->exit(m_exitCode);
+        if (m_exitCode != Application::EXIT_CODE_RESTART)
+        {
+            qApp->exit(m_exitCode);
+        }
+        else
+        {  // delay the restart slightly to allow the close event to fully complete and release any resources before we start the new instance
+            QTimer::singleShot(500, [this]() { qApp->exit(m_exitCode); });
+        }
     }
     else
     {  // message is needed for Windows -> stopping RTL SDR thread may take long time :-(
