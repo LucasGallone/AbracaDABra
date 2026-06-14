@@ -118,6 +118,7 @@ public:
         int agcLevelMax;
         int ppm;
         float rfLevelOffset;
+        bool useNativeSocket;
     } rtltcp;
 #if HAVE_AIRSPY
     struct

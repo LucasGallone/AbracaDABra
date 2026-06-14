@@ -2744,7 +2744,7 @@ void Application::initInputDevice(const InputDevice::Id &d, const QVariant &id)
         break;
         case InputDevice::Id::RTLTCP:
         {
-            m_inputDevice = new RtlTcpInput();
+            m_inputDevice = new RtlTcpInput(m_settings->rtltcp.useNativeSocket);
 
             // signals have to be connected before calling openDevice
             // RTL_TCP is opened immediately and starts receiving data
@@ -3391,6 +3391,7 @@ void Application::loadSettings()
     m_settings->rtltcp.agcLevelMax = settings->value("RTL-TCP/agcLevelMax", 0).toInt();
     m_settings->rtltcp.ppm = settings->value("RTL-TCP/ppm", 0).toInt();
     m_settings->rtltcp.rfLevelOffset = settings->value("RTL-TCP/rfLevelOffset", 0.0).toFloat();
+    m_settings->rtltcp.useNativeSocket = settings->value("RTL-TCP/useNativeSocket", true).toBool();
 
 #if HAVE_RARTTCP
     m_settings->rarttcp.tcpAddress = settings->value("RART-TCP/address", QString("127.0.0.1")).toString();
@@ -3775,7 +3776,7 @@ void Application::saveSettings()
     settings->setValue("RTL-TCP/agcLevelMax", m_settings->rtltcp.agcLevelMax);
     settings->setValue("RTL-TCP/ppm", m_settings->rtltcp.ppm);
     settings->setValue("RTL-TCP/rfLevelOffset", m_settings->rtltcp.rfLevelOffset);
-
+    settings->setValue("RTL-TCP/useNativeSocket", m_settings->rtltcp.useNativeSocket);
 #if HAVE_RARTTCP
     settings->setValue("RART-TCP/address", m_settings->rarttcp.tcpAddress);
     settings->setValue("RART-TCP/port", m_settings->rarttcp.tcpPort);
