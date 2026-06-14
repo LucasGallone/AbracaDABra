@@ -38,7 +38,7 @@
 #include <rtl-sdr.h>
 #include "inputdevice.h"
 
-#define RTLTCP_USE_NATIVE_SOCKET 0
+#define RTLTCP_USE_NATIVE_SOCKET 1
 
 #define RTLTCP_CHUNK_SIZE (INPUT_CHUNK_IQ_SAMPLES * 2 * sizeof(uint8_t))  // 64ms of IQ samples at 2048 kHz
 
@@ -75,10 +75,12 @@ class RtlTcpWorker : public QThread
 {
     Q_OBJECT
 public:
-    explicit RtlTcpWorker(SOCKET sock, QObject *parent = nullptr);
+    explicit RtlTcpWorker(const QString &address, int port, QObject *parent = nullptr);
     void captureIQ(bool ena);
     void startStopRecording(bool ena);
     bool isRunning();
+    void writeData(const QByteArray &data);
+    void requestStop();
 
 protected:
     void run() override;
@@ -90,8 +92,12 @@ signals:
     void serverInfo(uint32_t tunerType, uint32_t tunerGainCount);
 
 private:
-    SOCKET m_sock;
+    QString m_address;
+    int m_port;
 
+    QMutex m_commandMutex;
+    QQueue<QByteArray> m_commandQueue;
+    std::atomic<bool> m_stopRequested;
     std::atomic<bool> m_isRecording;
     std::atomic<bool> m_enaCaptureIQ;
     std::atomic<bool> m_watchdogFlag;
@@ -115,6 +121,7 @@ private:
     // input buffer
     uint8_t m_bufferIQ[RTLTCP_CHUNK_SIZE];
     void processInputData(unsigned char *buf, uint32_t len);
+    void flushCommandQueue(SOCKET &socket);
 };
 
 class RtlTcpInput : public InputDevice
@@ -167,7 +174,6 @@ public:
 
 private:
     uint32_t m_frequency;
-    SOCKET m_sock;
     QString m_address;
     int m_port;
     QTcpSocket *m_controlSocket;

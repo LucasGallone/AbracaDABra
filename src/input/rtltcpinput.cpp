@@ -88,7 +88,6 @@ RtlTcpInput::RtlTcpInput(QObject *parent) : InputDevice(parent)
     m_rfLevelOffset = 0.0;
 
     m_frequency = 0;
-    m_sock = INVALID_SOCKET;
     m_address = "127.0.0.1";
     m_port = 1234;
 
@@ -101,14 +100,7 @@ RtlTcpInput::~RtlTcpInput()
     if (nullptr != m_worker)
     {
         m_worker->captureIQ(false);
-
-        // close socket
-#if defined(_WIN32)
-        closesocket(m_sock);
-#else
-        ::close(m_sock);
-#endif
-        m_sock = INVALID_SOCKET;
+        m_worker->requestStop();
 
         m_worker->wait(2000);
 
@@ -153,185 +145,8 @@ bool RtlTcpInput::openDevice(const QVariant &hwId, bool fallbackConnection)
         return true;
     }
 
-    struct addrinfo hints;
-    memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_flags = 0;
-    hints.ai_protocol = 0; /* Any protocol */
-
-    QString portStr = QString().number(m_port);
-
-    struct addrinfo *result;
-    int s = getaddrinfo(m_address.toLatin1(), portStr.toLatin1(), &hints, &result);
-    if (s != 0)
-    {
-#if defined(_WIN32)
-        qCCritical(rtlTcpInput) << "getaddrinfo error:" << gai_strerrorA(s);
-#else
-        qCCritical(rtlTcpInput) << "getaddrinfo error:" << gai_strerror(s);
-#endif
-        return false;
-    }
-
-    /* getaddrinfo() returns a list of address structures.
-       Try each address until we successfully connect(2).
-       If socket(2) (or connect(2)) fails, we (close the socket
-       and) try the next address. */
-    struct addrinfo *rp;
-    int sfd = -1;
-    for (rp = result; rp != NULL; rp = rp->ai_next)
-    {
-        sfd = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
-        if (sfd == -1)
-        {
-            continue;
-        }
-
-        // Set non-blocking
-#if defined(_WIN32)
-        /// Windows sockets are created in blocking mode by default
-        // currently on windows, there is no easy way to obtain the socket's current blocking mode since WSAIsBlocking was deprecated
-        // https://docs.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-ioctlsocket
-        u_long flags = 1;  // If flags != 0, non-blocking mode is enabled.
-        if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
-        {
-            qCWarning(rtlTcpInput) << "Failed to set non-blocking socket";
-        }
-
-        struct sockaddr_in *sa = (struct sockaddr_in *)rp->ai_addr;
-        qCInfo(rtlTcpInput, "Trying to connect to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
-        ::connect(sfd, rp->ai_addr, rp->ai_addrlen);
-        // https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa450263(v=msdn.10)
-        //  It is normal for WSAEWOULDBLOCK to be reported as the result from calling connect (Windows Sockets)
-        // on a nonblocking SOCK_STREAM socket, since some time must elapse for the connection to be established.
-#if (_WIN32_WINNT >= 0x0600)
-        struct pollfd pfd;
-        pfd.fd = sfd;
-        pfd.events = POLLOUT;
-        if (WSAPoll(&pfd, 1, 5000) > 0)
-        {
-            int sockErr = 0;
-            int sockErrLen = sizeof(sockErr);
-            if (getsockopt(sfd, SOL_SOCKET, SO_ERROR, (char *)&sockErr, &sockErrLen) != 0 || sockErr != 0)
-            {
-                qCCritical(rtlTcpInput, "Connection failed: %d", sockErr ? sockErr : WSAGetLastError());
-            }
-            else
-            {
-                qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
-
-                flags = 0;  // If flags != 0, non-blocking mode is enabled.
-                if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
-                {
-                    qCWarning(rtlTcpInput) << "Failed to set blocking socket";
-                }
-
-                m_sock = sfd;
-                break; /* Success */
-            }
-        }
-        else
-        {  // -1 is error, 0 is timeout
-            qCCritical(rtlTcpInput) << "Unable to connect";
-        }
-#else  // (_WIN32_WINNT < 0x0600)
-       // poll API does not exist :-(
-       // this part was not tested
-        fd_set connFd;
-        FD_ZERO(&connFd);
-        FD_SET(sfd, &connFd);
-
-        // check if the socket is ready
-        TIMEVAL connTimeout;
-        connTimeout.tv_sec = 2;
-        connTimeout.tv_usec = 0;
-        if (::select(sfd + 1, nullptr, &connFd, nullptr, &connTimeout) > 0)
-        {
-            qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
-
-            flags = 0;  // If flags != 0, non-blocking mode is enabled.
-            if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
-            {
-                qCWarning(rtlTcpInput) << "Failed to set blocking socket";
-            }
-
-            m_sock = sfd;
-            break; /* Success */
-        }
-        else
-        {  // -1 is error, 0 is timeout
-            qCCritical(rtlTcpInput) << "Unable to connect";
-        }
-#endif
-
-#else  // not defined(_WIN32)
-        long arg;
-        if ((arg = fcntl(sfd, F_GETFL, NULL)) < 0)
-        {
-            qCWarning(rtlTcpInput, "Error fcntl(..., F_GETFL) (%s)", strerror(errno));
-        }
-        arg |= O_NONBLOCK;
-        if (fcntl(sfd, F_SETFL, arg) < 0)
-        {
-            qCWarning(rtlTcpInput, "Error fcntl(..., F_SETFL) (%s)", strerror(errno));
-        }
-
-        struct sockaddr_in *sa = (struct sockaddr_in *)rp->ai_addr;
-        qCInfo(rtlTcpInput, "Trying to connect to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
-        ::connect(sfd, rp->ai_addr, rp->ai_addrlen);
-
-        struct pollfd pfd;
-        pfd.fd = sfd;
-        pfd.events = POLLOUT;
-        if (poll(&pfd, 1, 5000) > 0)
-        {
-            int sockErr = 0;
-            socklen_t sockErrLen = sizeof(sockErr);
-            if (getsockopt(sfd, SOL_SOCKET, SO_ERROR, &sockErr, &sockErrLen) < 0 || sockErr != 0)
-            {
-                qCCritical(rtlTcpInput, "Connection failed: %s", strerror(sockErr ? sockErr : errno));
-            }
-            else
-            {
-                qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
-
-                // set bloking mode again
-                if ((arg = fcntl(sfd, F_GETFL, NULL)) < 0)
-                {
-                    qCWarning(rtlTcpInput, "Error fcntl(..., F_GETFL) (%s)", strerror(errno));
-                }
-                arg &= (~O_NONBLOCK);
-                if (fcntl(sfd, F_SETFL, arg) < 0)
-                {
-                    qCWarning(rtlTcpInput, "Error fcntl(..., F_SETFL) (%s)", strerror(errno));
-                }
-
-                m_sock = sfd;
-                break; /* Success */
-            }
-        }
-        else
-        {  // -1 is error, 0 is timeout
-            qCCritical(rtlTcpInput) << "Unable to connect";
-        }
-#endif
-
-#if defined(_WIN32)
-        closesocket(sfd);
-#else
-        ::close(sfd);
-#endif
-    }
-
-    if (NULL == rp)
-    { /* No address succeeded */
-        qCCritical(rtlTcpInput) << "Could not connect";
-        return false;
-    }
-
     // worker reads dongle info and starts reading samples
-    m_worker = new RtlTcpWorker(m_sock, this);
+    m_worker = new RtlTcpWorker(m_address, m_port, this);
     connect(m_worker, &RtlTcpWorker::serverInfo, this, &RtlTcpInput::onServerInfo, Qt::QueuedConnection);
     connect(m_worker, &RtlTcpWorker::agcLevel, this, &RtlTcpInput::onAgcLevel, Qt::QueuedConnection);
     connect(m_worker, &RtlTcpWorker::dataReady, this, [=]() { emit tuned(m_frequency); }, Qt::QueuedConnection);
@@ -661,13 +476,6 @@ void RtlTcpInput::onReadThreadStopped()
 {
     qCCritical(rtlTcpInput) << "Server disconnected.";
 
-    // close socket
-#if defined(_WIN32)
-    closesocket(m_sock);
-#else
-    ::close(m_sock);
-#endif
-    m_sock = INVALID_SOCKET;
     m_watchdogTimer.stop();
 
     // flush buffer to avoid blocking of the DAB processing thread
@@ -683,7 +491,9 @@ void RtlTcpInput::onWatchdogTimeout()
         if (!m_worker->isRunning())
         {  // some problem in data input
             qCCritical(rtlTcpInput) << "Watchdog timeout";
+            m_worker->requestStop();
             inputBuffer.flush();
+            m_worker->wait(2000);
             emit error(InputDevice::ErrorCode::NoDataAvailable);
         }
     }
@@ -758,19 +568,25 @@ void RtlTcpInput::sendCommand(const RtlTcpCommand &cmd, uint32_t param)
     cmdBuffer[2] = (param >> 16) & 0xFF;
     cmdBuffer[1] = (param >> 24) & 0xFF;
 
-    ::send(m_sock, (char *)cmdBuffer, 5, 0);
+    m_worker->writeData(QByteArray((char *)cmdBuffer, 5));
 }
 
-RtlTcpWorker::RtlTcpWorker(SOCKET sock, QObject *parent) : QThread(parent)
+RtlTcpWorker::RtlTcpWorker(const QString &address, int port, QObject *parent) : QThread{parent}, m_address{address}, m_port(port)
 {
     m_isRecording = false;
     m_enaCaptureIQ = false;
-    m_sock = sock;
+    m_stopRequested = false;
 }
 
 void RtlTcpWorker::startStopRecording(bool ena)
 {
     m_isRecording = ena;
+}
+
+void RtlTcpWorker::writeData(const QByteArray &data)
+{
+    QMutexLocker locker(&m_commandMutex);
+    m_commandQueue.enqueue(data);
 }
 
 void RtlTcpWorker::run()
@@ -780,6 +596,186 @@ void RtlTcpWorker::run()
     m_agcLevel = 0.0;
     m_agcLevelEmitCntr = 0;
     m_watchdogFlag = false;  // first callback sets it to true
+
+    SOCKET sock = INVALID_SOCKET;
+
+    // connect
+    struct addrinfo hints;
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = 0;
+    hints.ai_protocol = 0; /* Any protocol */
+
+    QString portStr = QString().number(m_port);
+
+    struct addrinfo *result;
+    int s = getaddrinfo(m_address.toLatin1(), portStr.toLatin1(), &hints, &result);
+    if (s != 0)
+    {
+#if defined(_WIN32)
+        qCCritical(rtlTcpInput) << "getaddrinfo error:" << gai_strerrorA(s);
+#else
+        qCCritical(rtlTcpInput) << "getaddrinfo error:" << gai_strerror(s);
+#endif
+        return;
+    }
+
+    /* getaddrinfo() returns a list of address structures.
+       Try each address until we successfully connect(2).
+       If socket(2) (or connect(2)) fails, we (close the socket
+       and) try the next address. */
+    struct addrinfo *rp;
+    int sfd = -1;
+    for (rp = result; rp != NULL; rp = rp->ai_next)
+    {
+        sfd = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
+        if (sfd == -1)
+        {
+            continue;
+        }
+
+        // Set non-blocking
+#if defined(_WIN32)
+        /// Windows sockets are created in blocking mode by default
+        // currently on windows, there is no easy way to obtain the socket's current blocking mode since WSAIsBlocking was deprecated
+        // https://docs.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-ioctlsocket
+        u_long flags = 1;  // If flags != 0, non-blocking mode is enabled.
+        if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
+        {
+            qCWarning(rtlTcpInput) << "Failed to set non-blocking socket";
+        }
+
+        struct sockaddr_in *sa = (struct sockaddr_in *)rp->ai_addr;
+        qCInfo(rtlTcpInput, "Trying to connect to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
+        ::connect(sfd, rp->ai_addr, rp->ai_addrlen);
+        // https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa450263(v=msdn.10)
+        //  It is normal for WSAEWOULDBLOCK to be reported as the result from calling connect (Windows Sockets)
+        // on a nonblocking SOCK_STREAM socket, since some time must elapse for the connection to be established.
+#if (_WIN32_WINNT >= 0x0600)
+        struct pollfd pfd;
+        pfd.fd = sfd;
+        pfd.events = POLLOUT;
+        if (WSAPoll(&pfd, 1, 5000) > 0)
+        {
+            int sockErr = 0;
+            int sockErrLen = sizeof(sockErr);
+            if (getsockopt(sfd, SOL_SOCKET, SO_ERROR, (char *)&sockErr, &sockErrLen) != 0 || sockErr != 0)
+            {
+                qCCritical(rtlTcpInput, "Connection failed: %d", sockErr ? sockErr : WSAGetLastError());
+            }
+            else
+            {
+                qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
+
+                flags = 0;  // If flags != 0, non-blocking mode is enabled.
+                if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
+                {
+                    qCWarning(rtlTcpInput) << "Failed to set blocking socket";
+                }
+
+                sock = sfd;
+                break; /* Success */
+            }
+        }
+        else
+        {  // -1 is error, 0 is timeout
+            qCCritical(rtlTcpInput) << "Unable to connect";
+        }
+#else  // (_WIN32_WINNT < 0x0600)
+       // poll API does not exist :-(
+       // this part was not tested
+        fd_set connFd;
+        FD_ZERO(&connFd);
+        FD_SET(sfd, &connFd);
+
+        // check if the socket is ready
+        TIMEVAL connTimeout;
+        connTimeout.tv_sec = 2;
+        connTimeout.tv_usec = 0;
+        if (::select(sfd + 1, nullptr, &connFd, nullptr, &connTimeout) > 0)
+        {
+            qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
+
+            flags = 0;  // If flags != 0, non-blocking mode is enabled.
+            if (NO_ERROR != ioctlsocket(sfd, FIONBIO, &flags))
+            {
+                qCWarning(rtlTcpInput) << "Failed to set blocking socket";
+            }
+
+            sock = sfd;
+            break; /* Success */
+        }
+        else
+        {  // -1 is error, 0 is timeout
+            qCCritical(rtlTcpInput) << "Unable to connect";
+        }
+#endif
+
+#else  // not defined(_WIN32)
+        long arg;
+        if ((arg = fcntl(sfd, F_GETFL, NULL)) < 0)
+        {
+            qCWarning(rtlTcpInput, "Error fcntl(..., F_GETFL) (%s)", strerror(errno));
+        }
+        arg |= O_NONBLOCK;
+        if (fcntl(sfd, F_SETFL, arg) < 0)
+        {
+            qCWarning(rtlTcpInput, "Error fcntl(..., F_SETFL) (%s)", strerror(errno));
+        }
+
+        struct sockaddr_in *sa = (struct sockaddr_in *)rp->ai_addr;
+        qCInfo(rtlTcpInput, "Trying to connect to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
+        ::connect(sfd, rp->ai_addr, rp->ai_addrlen);
+
+        struct pollfd pfd;
+        pfd.fd = sfd;
+        pfd.events = POLLOUT;
+        if (poll(&pfd, 1, 5000) > 0)
+        {
+            int sockErr = 0;
+            socklen_t sockErrLen = sizeof(sockErr);
+            if (getsockopt(sfd, SOL_SOCKET, SO_ERROR, &sockErr, &sockErrLen) < 0 || sockErr != 0)
+            {
+                qCCritical(rtlTcpInput, "Connection failed: %s", strerror(sockErr ? sockErr : errno));
+            }
+            else
+            {
+                qCInfo(rtlTcpInput, "Connected to: %s:%d", inet_ntoa(sa->sin_addr), m_port);
+
+                // set bloking mode again
+                if ((arg = fcntl(sfd, F_GETFL, NULL)) < 0)
+                {
+                    qCWarning(rtlTcpInput, "Error fcntl(..., F_GETFL) (%s)", strerror(errno));
+                }
+                arg &= (~O_NONBLOCK);
+                if (fcntl(sfd, F_SETFL, arg) < 0)
+                {
+                    qCWarning(rtlTcpInput, "Error fcntl(..., F_SETFL) (%s)", strerror(errno));
+                }
+
+                sock = sfd;
+                break; /* Success */
+            }
+        }
+        else
+        {  // -1 is error, 0 is timeout
+            qCCritical(rtlTcpInput) << "Unable to connect";
+        }
+#endif
+
+#if defined(_WIN32)
+        closesocket(sfd);
+#else
+        ::close(sfd);
+#endif
+    }
+
+    if (NULL == rp)
+    { /* No address succeeded */
+        qCCritical(rtlTcpInput) << "Could not connect";
+        return;
+    }
 
     // read dongle info
     struct
@@ -793,16 +789,16 @@ void RtlTcpWorker::run()
 #if defined(_WIN32)
 #if (_WIN32_WINNT >= 0x0600)
     struct pollfd fd;
-    fd.fd = m_sock;
+    fd.fd = sock;
     fd.events = POLLIN;
     if (WSAPoll(&fd, 1, 10000) > 0)
     {
-        ::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
+        ::recv(sock, (char *)&dongleInfo, sizeof(dongleInfo), 0);
     }
     else
     {  // -1 is error, 0 is timeout
         qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return false;
+        goto worker_exit;
     }
 #else
     // poll API does not exist :-(
@@ -821,25 +817,25 @@ void RtlTcpWorker::run()
     else
     {  // -1 is error, 0 is timeout
         qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return false;
+        goto worker_exit;
     }
 #endif
 #else
     struct pollfd fd;
-    fd.fd = m_sock;
+    fd.fd = sock;
     fd.events = POLLIN;
     if (poll(&fd, 1, 10000) > 0)
     {
-        if (::recv(m_sock, (char *)&dongleInfo, sizeof(dongleInfo), 0) <= 0)
+        if (::recv(sock, (char *)&dongleInfo, sizeof(dongleInfo), 0) <= 0)
         {
             qCCritical(rtlTcpInput) << "Server not responding.";
-            return;
+            goto worker_exit;
         }
     }
     else
     {  // -1 is error, 0 is timeout
         qCCritical(rtlTcpInput) << "Unable to get RTL dongle infomation";
-        return;
+        goto worker_exit;
     }
 #endif
 
@@ -854,12 +850,12 @@ void RtlTcpWorker::run()
     }
 
     // read samples
-    while (INVALID_SOCKET != m_sock)
+    while (!m_stopRequested && INVALID_SOCKET != sock)
     {
         size_t read = 0;
         do
         {
-            ssize_t ret = ::recv(m_sock, (char *)m_bufferIQ + read, RTLTCP_CHUNK_SIZE - read, 0);
+            ssize_t ret = ::recv(sock, (char *)m_bufferIQ + read, RTLTCP_CHUNK_SIZE - read, 0);
             if (0 == ret)
             {  // disconnected => finish thread operation
                 qCCritical(rtlTcpInput) << "Socket disconnected";
@@ -914,6 +910,8 @@ void RtlTcpWorker::run()
         // reset watchDog flag, timer sets it to true
         m_watchdogFlag = true;
 
+        flushCommandQueue(sock);
+
         // full chunk is read at this point
         if (m_enaCaptureIQ)
         {  // process data
@@ -951,6 +949,13 @@ void RtlTcpWorker::run()
 
 worker_exit:
     // single exit point
+    // close socket
+#if defined(_WIN32)
+    closesocket(sock);
+#else
+    ::close(sock);
+#endif
+
     return;
 }
 
@@ -963,11 +968,30 @@ void RtlTcpWorker::captureIQ(bool ena)
     m_enaCaptureIQ = ena;
 }
 
+void RtlTcpWorker::requestStop()
+{
+    m_stopRequested = true;
+}
+
 bool RtlTcpWorker::isRunning()
 {
     bool flag = m_watchdogFlag;
     m_watchdogFlag = false;
     return flag;
+}
+
+void RtlTcpWorker::flushCommandQueue(SOCKET &socket)
+{
+    QMutexLocker locker(&m_commandMutex);
+    if (m_commandQueue.isEmpty())
+    {
+        return;
+    }
+    while (!m_commandQueue.isEmpty())
+    {
+        ::send(socket, (char *)m_commandQueue.dequeue().constData(), 5, 0);
+    }
+    locker.unlock();
 }
 
 void RtlTcpWorker::processInputData(unsigned char *buf, uint32_t len)
