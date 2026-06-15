@@ -171,19 +171,6 @@ void SPIApp::enable(bool ena)
     }
 }
 
-void SPIApp::setEnableRadioDNS(bool ena)
-{
-    if (m_enaRadioDNS != ena)
-    {
-        m_enaRadioDNS = ena;
-        m_radioDnsDownloadQueue.clear();
-        if (m_enaRadioDNS)
-        {
-            emit radioDNSAvailable();
-        }
-    }
-}
-
 void SPIApp::onUserAppData(const RadioControlUserAppData &data)
 {
     if ((DabUserApplicationType::SPI == data.userAppType) && (m_isRunning))
@@ -454,8 +441,19 @@ void SPIApp::onFileRequest(uint16_t decoderId, const QString &url, const QString
 
 void SPIApp::onSettingsChanged(bool useInternet, bool enaRadioDNS)
 {
-    setUseInternet(useInternet);
-    setEnableRadioDNS(enaRadioDNS);
+    // radioDNS requres internet access, so it cannot be enabled if internet access is disabled
+    bool enaRadioDns = useInternet && enaRadioDNS;
+
+    m_useInternet = useInternet;
+    if (m_enaRadioDNS != enaRadioDns)
+    {
+        m_enaRadioDNS = enaRadioDns;
+        m_radioDnsDownloadQueue.clear();
+        if (enaRadioDns)
+        {
+            emit radioDNSAvailable();
+        }
+    }
 }
 
 void SPIApp::parseBinaryInfo(uint16_t decoderId, const MOTObject &motObj)
@@ -1662,7 +1660,7 @@ void SPIApp::radioDNSLookup()
 
 void SPIApp::getSI(const ServiceListId &servId, const uint32_t &ueid)
 {
-    if (m_useInternet && m_enaRadioDNS)
+    if (m_enaRadioDNS)
     {  // query RadioDNS
         m_radioDnsDownloadQueue.enqueue({radioDNSFQDN(servId, ueid), "SI.xml"});
         if (m_radioDnsDownloadQueue.size() == 1)
@@ -1674,7 +1672,7 @@ void SPIApp::getSI(const ServiceListId &servId, const uint32_t &ueid)
 
 void SPIApp::getPI(const ServiceListId &servId, const QList<uint32_t> &ueidList, const QDate &date)
 {
-    if (m_useInternet && m_enaRadioDNS)
+    if (m_enaRadioDNS)
     {  // query RadioDNS
         for (const auto &ueid : ueidList)
         {

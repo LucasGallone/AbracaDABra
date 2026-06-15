@@ -69,8 +69,6 @@ public:
     void enable(bool ena);
 
     // RadioDNS
-    void setUseInternet(bool ena) { m_useInternet = ena; }
-    void setEnableRadioDNS(bool ena);
     void getSI(const ServiceListId &servId, const uint32_t &ueid);
     void getPI(const ServiceListId &servId, const QList<uint32_t> &ueidList, const QDate &date);
 
