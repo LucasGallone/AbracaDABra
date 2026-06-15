@@ -435,7 +435,7 @@ void SPIApp::onFileRequest(uint16_t decoderId, const QString &url, const QString
     // not found -> try to download it if not relative URL
     if (QUrl(url).isValid() && !QUrl(url).isRelative())
     {
-        downloadFile(url, requestId);
+        downloadFileRequest(url, requestId);
     }
 }
 
@@ -444,7 +444,12 @@ void SPIApp::onSettingsChanged(bool useInternet, bool enaRadioDNS)
     // radioDNS requres internet access, so it cannot be enabled if internet access is disabled
     bool enaRadioDns = useInternet && enaRadioDNS;
 
-    m_useInternet = useInternet;
+    if (m_useInternet != useInternet)
+    {
+        m_useInternet = useInternet;
+        m_downloadReqQueue.clear();
+    }
+
     if (m_enaRadioDNS != enaRadioDns)
     {
         m_enaRadioDNS = enaRadioDns;
@@ -1627,7 +1632,7 @@ void SPIApp::radioDNSLookup()
 
         if (!m_dnsCache[fqdn].isEmpty())
         {  // valid address
-            downloadFile(QString("%1/radiodns/spi/3.1/%3").arg(m_dnsCache[fqdn], file), "XML|" + file);
+            downloadFileRequest(QString("%1/radiodns/spi/3.1/%3").arg(m_dnsCache[fqdn], file), "XML|" + file);
         }
         else
         {
@@ -1763,7 +1768,7 @@ void SPIApp::handleRadioDNSLookup()
                 address = QString("http://%1").arg(record.target());
             }
             m_dnsCache[fqdn] = address;
-            downloadFile(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
+            downloadFileRequest(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
 
             QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
         }
@@ -1791,7 +1796,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
                     }
                     // giving priority to non TLS (against standard)
                     QString srvUrl = QString("https://dns.google/resolve?name=_radioepg._tcp.%1&type=SRV").arg(data);
-                    downloadFile(srvUrl, "DOH_SRV", false);
+                    downloadFileRequest(srvUrl, "DOH_SRV", false);
                     return;
                 }
                 else if (requestId == "DOH_SRV")
@@ -1814,7 +1819,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
                             address = QString("http://%1").arg(match.captured(1));
                         }
                         m_dnsCache[fqdn] = address;
-                        downloadFile(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
+                        downloadFileRequest(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
 
                         // next lookup
                         QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
@@ -1837,7 +1842,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
                 if (name.startsWith("_radioepg._tcp."))
                 {  // try  TLS lookup
                     QString srvUrl = QString("https://dns.google/resolve?name=%1&type=SRV").arg(name.replace("_radioepg._tcp.", "_radiospi._tcp."));
-                    downloadFile(srvUrl, "DOH_SRV", false);
+                    downloadFileRequest(srvUrl, "DOH_SRV", false);
                     return;
                 }
             }
@@ -1854,7 +1859,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
     }
 }
 
-void SPIApp::downloadFile(const QString &url, const QString &requestId, bool useCache)
+void SPIApp::downloadFileRequest(const QString &url, const QString &requestId, bool useCache)
 {
     qCDebug(spiApp) << Q_FUNC_INFO << url;
     if (!m_useInternet)
@@ -1868,15 +1873,37 @@ void SPIApp::downloadFile(const QString &url, const QString &requestId, bool use
         request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferCache);
     }
     request.setUrl(QUrl(url));
-    auto reply = m_netAccessManager->get(request);
-    reply->setProperty("requestId", requestId);
+    m_downloadReqQueue.enqueue({requestId, std::move(request)});
+    if (m_downloadReqQueue.size() == 1)
+    {
+        downloadFile();
+    }
+}
+
+void SPIApp::downloadFile()
+{
+    if (m_downloadReqQueue.isEmpty() == false)
+    {
+        auto request = m_downloadReqQueue.head();
+        auto reply = m_netAccessManager->get(request.second);
+        reply->setProperty("requestId", request.first);
+    }
 }
 
 void SPIApp::onFileDownloaded(QNetworkReply *reply)
 {
+    QString requestId = reply->property("requestId").toString();
+    if (!requestId.isEmpty() && requestId == m_downloadReqQueue.head().first)
+    {
+        m_downloadReqQueue.dequeue();
+        if (m_downloadReqQueue.isEmpty() == false)
+        {
+            downloadFile();
+        }
+    }
+
     if (reply->error() == QNetworkReply::NoError)
     {
-        QString requestId = reply->property("requestId").toString();
         if (requestId.startsWith("XML|"))
         {
             QByteArray data = reply->readAll();
