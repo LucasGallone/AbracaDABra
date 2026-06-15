@@ -44,7 +44,7 @@
 #define RTLTCP_DOC_ENABLE 1          // enable DOC
 #define RTLTCP_AGC_ENABLE 1          // enable AGC
 #define RTLTCP_START_COUNTER_INIT 2  // init value of the counter used to reset buffer after tune
-#define RTLTCP_START_COUNTER_FILL_BUFFER (8)  // number of input buffers to fill before emitting data after tune
+#define RTLTCP_START_COUNTER_FILL_BUFFER (16)  // number of input buffers to fill before emitting data after tune
 
 #define RTLTCP_AGC_LEVEL_MAX_DEFAULT 105
 
