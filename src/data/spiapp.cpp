@@ -1635,7 +1635,7 @@ void SPIApp::radioDNSLookup()
         }
 
         // next dns lookup
-        QTimer::singleShot(10, this, [this, fqdn]() { radioDNSLookup(); });
+        QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
     }
     else
     {
@@ -1727,7 +1727,7 @@ void SPIApp::handleRadioDNSLookup()
             m_dnsCache[fqdn] = "";  // invalid record in cache
 
             // next lookup
-            QTimer::singleShot(10, this, [this, fqdn]() { radioDNSLookup(); });
+            QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
         }
         return;
     }
@@ -1765,7 +1765,7 @@ void SPIApp::handleRadioDNSLookup()
             m_dnsCache[fqdn] = address;
             downloadFile(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
 
-            QTimer::singleShot(10, this, [this, fqdn]() { radioDNSLookup(); });
+            QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
         }
     }
 }
@@ -1817,7 +1817,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
                         downloadFile(QString("%1/radiodns/spi/3.1/%3").arg(address, request.second), "XML|" + request.second);
 
                         // next lookup
-                        QTimer::singleShot(10, this, [this, fqdn]() { radioDNSLookup(); });
+                        QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this, fqdn]() { radioDNSLookup(); });
                         return;
                     }
                 }
@@ -1850,7 +1850,7 @@ void SPIApp::handleRadioDoHLookup(QNetworkReply *reply)
         QString fqdn = m_radioDnsDownloadQueue.dequeue().first;
         m_dnsCache[fqdn] = "";  // invalid record in cache
         // next lookup
-        QTimer::singleShot(10, this, [this]() { radioDNSLookup(); });
+        QTimer::singleShot(SPI_APP_RADIODNS_LOOKUP_DELAY, this, [this]() { radioDNSLookup(); });
     }
 }
 

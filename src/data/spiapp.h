@@ -41,6 +41,8 @@
 // #define SPI_APP_INVALID_TAG 0x7F
 #define SPI_APP_INVALID_DECODER_ID 0xF000
 
+#define SPI_APP_RADIODNS_LOOKUP_DELAY 10
+
 class SPIApp : public UserApplication
 {
     Q_OBJECT
