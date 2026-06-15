@@ -1893,7 +1893,7 @@ void SPIApp::downloadFile()
 void SPIApp::onFileDownloaded(QNetworkReply *reply)
 {
     QString requestId = reply->property("requestId").toString();
-    if (!requestId.isEmpty() && requestId == m_downloadReqQueue.head().first)
+    if (!requestId.isEmpty() && m_downloadReqQueue.isEmpty() == false && requestId == m_downloadReqQueue.head().first)
     {
         m_downloadReqQueue.dequeue();
         if (m_downloadReqQueue.isEmpty() == false)
