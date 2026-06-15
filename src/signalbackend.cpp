@@ -473,6 +473,13 @@ void SignalBackend::onSignalSpectrum(std::shared_ptr<std::vector<float>> data, i
                 {
                     m_spectrumPlot->setProgrammaticYRange(m_spectYViewMin, m_spectYViewMax);
                 }
+
+                if (m_settings->signal.showNULL && m_nullSpectrumUpdated == false)
+                {  // no sync clear NULL spectrum
+                    m_spectrumPlot->clear(m_nullSpectSeriesId);
+                    m_nullSpectrumBuffer.assign(2048, 0.0);
+                }
+                m_nullSpectrumUpdated = false;
             }
             if (m_waterfallItem)
             {
@@ -560,6 +567,7 @@ void SignalBackend::onSignalSpectrum(std::shared_ptr<std::vector<float>> data, i
             if (m_spectrumPlot)
             {
                 m_spectrumPlot->replaceBuffer(m_nullSpectSeriesId, bins);
+                m_nullSpectrumUpdated = true;
             }
         }
     }

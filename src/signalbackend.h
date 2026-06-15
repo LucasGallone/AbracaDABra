@@ -113,6 +113,8 @@ private:
 
     std::vector<float> m_signalSpectrumBuffer;
     std::vector<float> m_nullSpectrumBuffer;
+
+    bool m_nullSpectrumUpdated = false;
     int m_frequency = 0;
     float m_rfLevel = NAN;
     float m_tunerGain = NAN;
