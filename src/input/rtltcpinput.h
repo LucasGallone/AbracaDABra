@@ -94,7 +94,7 @@ private:
     QString m_address;
     int m_port;
     bool m_useNativeSocket;
-
+    SOCKET m_sock = INVALID_SOCKET;
     QMutex m_commandMutex;
     QQueue<QByteArray> m_commandQueue;
     std::atomic<bool> m_stopRequested;

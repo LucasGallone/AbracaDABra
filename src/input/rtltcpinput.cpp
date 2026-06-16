@@ -911,6 +911,9 @@ void RtlTcpWorker::runNativeSocket()
         emit serverInfo(RTLSDR_TUNER_UNKNOWN, 0);
     }
 
+    // store socket to be used to force close
+    m_sock = sock;
+
     // read samples
     while (!m_stopRequested && INVALID_SOCKET != sock)
     {
@@ -969,7 +972,7 @@ void RtlTcpWorker::runNativeSocket()
             }
         } while (RTLTCP_CHUNK_SIZE > read);
 
-        // reset watchDog flag, timer sets it to true
+        // reset watchDog flag, timer sets it to false
         m_watchdogFlag = true;
 
         flushCommandQueue(sock);
@@ -1073,15 +1076,15 @@ void RtlTcpWorker::runQtSocket()
     size_t accumulated = 0;
     while (!m_stopRequested)
     {
-        if (!socket.waitForReadyRead())
+        if (!socket.waitForReadyRead(3000))
         {
             qCCritical(rtlTcpInput) << "Socket disconnected";
             return;
         }
 
-        flushCommandQueue(socket);
-
         m_watchdogFlag = true;
+
+        flushCommandQueue(socket);
 
         while (socket.bytesAvailable() > 0 && !m_stopRequested)
         {
@@ -1135,6 +1138,10 @@ void RtlTcpWorker::runQtSocket()
 void RtlTcpWorker::requestStop()
 {
     m_stopRequested = true;
+    if (m_useNativeSocket && m_sock != INVALID_SOCKET)
+    {  // force closing of the socket to interrupt blocking recv() call
+        ::close(m_sock);
+    }
 }
 
 void RtlTcpWorker::flushCommandQueue(SOCKET &socket)
