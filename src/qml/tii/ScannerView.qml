@@ -473,6 +473,7 @@ Item {
         enabled: scannerSetupDrawerLoader.item !== null
 
         function onClosed() {
+            scannerBackend.channelSelectionModel.save();
             scannerSetupDrawerLoader.active = false
         }
     }
